@@ -4,9 +4,9 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 ## Alunos integrantes da equipe
 
-| <br>                           | <br>                                   | <br>                        | <br>                   |
-| ------------------------------ | -------------------------------------- | --------------------------- | ---------------------- |
-| Maria Luiza de Oliveira Campos | Marlene Vasconcelos Moraes de Oliveira | Ramir Aguiar Ribeiro Junior | Weslley Oliveira Silva |
+| <img src=".\img\Maria Luiza.png" width="200px" /> | <img src=".\img\Marlene.jpg" alt="Marlene" width="200px"/>   | <img src=".\img\Ramir.jpg" alt="Ramir" width="200px" /> | <img src=".\img\Weslley.jpg" alt="Weslley" width="200px" /> |
+| ------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------- | ----------------------------------------------------------- |
+| Maria Luiza de Oliveira Campos                    | Marlene Vasconcelos Moraes de Oliveira<br/> (@MarleneMoraes) | Ramir Aguiar Ribeiro Junior <br/>(@RamirJr)             | Weslley Oliveira Silva <br/>(@weslleyolis)                  |
 
 ## Professores responsáveis
 
