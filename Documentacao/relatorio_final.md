@@ -99,7 +99,45 @@ Texto
 
 ## 3.Protótipo
 
+<img src=".\img\_prototipo\desktop-principal.png" alt="Página Inicial Ca$hFix" width="100%"  /> 
+
+Página inicial - versão Desktop
+
+
+
+<img src=".\img\_prototipo\desktop-pag2.png" alt="Quem Somos" width="100%"  />
+
+Sessão "Quem Somos" - versão Desktop
+
+
+
+<img src=".\img\_prototipo\desktop-pag3.png" alt="Nosso Compromisso" width="100%"  />
+
+Sessão "Nosso compromisso" - versão Desktop
+
+
+
+<img src=".\img\_prototipo\desktop-pag4.png" alt="Na palma da sua mão" width="100%"  />
+ Sessão "Na Palma da Sua Mão" - versão Desktop
+
+
+
+<img src=".\img\_prototipo\desktop-login.png" alt="Login" width="100%"  />
+ Página de Login - versão Desktop
+
+
+
+<img src=".\img\_prototipo\desktop-cadastro.png" alt="Cadastro" width="100%"  />
+ Página de Cadastro - versão Desktop
+
+
+
+<img src=".\img\_prototipo\desktop-paginterna.png" alt="Página Interna" width="100%"  />
+ Página interna - versão Desktop
+
 ## 4.Tecnologias Utilizadas
+
+
 
 ## 5.Sistema desenvolvido
 
