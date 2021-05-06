@@ -2,11 +2,11 @@
 
 <img src=".\imagens\logo.png" alt="DevTask" width="100" align="right" />
 
-**Maria Luiza de Oliveira Campos **
+**Maria Luiza de Oliveira Campos**
 
 **Marlene Vasconcelos Moraes de Oliveira**
 
-**Ramir Aguiar Ribeiro Junior **
+**Ramir Aguiar Ribeiro Junior**
 
 **Weslley Oliveira Silva**
 
