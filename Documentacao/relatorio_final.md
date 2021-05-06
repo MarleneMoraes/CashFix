@@ -2,23 +2,25 @@
 
 <img src=".\imagens\logo.png" alt="DevTask" width="100" align="right" />
 
-**Ana Clara Fonseca Campos, claracamposbh@hotmail.com**
+**Maria Luiza de Oliveira Campos **
 
-**Joao Pedro Mayrink de Jesus, joaopmayrinkj@gmail.com**
+**Marlene Vasconcelos Moraes de Oliveira**
 
-**Jose Vitor da Silva Sousa, jvitosousa@gmail.com**
+**Ramir Aguiar Ribeiro Junior **
 
-**Marlene Vasconcelos Moraes de Oliveira, marlenevmoliveira@gmail.com**
-
----
-
-_Curso de Engenharia de Software, Unidade Praça da Liberdade_
-
-_Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Minas Gerais (PUC MINAS), Belo Horizonte – MG – Brasil_
+**Weslley Oliveira Silva**
 
 ---
 
-_**Resumo** 
+_Curso de Sistemas de Informação, Unidade São Gabriel_
+
+_Instituto de Informática e Ciências Exatas (ICEI)_
+
+_Pontifícia Universidade de Minas Gerais (PUC MINAS), Belo Horizonte – MG – Brasil_
+
+---
+
+**Resumo** 
 
 <p align="justify">A grande demanda de trabalho remoto, sobretudo, na área da Tecnologia da Informação, trouxe o aumento de oportunidades. Entretanto, profissionais com menos experiência não conseguem demonstrar suas habilidades para adquirir conhecimento na prática. Dessa forma, a equipe da DevTask pensou em uma plataforma de desenvolvedores <i>freelancers</i>, no modo <i>marketplace</i>. A missão é conectar pessoas — físicas e/ou jurídicas — interessadas em serviços de <i>software</i> com os profissionais autônomos. O contato entre os desenvolvedores e clientes é direto via chat ou e-mail, além do suporte técnico em caso de dúvidas ou problemas.</p>
 
@@ -325,7 +327,6 @@ Dos artefatos;
 Da apresentação final;
 
 Do vídeo de apresentação.
-
 
 
 
