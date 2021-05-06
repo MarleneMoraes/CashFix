@@ -1,0 +1,122 @@
+@charset "UTF-8";
+*{
+     margin: 0px;
+     padding: 0px;   
+}
+
+    body, ul, li, p 
+         {
+         list-style: none;
+         font-size: 1.2rem;
+         font-family: Arial;}
+
+/*---------------------------------------------------*/
+.header
+     {background-color: #00D668;
+     display: flex;
+     justify-content: space-between;
+     padding: 10px;
+     align-items: center;}
+
+.sair
+     { color: black;
+     text-decoration: none;
+     background-color: transparent;
+     border-style: solid;
+     border-color: black;
+     border-radius: 6px;
+     outline: none;
+     padding: 10px;
+     margin: 40px;}
+body 
+     {background-color: black;
+     color: white;}
+
+/*---------------------------------------------------*/
+main   
+ {color: black;}
+
+button 
+     {background-color: #00A34F;
+     color: white;
+     border: none;
+     border-radius: 6px;}
+
+    h3
+     {text-align:justify;
+     margin:  1px;
+     padding: 5x;}
+/*---------------------------------------------------*/
+    .linha1         /*--1ª-linha--*/
+         {
+          display: flex;
+          align-items: center;
+         width: 800px;
+         height: 220px;
+         margin: 0 auto 0 auto;}     
+        .primeiro {
+          background-color: white;
+          padding: 30px;
+          border-radius: 5px;
+          width: 150px;
+          height: 100px;
+          }  
+          
+          .segundo {
+               margin: 10px;
+          }
+
+          .botoes1 button{
+               cursor: pointer; 
+               width: 100px; 
+               height: 100px;
+          }
+
+          .botoes2 button{
+               cursor: pointer; 
+               width: 100px; 
+               height: 100px;
+               padding: 10px;
+          }
+
+        .terceiro 
+             {
+          background-color: white;
+          padding: 30px;
+          border-radius: 5px;
+          width: 150px;
+          height: 100px;
+          }
+
+    .linha2         /*--2ª-linha--*/
+         {
+         display: flex;
+         width: 800px;
+         height: 220px;
+         margin: 10px auto;
+         }    
+        .quarto 
+             {
+               margin: 30px;
+             border-radius: 5px;
+             width: 150px;
+             height: 100px;
+          }
+        .quinto {
+             background-color: white;
+             margin: 10px;
+             padding: 30px;
+             border-radius: 5px;
+             width: 150px;
+             height: 100px;
+          }
+        .sexto 
+             {
+          margin: 30px;
+          border-radius: 5px;
+          width: 150px;
+          height: 100px;
+          }
+/*---------------------------------------------------*/
+/*RODAPE*/  
+
