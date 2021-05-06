@@ -1,0 +1,115 @@
+body {
+    background-color: black;
+    padding: 0px;
+    margin: 40px;
+}
+
+header img {
+    width: 140px;
+}
+
+.login {
+    color: #00D668;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    justify-content: center;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.login h1 {
+    font-size: 30px;
+}
+
+.usuario , .senha {
+    width: 358px;
+    height: 35px;
+    border-radius: 6px;
+    margin: 10px;
+    background-color: #ecf0f1;
+    border-width: 0.20px;
+    border-color: #00D668;
+}
+
+.botao {
+    width: 400px;
+    height: 35px;
+    border-radius: 6px;
+    background-color:#00D668;
+    border-color: #00D668;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: white;
+    border-width: 0px;
+}
+
+.cadastrar {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 40px;
+    border: 1px solid #00D668;
+    width: 400px;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+
+.label {
+    position: relative;
+}
+
+.label i {
+    position: absolute;
+    left: 5px;
+    padding: 20px;
+    color: #bbb;
+    
+}
+
+.label input[type=text] {
+    padding-left: 40px;
+}
+
+.label input[type=password] {
+    padding-left: 40px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+    
+.botao:hover {
+    color: white;
+    background-color: #bbb;
+    }
+
+.esqueceu-senha {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+    text-align:left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.esqueceu-senha a {
+    color: #bbb;
+}
+
+.voltar {
+    color: white;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 110px;
+    border: 1px solid #00D668;
+    width: 60px;
+    border-radius: 4px;
+    margin-left: 10px;
+    position: absolute;
+    padding: 10px;
+
+}
