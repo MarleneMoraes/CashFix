@@ -2,11 +2,11 @@
 
 <img src=".\img\logotipo-colorida.png" alt="Ca$hFix" width="150" align="right" />
 
-**Maria Luiza de Oliveira Campos **
+**Maria Luiza de Oliveira Campos**
 
 **Marlene Vasconcelos Moraes de Oliveira**
 
-**Ramir Aguiar Ribeiro Junior **
+**Ramir Aguiar Ribeiro Junior**
 
 **Weslley Oliveira Silva**
 
@@ -135,9 +135,24 @@ Sessão "Nosso compromisso" - versão Desktop
 <img src=".\img\_prototipo\desktop-paginterna.png" alt="Página Interna" width="100%"  />
  Página interna - versão Desktop
 
-## 4.Tecnologias Utilizadas
+## 4.Tecnologias
 
+O projeto emprega tecnologias de alto nível, voltadas para uma melhor performance e experiência do usuário. Além disso, adequamos o projeto para possibilitar um desenvolvimento de software mais suave, e optamos por metodologias que facilitassem o desenvolvimento colaborativo e a integração de todos os componentes do grupo. A listagem das tecnologias pode ser vista na tabela abaixo, que relaciona as áreas de desenvolvimento com as tecnologias envolvidas.
 
+### 4.1 Front-End
+
+- HTML
+- CSS 
+- JavaScript
+- Bootstrap
+
+### 4.2 Back-End
+
+- JavaScript
+
+### 4.3 IDE
+
+- Visual Studio Code
 
 ## 5.Sistema desenvolvido
 
