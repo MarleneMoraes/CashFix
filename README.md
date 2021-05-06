@@ -1,6 +1,6 @@
 # Ca$hFix
 
-Ca$hFix é uma plataforma gratuita de finanças onde o cliente pode planejar seus gastos mensais à luz do seu principal objetivo financeiro, seja pagamento de dívidas, economia ou investimento de maneira segura e rápida. A escolha do cliente será mediado por um plano de ação para auxiliar na realização do objetivo a ser conquistado, através de notificações. 
+<img src=".\img\_prototipo\logotipo-colorida.png" alt="Ca$hFix" width="150" align="right" />Ca$hFix é uma plataforma gratuita de finanças onde o cliente pode planejar seus gastos mensais à luz do seu principal objetivo financeiro, seja pagamento de dívidas, economia ou investimento de maneira segura e rápida. A escolha do cliente será mediado por um plano de ação para auxiliar na realização do objetivo a ser conquistado, através de notificações. 
 
 ## Alunos integrantes da equipe
 
