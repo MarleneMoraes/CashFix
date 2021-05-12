@@ -20,7 +20,7 @@ _Pontifícia Universidade de Minas Gerais (PUC MINAS), Belo Horizonte – MG –
 
 **Resumo** 
 
-<p align="justify">A grande demanda de trabalho remoto, sobretudo, na área da Tecnologia da Informação, trouxe o aumento de oportunidades. Entretanto, profissionais com menos experiência não conseguem demonstrar suas habilidades para adquirir conhecimento na prática. Dessa forma, a equipe da DevTask pensou em uma plataforma de desenvolvedores <i>freelancers</i>, no modo <i>marketplace</i>. A missão é conectar pessoas — físicas e/ou jurídicas — interessadas em serviços de <i>software</i> com os profissionais autônomos. O contato entre os desenvolvedores e clientes é direto via chat ou e-mail, além do suporte técnico em caso de dúvidas ou problemas.</p>
+<p align="justify"> Ter o controle e saber lidar com o próprio dinheiro é, além de fundamental para uma vida tranquila, libertador. Nem os mais altos salários se sustentam sem uma educação financeira, uma vez que podem ser incompatíveis com o estilo de vida que uma pessoa quer levar. O pior cenário, porém, é de pessoas que não possuem uma remuneração tão boa e, além disso, gastam bem mais do que podem. Com isso, a equipe da Cashfix facilita o seu dia a dia com soluções que simplificam e automatizam a gestão e o pagamento das suas dívidas, emprestimos, financiamentos e poupança.</p>
 
 ---
 
