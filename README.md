@@ -6,7 +6,7 @@
 
 | <img src=".\img\Maria Luiza.png" width="200px" /> | <img src=".\img\Marlene.jpg" alt="Marlene" width="200px"/>   | <img src=".\img\Ramir.jpg" alt="Ramir" width="200px" /> | <img src=".\img\Weslley.jpg" alt="Weslley" width="200px" /> |
 | ------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------- | ----------------------------------------------------------- |
-| Maria Luiza de Oliveira Campos <br/>(@straslilas) | Marlene Vasconcelos Moraes de Oliveira<br/> (@MarleneMoraes) | Ramir Aguiar Ribeiro Junior <br/>(@RamirJr)             | Weslley Oliveira Silva <br/>(@weslleyolis)                  |
+| Maria Luiza de Oliveira Campos <br/>(@straslilas) | Marlene Vasconcelos Moraes de Oliveira<br/> (@MarleneMoraes) | Ramir Aguiar Ribeiro Junior <br/>(@RamirJunior)             | Weslley Oliveira Silva <br/>(@weslleyolis)                  |
 
 ## Professores responsáveis
 
