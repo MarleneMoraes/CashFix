@@ -137,7 +137,12 @@ hr {
 
 /* Outros botões */
 .botao-quadrado{
-
+    font-size: 0.8rem;
+    width: 6rem;
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
 }
 
 /* Campos de dados */
@@ -162,13 +167,19 @@ hr {
 
 .card {
     align-items: center;
-    display: inline-flex;
-    margin-left: 20px;
-    color: var(--cinza-escuro);
-    background: var(--claro);
-    width: 250px;
-    height: 50vh;
-    border-radius: 30px;
+    width: 15rem;
+    margin: 3px;
+    height: 12rem;
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+}
+
+.cartao-branco{
+    background-color: var(--branco);
+}
+
+.cartao-preto{
+    background-color: var(--preto);
 }
 
 
