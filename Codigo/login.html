@@ -5,43 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/estiloLogin.css">
+    <link rel="stylesheet" href="./css/estiloLogin.css">
     <link rel="shortcut icon" href="imagens/logotipo-colorida.png" type="image/x-icon">
     <title>Login | CashFix</title>
 </head>
 
 <body>
-    <header>
-        <img src="imagens/logo-branca-colorida.png" alt="imagem logo">
+    <!-- Cabeçalho -->
+    <header class="row container-fluid header">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <a href="index.html"><img class="logo" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
+                    title="CashFix"></a>
+        </div>
     </header>
-    <div class="login">
-        <h1>Login</h1>
-        <form action="welcome.html">
-            <label class="label" for="">
-                <i class="fa fa-envelope icone1"></i>
-                <input type="text" class="usuario" name="usuario" placeholder="Email"> </br>
-            </label>
-            <label class="label" for="">
-                <i class="fa fa-lock" aria-hidden="true"></i>
-                <input type="password" class="senha" name="password" placeholder="Senha"> </br>
-            </label>
-            <label for="">
-                <a href="welcome.html">
-                    <input type="submit" class="botao" value="Entrar">
+
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="login">
+            <h1>Login</h1>
+            <form action="pagina-interna.html">
+                <label class="label" for="">
+                    <i class="fa fa-envelope icone1"></i>
+                    <input class="form usuario" type="text" name="usuario" placeholder="Email"> </br>
+                </label>
+
+                <label class="label" for="">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input class="form senha" type="password" name="password" placeholder="Senha"> </br>
+                </label>
+
+                <a class="esqueceu-senha" href="#">Esqueceu sua senha?</a>
+
+                <button class="botao botao-verde entrar" type="submit" value="Entrar">
+                    <a href="pagina-interna.html"> Entrar
+                    </a></button>
+                <button class="botao botao-contorno cadastrar">
+                    Ainda não possui uma conta? <a href="cadastro.html">Cadastre-se!</a>
+                </button>
+            </form>
+        </div>
+
+        <!-- Botão de Voltar -->
+        <button class="botao botao-contorno voltar">
+            <a href="index.html">Voltar</a>
+        </button>
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+         <a href="index.html">
+                    <img src="imagens/logo-branca.png" alt="logo CashFix" title="CashFix">
                 </a>
-            </label>
-        </form>
-        <div class="esqueceu-senha">
-            <a href="#">Esqueceu sua senha?</a>
-        </div>
-        <div class="cadastrar">
-            <p>Ainda não possui uma conta? <a href="cadastro.html">Cadastre-se!</a></p>
-        </div>
-    </div>
-    <div class="voltar">
-        <a href="index.html">Voltar</a>
-    </div>
+        <hr>
+        <p>&copy; Copyright 2021 - Trabalho Interdisciplinar: Aplicações Web | <strong>ICEI PUC Minas</strong></p>
+    </footer>
+
     <script src="https://kit.fontawesome.com/83bbcb24d1.js" crossorigin="anonymous"></script>
 </body>
 

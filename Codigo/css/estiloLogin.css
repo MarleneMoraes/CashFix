@@ -1,59 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: black;
-    padding: 0px;
-    margin: 40px;
-}
-
-header img {
-    width: 140px;
-}
-
-.login {
-    color: #00D668;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: grid;
-    justify-content: center;
-    margin-top: 80px;
+    background-color: #fafafa;
+    height: 100vh;
     width: 100%;
 }
 
-.login h1 {
+h1{
+    color:#00A34F;
     font-size: 30px;
 }
 
-.usuario , .senha {
-    width: 358px;
-    height: 35px;
-    border-radius: 6px;
-    margin: 10px;
-    background-color: #ecf0f1;
-    border-width: 0.20px;
-    border-color: #00D668;
+a {
+    text-decoration: none;
 }
 
-.botao {
-    width: 400px;
-    height: 35px;
-    border-radius: 6px;
-    background-color:#00D668;
-    border-color: #00D668;
-    margin-top: 10px;
-    margin-left: 10px;
+/* Cabeçalho */
+header{
+    background-image: url(../imagens/bg-texture.png);
+    padding: 15px;
     color: white;
-    border-width: 0px;
+    -webkit-box-shadow: 1px 13px 10px -9px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 1px 13px 10px -9px rgba(50, 50, 50, 0.5);
+    box-shadow: 1px 13px 10px -9px rgba(50, 50, 50, 0.5);
 }
 
-.cadastrar {
-    color: #bbb;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 10px;
-    text-align: center;
-    margin-top: 40px;
-    border: 1px solid #00D668;
-    width: 400px;
-    border-radius: 6px;
-    margin-left: 10px;
+header img {
+    width: 100px;
 }
+
+@media (min-width:600px){
+    header img{
+       width: 120px;
+    }
+}
+
+@media(min-width:1200px){
+    header img{
+        width: 140px;
+     }
+}
+
+/* Card Login */
+.login {
+    background-color: #ffffff;
+    margin: 80px auto;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    padding: 1.25rem;
+    width: 320px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (min-width:600px){
+    .login {
+        width: 450px;
+    }   
+}
+
+/* Campos do formulário */
 
 .label {
     position: relative;
@@ -61,10 +70,10 @@ header img {
 
 .label i {
     position: absolute;
-    left: 5px;
+    left: 2px;
+    top: -15px;
     padding: 20px;
     color: #bbb;
-    
 }
 
 .label input[type=text] {
@@ -75,41 +84,127 @@ header img {
     padding-left: 40px;
 }
 
-a {
-    color: white;
-    text-decoration: none;
+/* Botões */
+
+.usuario, .senha {
+    width: 16rem;
+    height: 3rem;
+    margin: 10px;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    border-width: 0.013rem;
+    border-color: #00D668;
 }
-    
-.botao:hover {
-    color: white;
-    background-color: #bbb;
+
+@media (min-width:600px){
+    .usuario, .senha {
+        width: 24rem;
+        height: 3rem;
     }
+}
 
 .esqueceu-senha {
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 10px;
-    text-align:left;
-    margin-top: 10px;
-    margin-left: 10px;
+    color: gray;
+    display: block;
+    font-size: 0.75rem;
+    margin: 1px 0px 5px 155px;
 }
 
-.esqueceu-senha a {
-    color: #bbb;
+@media (min-width:600px){
+    .esqueceu-senha {
+        margin: 1px 0px 5px 285px;
+    }
 }
 
-.voltar {
-    color: white;
-    text-decoration: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 10px;
+.botao {
+    padding: .375rem .75rem;
+    font: 1rem 400 'Segoe UI';
     text-align: center;
-    margin-top: 110px;
-    border: 1px solid #00D668;
-    width: 60px;
-    border-radius: 4px;
-    margin-left: 10px;
-    position: absolute;
-    padding: 10px;
+    text-decoration: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    border-style: none;
+}
 
+.botao-verde {
+    background-color:#00A34F;
+}
+
+.botao-verde:hover {
+    background-color: #004A24;
+}
+
+.botao-verde:active {
+    background-color: #00D668;
+}
+
+.entrar, .cadastrar {
+    width: 16rem;
+    height: 3rem;
+    margin: 8px;
+    display: block;
+}
+
+@media (min-width:600px){
+    .entrar, .cadastrar {
+        width: 24rem;
+    }
+}
+
+.entrar a {
+    color: white;
+}
+
+.botao-contorno{
+    color: #bbb;
+    background-color: transparent;
+    border: 1px solid #00D668;
+}
+
+.botao-contorno a{
+    color: #00A34F;
+    display: block;
+}
+
+.botao-contorno:hover{
+    color: white;
+    background-color: #00D668;
+    border: none;
+}
+
+.voltar{
+    margin: 0px 0px 20px 15px;
+
+}
+
+/* Rodape */
+
+.rodape {
+    top: 12%;
+    position: relative;
+    padding: 20px;
+    background-image: url(../imagens/bg-texture.png);
+    color: #dadada;
+    text-align: center;
+}
+
+@media (min-width:600px){
+    .rodape{
+        top: 28.9%;
+    }
+}
+
+@media (min-width:1000px){  
+    .rodape{
+        top: 18.5%;
+    }
+}
+
+.rodape img {
+    width: 150px;
+}
+
+.rodape ul {
+    list-style: none;
+    text-align: left;
 }
