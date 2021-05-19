@@ -34,6 +34,7 @@
 body{
     height: 100vh;
     width: 100%;
+    font-family: var(--ff-texto);
 }
 
 h1,
@@ -43,12 +44,7 @@ h3 {
 
 }
 
-p {
-    font-family: var(--ff-texto);
-}
-
 a{
-    font-family: var(--ff-texto);
     color: var(--principal);
     text-decoration: none;
     cursor: pointer;
@@ -115,6 +111,10 @@ hr {
     color: var(--branco);
 }
 
+.botao-verde a{
+    color:var(--branco)
+}
+
 .botao-verde:hover {
     background-color: var(--efeito-hover);
 }
@@ -138,6 +138,26 @@ hr {
 /* Outros botões */
 .botao-quadrado{
 
+}
+
+/* Campos de dados */
+.label {
+    position: relative;
+}
+
+.label i {
+    left: 2px;
+    position: absolute;
+    color: var(--cinza);
+    padding: 20px;
+}
+
+.label input[type=text] {
+    padding-left: 40px;
+}
+
+.label input[type=password] {
+    padding-left: 40px;
 }
 
 .card {

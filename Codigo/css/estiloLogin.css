@@ -10,13 +10,12 @@ a {
 
 /* Card Login */
 .login {
-    background-color: #ffffff;
+    background-color: var(--branco);
     margin: 80px auto;
-    border: 1px solid #bbb;
+    border: 1px solid var(--cinza);
     border-radius: 10px;
     padding: 1.25rem;
     width: 320px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media (min-width:600px){
@@ -27,24 +26,8 @@ a {
 
 /* Campos do formulário */
 
-.label {
-    position: relative;
-}
-
 .label i {
-    position: absolute;
-    left: 2px;
     top: -15px;
-    padding: 20px;
-    color: #bbb;
-}
-
-.label input[type=text] {
-    padding-left: 40px;
-}
-
-.label input[type=password] {
-    padding-left: 40px;
 }
 
 /* Botões */
