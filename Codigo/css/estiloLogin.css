@@ -1,17 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #fafafa;
-    height: 100vh;
-    width: 100%;
-}
-
 h1{
-    color:#00A34F;
+    color: var(--principal);
     font-size: 30px;
 }
 
@@ -19,31 +7,6 @@ a {
     text-decoration: none;
 }
 
-/* Cabeçalho */
-header{
-    background-image: url(../imagens/bg-texture.png);
-    padding: 15px;
-    color: white;
-    -webkit-box-shadow: 1px 13px 10px -9px rgba(50, 50, 50, 0.5);
-    -moz-box-shadow: 1px 13px 10px -9px rgba(50, 50, 50, 0.5);
-    box-shadow: 1px 13px 10px -9px rgba(50, 50, 50, 0.5);
-}
-
-header img {
-    width: 100px;
-}
-
-@media (min-width:600px){
-    header img{
-       width: 120px;
-    }
-}
-
-@media(min-width:1200px){
-    header img{
-        width: 140px;
-     }
-}
 
 /* Card Login */
 .login {
@@ -86,56 +49,21 @@ header img {
 
 /* Botões */
 
-.usuario, .senha {
-    width: 16rem;
-    height: 3rem;
-    margin: 10px;
-    padding: .375rem .75rem;
-    border-radius: .25rem;
-    border-width: 0.013rem;
-    border-color: #00D668;
-}
-
-@media (min-width:600px){
-    .usuario, .senha {
-        width: 24rem;
-        height: 3rem;
-    }
-}
-
 .esqueceu-senha {
-    color: gray;
+    color: var(--cinza);
     display: block;
     font-size: 0.75rem;
     margin: 1px 0px 5px 155px;
 }
 
+.esqueceu-senha:hover {
+    color: var(--principal);
+}
+
 @media (min-width:600px){
     .esqueceu-senha {
-        margin: 1px 0px 5px 285px;
+        margin: 1px 0px 5px 65%;
     }
-}
-
-.botao {
-    padding: .375rem .75rem;
-    font: 1rem 400 'Segoe UI';
-    text-align: center;
-    text-decoration: none;
-    border-radius: .25rem;
-    cursor: pointer;
-    border-style: none;
-}
-
-.botao-verde {
-    background-color:#00A34F;
-}
-
-.botao-verde:hover {
-    background-color: #004A24;
-}
-
-.botao-verde:active {
-    background-color: #00D668;
 }
 
 .entrar, .cadastrar {
@@ -155,56 +83,7 @@ header img {
     color: white;
 }
 
-.botao-contorno{
-    color: #bbb;
-    background-color: transparent;
-    border: 1px solid #00D668;
-}
-
-.botao-contorno a{
-    color: #00A34F;
-    display: block;
-}
-
-.botao-contorno:hover{
-    color: white;
-    background-color: #00D668;
-    border: none;
-}
-
 .voltar{
     margin: 0px 0px 20px 15px;
-
 }
 
-/* Rodape */
-
-.rodape {
-    top: 12%;
-    position: relative;
-    padding: 20px;
-    background-image: url(../imagens/bg-texture.png);
-    color: #dadada;
-    text-align: center;
-}
-
-@media (min-width:600px){
-    .rodape{
-        top: 28.9%;
-    }
-}
-
-@media (min-width:1000px){  
-    .rodape{
-        top: 18.5%;
-    }
-}
-
-.rodape img {
-    width: 150px;
-}
-
-.rodape ul {
-    list-style: none;
-    text-align: left;
-}

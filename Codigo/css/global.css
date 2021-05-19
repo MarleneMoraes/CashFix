@@ -1,29 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
-
-
 :root{
-    --primary: #00A34F;
-    --accent: #336149;
-    --basic: #69F0AA;
+    --principal: #00A34F;
+    --escuro: #336149;
+    --básica: #69F0AA;
 
-    --hover: #004A24;
-    --active: #00D668;
+    --efeito-hover: #004A24;
+    --efeito-active: #00D668;
 
-    --dark: #000000;
-    --dark-gray: #3c3c3c;
-    --light:#fafafa;
-    --clean:#dadada;
-    --off-white: #ffffff;
-    --shadow: #32323280;
+    --preto: #000000;
+    --cinza:#bbb;
+    --cinza-escuro: #3c3c3c;
+    --claro:#fafafa;
+    --fundo:#dadada;
+    --branco: #ffffff;
+    --sombra: #32323280;
 
     --gradient-primary: linear-gradient(180deg, rgba(1, 61, 30, 1) 0%, rgba(56, 156, 104, 1) 100%);
     --gradient-accent: linear-gradient(180deg, rgba(56, 156, 104, 1) 0%, rgba(1, 61, 30, 1) 100%);
     
 
-    --ff-title:'Ubuntu', 'Source Sans Pro', 'Merriweather', sans-serif;
-    --ff-text:'OpenSans', 'Roboto', 'Arial', sans-serif;
+    --ff-titulo:'Ubuntu', 'Source Sans Pro', 'Merriweather', sans-serif;
+    --ff-texto:'OpenSans', 'Roboto', 'Arial', sans-serif;
 }
 
 *{
@@ -32,73 +31,142 @@
     box-sizing: border-box;
 }
 
+body{
+    height: 100vh;
+    width: 100%;
+}
+
 h1,
 h2, 
 h3 {
-    font-family: var(--ff-title);
+    font-family: var(--ff-titulo);
+
+}
+
+p {
+    font-family: var(--ff-texto);
 }
 
 a{
+    font-family: var(--ff-texto);
+    color: var(--principal);
     text-decoration: none;
     cursor: pointer;
 }
 
-a:hover {
-    color: var(--off-white);
-}
-
 hr {
-    color: #9affcb;
+    color: var(--básica);
     margin: 0 auto 20px 0;
 }
 
-.header {
-    z-index: 999;
-    position: fixed;
+/* Cabeçalho */
+
+.cabecalho{
     background: url(../imagens/bg-texture.png);
     padding: 15px;
-    color: var(--off-white);
-    -webkit-box-shadow: 1px 13px 10px -9px var(--shadow);
-    -moz-box-shadow: 1px 13px 10px -9px var(--shadow);
-    box-shadow: 1px 13px 10px -9px var(--shadow);
+    color: var(--branco);
+    -webkit-box-shadow: 1px 13px 10px -9px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 1px 13px 10px -9px rgba(50, 50, 50, 0.5);
+    box-shadow: 1px 13px 10px -9px rgba(50, 50, 50, 0.5);
 }
 
-.header img {
-    width: 150px;
+.cabecalho img {
+    width: 6.25rem;
 }
 
+@media (min-width:600px){
+    .cabecalho img {
+        max-width: 8.75rem;
+    }
+}
+
+/* Botões */
+
+.form {
+    width: 16rem;
+    height: 3rem;
+    margin: 10px;
+    font-family: var(--ff-texto);
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    border-width: 0.013rem;
+    border-color: #00D668;
+}
+
+@media (min-width:600px){
+    .form {
+        width: 24rem;
+        height: 3rem;
+    }
+}
+
+.botao {
+    padding: .375rem .75rem;
+    font: 1rem 400 var(--ff-titulo);
+    text-align: center;
+    text-decoration: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    border-style: none;
+}
+
+.botao-verde {
+    background-color:var(--principal);
+    color: var(--branco);
+}
+
+.botao-verde:hover {
+    background-color: var(--efeito-hover);
+}
+
+.botao-verde:active {
+    background-color: var(--efeito-active);
+}
+
+.botao-contorno{
+    color: var(--cinza);
+    background-color: transparent;
+    border: 1px solid var(--efeito-active);
+}
+
+.botao-contorno:hover{
+    color: var(--branco);
+    background-color: var(--efeito-active);
+    border: none;
+}
+
+/* Outros botões */
+.botao-quadrado{
+
+}
 
 .card {
     align-items: center;
     display: inline-flex;
     margin-left: 20px;
-    color: var(--dark-gray);
-    background: var(--light);
+    color: var(--cinza-escuro);
+    background: var(--claro);
     width: 250px;
     height: 50vh;
     border-radius: 30px;
 }
 
 
+/* FOOTER - precisa ajeitar */
 
-/* FOOTER */
-
-.footer {
-    padding: 40px 20px 20px;
-    background: url(../imagens/bg-texture.png);
-    color: var(--clean);
-    height: 100%;
+.rodape {
+    position: relative;
+    padding: 20px;
+    background-image: url(../imagens/bg-texture.png);
+    color: var(--fundo);
+    text-align: center;
 }
 
-.footer img {
+.rodape img {
     width: 150px;
 }
 
-.footer ul {
+.rodape ul {
     list-style: none;
     text-align: left;
-}
-
-.footer p {
-    margin-top: 50px;
 }
