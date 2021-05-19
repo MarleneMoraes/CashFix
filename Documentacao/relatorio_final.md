@@ -125,6 +125,11 @@ O projeto emprega tecnologias de alto nível, voltadas para uma melhor performan
 
 ## 5.Sistema desenvolvido
 
+- Página Inicial: Tem a função de informar o usuário os princípios da aplicação. Nela o usuário encontra informações sobre a finalidade do Cashfix e também a funcionalidade de abrir conta ou se cadastrar.
+- Pagina de Cadastrp: Possui um formulário onde o usuário poderá se cadastrar para usar a aplicação Cashfix
+- Pagina de Login: Pagina onde o usuário cadastrado pode logar para usar os serviços disponíveis.
+- Pagina Interna: Primeira página que é exibida para o usuário. Nela o usuario poderá acessar funcionalidades para controle e visualização dos dados na sua conta Cashfix.
+-
 Faça aqui uma breve descrição do software e coloque as principais telas com uma explicação de como usar cada uma.
 
 ## 6. Avaliação
