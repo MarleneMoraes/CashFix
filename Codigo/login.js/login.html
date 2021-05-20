@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/estiloLogin.css">
+    <link rel="shortcut icon" href="imagens/logotipo-colorida.png" type="image/x-icon">
+    <script src="js/script.js"></script>
+    <title>Login | CashFix</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="row container-fluid cabecalho">
+        <a href="index.html"><img class="logo" src="imagens/logo-branca-colorida.png" alt="logo CashFix" title="CashFix"></a>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="login">
+            <h1>Login</h1>
+            <br>
+            <form id="form_id" method="post" name="myform">
+                    <!--LOGIN-->
+                <label class="label" for="">
+                     <i class="fa fa-envelope icone1"></i>
+                     <input value="cashfix@gmail.com" class="form usuario" type="text" name="email" id="email"  autocomplete="off"/>
+                     <span id="alerta"></span>
+                </label>
+                <br>
+                    <label class="label" for="">
+                         <i class="fa fa-lock" aria-hidden="true"></i>
+                         <input value="123456" class="form senha" type="password" name="password" id="password" placeholder="123456"/>
+                    </label>
+                    <br>
+                <input class="botao botao-verde entrar" type="button" value="Entrar" id="submit" onclick="validate()"/>
+            </form>
+                <a class="esqueceu-senha" href="#">Esqueceu sua senha?</a>
+                <button class="botao botao-contorno cadastrar">
+                    Ainda não possui uma conta? <a href="cadastro.html">Cadastre-se!</a>
+                </button>
+            </form>
+        </div>
+
+        <!-- Botão de Voltar -->
+        <button class="botao botao-contorno voltar">
+            <a href="index.html">Voltar</a>
+        </button>
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <a href="index.html">
+            <img src="imagens/logo-branca.png" alt="logo CashFix" title="CashFix">
+        </a>
+        <hr>
+        <p>&copy; Copyright 2021 - Trabalho Interdisciplinar: Aplicações Web | <strong>ICEI PUC Minas</strong></p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/83bbcb24d1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
