@@ -20,12 +20,13 @@
 
     <!-- Conteúdo principal -->
     <main>
-        <div class="cadastro">
+        <div class="cadastro" id="signup">
             <h1>Cadastro</h1>
             <form action="pagina-interna.html">
                 <label class="label" for="">
                     <i class="fa fa-user"></i>
-                    <input class="form nome" type="text" name="nome" placeholder="Nome"> </br>
+                    <input class="form nome" type="text" name="nome" placeholder="Nome" id="username">
+                <small class="erro"></small> </br>
                 </label>
                 <label class="label" for="">
                     <i class="fa fa-list-alt"></i>
@@ -33,11 +34,18 @@
                 </label>
                 <label class="label" for="">
                     <i class="fa fa-envelope"></i>
-                    <input class="form usuario" type="text" name="usuario" placeholder="Email"> </br>
+                    <input class="form usuario" type="text" name="usuario" placeholder="Email" id="email"> 
+                <small class="erro"></small></br>
                 </label>
                 <label class="label" for="">
                     <i class="fa fa-lock"></i>
-                    <input class="form senha" type="password" name="password" placeholder="Senha"> </br>
+                    <input class="form senha" type="password" name="password" placeholder="Senha" id="password">
+                <small class="erro"></small> </br>
+                </label>
+                <label class="label" for="">
+                    <i class="fa fa-lock"></i>
+                    <input class="form confirma-senha" type="password" name="confirm-password" placeholder="Confirmar Senha" id="confirm-password"> 
+                <small class="erro"></small></br>
                 </label>
                 <button class="botao botao-verde cadastrar" type="submit" value="Cadastrar">
                     <a href="pagina-interna.html"> Cadastrar</a>
@@ -65,6 +73,7 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/83bbcb24d1.js" crossorigin="anonymous"></script>
+    <script src="scriptCadastro.js"></script>
 </body>
 
 </html>
