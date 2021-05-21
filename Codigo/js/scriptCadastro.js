@@ -2,11 +2,13 @@ const usernameEl = document.querySelector('#username');
 const emailEl = document.querySelector('#email');
 const passwordEl = document.querySelector('#password');
 const confirmPasswordEl = document.querySelector('#confirm-password');
+const userEl = document.querySelector('#user');
 
 const form = document.querySelector('#signup');
 
 
 const checkUsername = () => {
+    
 
     let valid = false;
 
@@ -23,6 +25,35 @@ const checkUsername = () => {
     }
     return valid;
 };
+
+
+const checkCPF = (e) => {
+     mascaraTelefone(e)
+
+     mascaraTelefone(e)
+
+    let valid = false;
+
+    const min = 11,
+        max = 11;
+
+    const user = userEl.value.trim();
+
+    if (!isRequired(user)) {
+        showError(userEl, 'Não pode ficar em branco.');
+    } else if (userEl.value.length != 14) { //São 14 caracteres por causa da máscara
+        showError(userEl, 'O CPF deve conter 11 caracteres.');
+    }
+    else {
+
+        showSuccess(userEl);
+
+        valid = true;
+    }
+    return valid;
+};
+
+
 
 
 const checkEmail = () => {
@@ -121,12 +152,13 @@ form.addEventListener('submit', function (e) {
     let isUsernameValid = checkUsername(),
         isEmailValid = checkEmail(),
         isPasswordValid = checkPassword(),
-        isConfirmPasswordValid = checkConfirmPassword();
+        isConfirmPasswordValid = checkConfirmPassword(),
+    isUserValid = checkCPF();
 
     let isFormValid = isUsernameValid &&
         isEmailValid &&
         isPasswordValid &&
-        isConfirmPasswordValid;
+        isConfirmPasswordValid && isUserValid;
 
     // submit to the server if the form is valid
     if (isFormValid) {
@@ -163,5 +195,69 @@ form.addEventListener('input', debounce(function (e) {
         case 'confirm-password':
             checkConfirmPassword();
             break;
+        case 'user':
+            checkCPF(e);
     }
 }));
+
+usernameEl.onblur = () => {
+    const username = usernameEl.value.trim();
+    if (!isRequired(username)) {
+        usernameEl.style.border = 'thin red solid';
+    }
+    else {
+        usernameEl.style.border = 'thin #00D668 solid';
+    }
+}
+
+userEl.onblur = () => {
+    const user = userEl.value.trim();
+    if (!isRequired(user)) {
+        userEl.style.border = 'thin red solid';
+    }
+    else {
+        userEl.style.border = 'thin #00D668 solid';
+    }
+}
+
+emailEl.onblur = () => {
+    const email = emailEl.value.trim();
+    if (!isRequired(email)) {
+        emailEl.style.border = 'thin red solid';
+    }
+    else {
+        emailEl.style.border = 'thin #00D668 solid';
+    }
+}
+
+passwordEl.onblur = () => {
+    const password = passwordEl.value.trim();
+    if (!isRequired(password)) {
+        passwordEl.style.border = 'thin red solid';
+    }
+    else {
+        passwordEl.style.border = 'thin #00D668 solid';
+    }
+}
+
+confirmPasswordEl.onblur = () => {
+    const confirmPassword = confirmPasswordEl.value.trim();
+    if (!isRequired(confirmPassword)) {
+        confirmPasswordEl.style.border = 'thin red solid';
+    }
+    else {
+        confirmPasswordEl.style.border = 'thin #00D668 solid';
+    }
+}
+
+
+userEl.keypress = (e) => mascaraTelefone(e.target.value)
+
+userEl.change = (e) => mascaraTelefone(e.target.value)
+
+const mascaraTelefone = (e) => {
+
+    e.target.value = e.target.value.replace(/[^\d]/g, "")
+    e.target.value = e.target.value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")
+    //tel.value = valor // Insere o(s) valor(es) no campo
+}

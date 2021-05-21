@@ -14,23 +14,29 @@
 <body>
     <!-- Cabeçalho -->
     <header class="row container-fluid cabecalho">
-        <a href="index.html"><img class="logo" src="imagens/logo-branca-colorida.png" alt="logo CashFix" title="CashFix"></a>
+        <a href="index.html"><img class="logo" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
+                title="CashFix"></a>
     </header>
 
     <!-- Conteúdo principal -->
     <main>
-        <div class="login">
+        <div class="login" id="signup">
             <h1>Login</h1>
             <form action="pagina-interna.html">
                 <label class="label" for="">
                     <i class="fa fa-envelope icone1"></i>
-                    <input class="form usuario" type="text" name="usuario" placeholder="Email"> </br>
+                    <input class="form usuario" type="text" name="usuario" id="email" placeholder="Email">
+                    <small class="erro"></small></br>
                 </label>
 
                 <label class="label" for="">
                     <i class="fa fa-lock" aria-hidden="true"></i>
-                    <input class="form senha" type="password" name="password" placeholder="Senha"> </br>
+                    <input class="form senha" type="password" name="password" id="password" placeholder="Senha">
+                    <small class="erro"></small></br>
                 </label>
+                <div class="caixa">
+                    <input type="checkbox"> <label for="text">Manter-se conectado?</label>
+                </div>
 
                 <a class="esqueceu-senha" href="#">Esqueceu sua senha?</a>
 
@@ -59,6 +65,7 @@
         <p>&copy; Copyright 2021 - Trabalho Interdisciplinar: Aplicações Web | <strong>ICEI PUC Minas</strong></p>
     </footer>
 
+    <script src="js/scriptLogin.js"></script>
     <script src="https://kit.fontawesome.com/83bbcb24d1.js" crossorigin="anonymous"></script>
 </body>
 
