@@ -17,8 +17,8 @@
     --branco: #ffffff;
     --sombra: #32323280;
 
-    --gradient-primary: linear-gradient(180deg, rgba(1, 61, 30, 1) 0%, rgba(56, 156, 104, 1) 100%);
-    --gradient-accent: linear-gradient(180deg, rgba(56, 156, 104, 1) 0%, rgba(1, 61, 30, 1) 100%);
+    --gradiente-principal: linear-gradient(180deg, rgba(1, 61, 30, 1) 0%, rgba(56, 156, 104, 1) 100%);
+    --gradiente-escuro: linear-gradient(180deg, rgba(56, 156, 104, 1) 0%, rgba(1, 61, 30, 1) 100%);
     
 
     --ff-titulo:'Ubuntu', 'Source Sans Pro', 'Merriweather', sans-serif;
