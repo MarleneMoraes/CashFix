@@ -22,16 +22,6 @@ main {
   }
 }
 
-.cartao-branco {
-  align-items: center;
-  justify-content: center;
-  padding: 2.2em;
-}
-
-.cartao-branco p {
-  margin: 1.5rem auto;
-}
-
 .servicos {
   padding: 0.7rem 1rem;
   display: flex;
