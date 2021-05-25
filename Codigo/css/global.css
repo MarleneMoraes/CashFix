@@ -44,7 +44,7 @@ h3 {
 
 }
 
-a{
+a { 
     color: var(--principal);
     text-decoration: none;
     cursor: pointer;
@@ -58,6 +58,7 @@ hr {
 /* Cabeçalho */
 
 .cabecalho{
+    width: 100%;
     background: url(../imagens/bg-texture.png);
     padding: 15px;
     color: var(--branco);
@@ -72,7 +73,7 @@ hr {
 
 @media (min-width:600px){
     .cabecalho img {
-        max-width: 8.75rem;
+        max-width: 9.375rem;
     }
 }
 
