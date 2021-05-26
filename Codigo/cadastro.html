@@ -20,35 +20,35 @@
 
     <!-- Conteúdo principal -->
     <main>
-        <div class="cadastro" id="signup">
+        <div class="cadastro" id="realizarCadastro">
             <h1>Cadastro</h1>
             <form action="pagina-interna.html">
                 <label class="label" for="">
                     <i class="fa fa-user"></i>
-                    <input class="form nome" type="text" name="nome" placeholder="Nome" id="username">
+                    <input class="form nome" type="text" name="nome" placeholder="Nome" id="nomeCadastro">
                 <small class="erro"></small> </br>
                 </label>
                 <label class="label" for="">
                     <i class="fa fa-list-alt"></i>
-                    <input class="form cpf" maxlength="14" type="text" name="cpf" placeholder="CNPJ / CPF" id="user"> 
+                    <input class="form cpf" maxlength="14" type="text" name="cpf" placeholder="CNPJ / CPF" id="cpfCadastro"> 
                 <small class="erro"></small></br>
                 </label>
                 <label class="label" for="">
                     <i class="fa fa-envelope"></i>
-                    <input class="form usuario" type="text" name="usuario" placeholder="Email" id="email"> 
+                    <input class="form usuario" type="text" name="usuario" placeholder="Email" id="emailCadastro"> 
                 <small class="erro"></small></br>
                 </label>
                 <label class="label" for="">
                     <i class="fa fa-lock"></i>
-                    <input class="form senha" type="password" name="password" placeholder="Senha" id="password">
+                    <input class="form senha" type="password" name="password" placeholder="Senha" id="senhaCadastro">
                 <small class="erro"></small> </br>
                 </label>
                 <label class="label" for="">
                     <i class="fa fa-lock"></i>
-                    <input class="form confirma-senha" type="password" name="confirm-password" placeholder="Confirmar Senha" id="confirm-password"> 
+                    <input class="form confirma-senha" type="password" name="confirm-password" placeholder="Confirmar Senha" id="confiSenhaCadastro"> 
                 <small class="erro"></small></br>
                 </label>
-                <button class="botao botao-verde cadastrar" type="submit" value="Cadastrar">
+                <button class="botao botao-verde cadastrar" onclick="cadastraUsuario()" type="button" value="cadastrar">
                     <a href="pagina-interna.html"> Cadastrar</a>
                 </button>
                 <button class="botao botao-contorno entrar">

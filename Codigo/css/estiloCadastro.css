@@ -28,6 +28,7 @@ h1{
     height: 3rem;
     margin: 8px;
     display: block;
+    color: #535151;
 }
 
 @media (min-width:600px){
@@ -42,3 +43,4 @@ h1{
 .erro {
     color: red;
 }
+

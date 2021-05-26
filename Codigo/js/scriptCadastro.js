@@ -1,13 +1,13 @@
-const usernameEl = document.querySelector('#username');
-const emailEl = document.querySelector('#email');
-const passwordEl = document.querySelector('#password');
-const confirmPasswordEl = document.querySelector('#confirm-password');
-const userEl = document.querySelector('#user');
+const nomeCadastroVar = document.querySelector('#nomeCadastro');
+const emailCadastroVar = document.querySelector('#emailCadastro');
+const senhaCadastroVar = document.querySelector('#senhaCadastro');
+const confiSenhaCadastroVar = document.querySelector('#confiSenhaCadastro');
+const cpfCadastroVar = document.querySelector('#cpfCadastro');
 
-const form = document.querySelector('#signup');
+const form = document.querySelector('#realizarCadastro');
 
 
-const checkUsername = () => {
+const checkNome = () => {
     
 
     let valid = false;
@@ -15,12 +15,12 @@ const checkUsername = () => {
     const min = 3,
         max = 25;
 
-    const username = usernameEl.value.trim();
+    const nomeCadastro = nomeCadastroVar.value.trim();
 
-    if (!isRequired(username)) {
-        showError(usernameEl, 'Nome não pode ficar em branco.');
+    if (!isRequired(nomeCadastro)) {
+        showError(nomeCadastroVar, 'Nome não pode ficar em branco.');
     } else {
-        showSuccess(usernameEl);
+        showSuccess(nomeCadastroVar);
         valid = true;
     }
     return valid;
@@ -37,16 +37,16 @@ const checkCPF = (e) => {
     const min = 11,
         max = 11;
 
-    const user = userEl.value.trim();
+    const user = cpfCadastroVar.value.trim();
 
-    if (!isRequired(user)) {
-        showError(userEl, 'Não pode ficar em branco.');
-    } else if (userEl.value.length != 14) { //São 14 caracteres por causa da máscara
-        showError(userEl, 'O CPF deve conter 11 caracteres.');
+    if (!isRequired(cpfCadastro)) {
+        showError(cpfCadastroVar, 'Não pode ficar em branco.');
+    } else if (cpfCadastroVar.value.length != 14) { //São 14 caracteres por causa da máscara
+        showError(cpfCadastroVar, 'O CPF deve conter 11 caracteres.');
     }
     else {
 
-        showSuccess(userEl);
+        showSuccess(cpfCadastroVar);
 
         valid = true;
     }
@@ -58,60 +58,60 @@ const checkCPF = (e) => {
 
 const checkEmail = () => {
     let valid = false;
-    const email = emailEl.value.trim();
-    if (!isRequired(email)) {
-        showError(emailEl, 'Email não pode ficar em branco.');
-    } else if (!isEmailValid(email)) {
-        showError(emailEl, 'Email inválido.')
+    const emailCadastro = emailCadastroVar.value.trim();
+    if (!isRequired(emailCadastro)) {
+        showError(emailCadastroVar, 'Email não pode ficar em branco.');
+    } else if (!isEmailValid(emailCadastro)) {
+        showError(emailCadastroVar, 'Email inválido.')
     } else {
-        showSuccess(emailEl);
+        showSuccess(emailCadastroVar);
         valid = true;
     }
     return valid;
 };
 
-const checkPassword = () => {
+const checkSenha = () => {
     let valid = false;
 
 
-    const password = passwordEl.value.trim();
+    const senhaCadastro = senhaCadastroVar.value.trim();
 
-    if (!isRequired(password)) {
-        showError(passwordEl, 'Escolha uma senha.');
+    if (!isRequired(senhaCadastro)) {
+        showError(senhaCadastroVar, 'Escolha uma senha.');
     } else {
-        showSuccess(passwordEl);
+        showSuccess(senhaCadastroVar);
         valid = true;
     }
 
     return valid;
 };
 
-const checkConfirmPassword = () => {
+const checkConfiSenha = () => {
     let valid = false;
     // check confirm password
-    const confirmPassword = confirmPasswordEl.value.trim();
-    const password = passwordEl.value.trim();
+    const confiSenhaCadastro = confiSenhaCadastroVar.value.trim();
+    const senhaCadastro = senhaCadastroVar.value.trim();
 
-    if (!isRequired(confirmPassword)) {
-        showError(confirmPasswordEl, 'Digite novamente a senha.');
-    } else if (password !== confirmPassword) {
-        showError(confirmPasswordEl, 'As senhas não coincidem. Tente novamente.');
+    if (!isRequired(confiSenhaCadastro)) {
+        showError(confiSenhaCadastroVar, 'Digite novamente a senha.');
+    } else if (senhaCadastro !== confiSenhaCadastro) {
+        showError(confiSenhaCadastroVar, 'As senhas não coincidem. Tente novamente.');
     } else {
-        showSuccess(confirmPasswordEl);
+        showSuccess(confiSenhaCadastroVar);
         valid = true;
     }
 
     return valid;
 };
 
-const isEmailValid = (email) => {
+const validEmail = (emailCadastro) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+    return re.test(emailCadastro);
 };
 
-const isPasswordSecure = (password) => {
+const validSenha = (senhaCadastro) => {
     const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
-    return re.test(password);
+    return re.test(senhaCadastro);
 };
 
 const isRequired = value => value === '' ? false : true;
@@ -149,19 +149,19 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     // validate fields
-    let isUsernameValid = checkUsername(),
-        isEmailValid = checkEmail(),
-        isPasswordValid = checkPassword(),
-        isConfirmPasswordValid = checkConfirmPassword(),
-    isUserValid = checkCPF();
+    let validNome = checkNome(),
+        validEmail = checkEmail(),
+        validSenha = checkSenha(),
+        validConfiSenha = checkConfiSenha(),
+        validCpf = checkCPF();
 
-    let isFormValid = isUsernameValid &&
-        isEmailValid &&
-        isPasswordValid &&
-        isConfirmPasswordValid && isUserValid;
+    let validFormulario = validNome &&
+        validEmail &&
+        validSenha &&
+        validConfiSenha && validCpf;
 
     // submit to the server if the form is valid
-    if (isFormValid) {
+    if (validFormulario) {
 
     }
 });
@@ -183,77 +183,77 @@ const debounce = (fn, delay = 500) => {
 
 form.addEventListener('input', debounce(function (e) {
     switch (e.target.id) {
-        case 'username':
-            checkUsername();
+        case 'nomeCadastro':
+            checkNome();
             break;
-        case 'email':
+        case 'emailCadastro':
             checkEmail();
             break;
-        case 'password':
-            checkPassword();
+        case 'senhaCadastro':
+            checkSenha();
             break;
-        case 'confirm-password':
-            checkConfirmPassword();
+        case 'confiSenhaCadastro':
+            checkConfiSenha();
             break;
-        case 'user':
+        case 'cpfCadastro':
             checkCPF(e);
     }
 }));
 
-usernameEl.onblur = () => {
-    const username = usernameEl.value.trim();
-    if (!isRequired(username)) {
-        usernameEl.style.border = 'thin red solid';
+nomeCadastroVar.onblur = () => {
+    const nomeCadastro = nomeCadastroVar.value.trim();
+    if (!isRequired(nomeCadastro)) {
+        nomeCadastroVar.style.border = 'thin red solid';
     }
     else {
-        usernameEl.style.border = 'thin #00D668 solid';
+        nomeCadastroVar.style.border = 'thin #00D668 solid';
     }
 }
 
-userEl.onblur = () => {
-    const user = userEl.value.trim();
-    if (!isRequired(user)) {
-        userEl.style.border = 'thin red solid';
+cpfCadastroVar.onblur = () => {
+    const cpfCadastro = cpfCadastroVar.value.trim();
+    if (!isRequired(cpfCadastro)) {
+        cpfCadastroVar.style.border = 'thin red solid';
     }
     else {
-        userEl.style.border = 'thin #00D668 solid';
+        cpfCadastroVar.style.border = 'thin #00D668 solid';
     }
 }
 
-emailEl.onblur = () => {
-    const email = emailEl.value.trim();
-    if (!isRequired(email)) {
-        emailEl.style.border = 'thin red solid';
+emailCadastroVar.onblur = () => {
+    const emailCadastro = emailCadastroVar.value.trim();
+    if (!isRequired(emailCadastro)) {
+        emailCadastroVar.style.border = 'thin red solid';
     }
     else {
-        emailEl.style.border = 'thin #00D668 solid';
+        emailCadastroVar.style.border = 'thin #00D668 solid';
     }
 }
 
-passwordEl.onblur = () => {
-    const password = passwordEl.value.trim();
-    if (!isRequired(password)) {
-        passwordEl.style.border = 'thin red solid';
+senhaCadastroVar.onblur = () => {
+    const senhaCadastro = senhaCadastroVar.value.trim();
+    if (!isRequired(senhaCadastro)) {
+        senhaCadastroVar.style.border = 'thin red solid';
     }
     else {
-        passwordEl.style.border = 'thin #00D668 solid';
+        senhaCadastroVar.style.border = 'thin #00D668 solid';
     }
 }
 
-confirmPasswordEl.onblur = () => {
-    const confirmPassword = confirmPasswordEl.value.trim();
-    if (!isRequired(confirmPassword)) {
-        confirmPasswordEl.style.border = 'thin red solid';
+confiSenhaCadastroVar.onblur = () => {
+    const confiSenhaCadastro = confiSenhaCadastroVar.value.trim();
+    if (!isRequired(confiSenhaCadastro)) {
+        confiSenhaCadastroVar.style.border = 'thin red solid';
     }
     else {
-        confirmPasswordEl.style.border = 'thin #00D668 solid';
+        confiSenhaCadastroVar.style.border = 'thin #00D668 solid';
     }
 }
 
 
-userEl.keypress = (e) => mascaraTelefone(e.target.value)
+cpfCadastroVar.keypress = (e) => mascaraTelefone(e.target.value)
 
-userEl.change = (e) => mascaraTelefone(e.target.value)
+cpfCadastroVar.change = (e) => mascaraTelefone(e.target.value)
 
 const mascaraTelefone = (e) => {
 
@@ -261,3 +261,31 @@ const mascaraTelefone = (e) => {
     e.target.value = e.target.value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")
     //tel.value = valor // Insere o(s) valor(es) no campo
 }
+
+/////////////////////////////////////////////////////////////////////
+
+
+function cadastraUsuario() {
+    const $nome = document.getElementById('nomeCadastro');
+    const $cpf = document.getElementById('cpfCadastro');
+    const $email = document.getElementById('emailCadastro');
+    const $senha = document.getElementById('senhaCadastro');
+    const $cadastrarBtn = document.getElementById('cadastrar');
+
+    var dados = JSON.parse(localStorage.getItem('dadosCadastro'))
+    
+    if (dados == null) {
+        localStorage.setItem("dadosCadastro", "[]");
+        dados = [];
+    }
+
+    var auxRegistro = {
+        nome: $nome.value,
+        cpf: $cpf.value,
+        email: $email.value,
+        senha: $senha.value
+    }
+
+    dados.push(auxRegistro);
+    localStorage.setItem("dadosCadastro", JSON.stringify(dados));
+};
