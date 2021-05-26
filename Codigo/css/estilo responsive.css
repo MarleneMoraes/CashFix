@@ -3,7 +3,6 @@
   position: fixed;
   display: flex;
   justify-content: space-between;
-  
 }
 
 .cadastre,
@@ -44,17 +43,17 @@ h2 {
 }
 
 a {
-    color: var(--fundo);
+  color: var(--fundo);
 }
 
 a:hover {
-    color: var(--branco);
+  color: var(--branco);
 }
 
 section {
   width: 100%;
   height: 100vh;
-  padding: 10%;
+  padding: 5%;
   color: var(--branco);
 }
 
@@ -127,9 +126,9 @@ section {
 }
 
 .cartao-compromisso {
-  width: 270px;
-  height: 290px;
-  border-radius: 30px;
+  width: 16.25rem;
+  height: 17.5rem;
+  border-radius: 1.875rem;
   padding: 1.5em;
   margin: 5rem auto;
 }
@@ -166,63 +165,132 @@ section {
   padding: 5%;
 }
 
-.na-palma-da-sua-mao-imagem img{
-    width:90%;
-    position: relative;
-    margin-top: -350%;
+.na-palma-da-sua-mao hr{
+  float: right;
 }
 
-.na-palma-da-sua-mao-texto{
-    background-color: var(--principal);
-    margin: 20% auto;
-    padding: 15px;
-    width: 90%;
-    height: 80%;
+.na-palma-da-sua-mao-imagem img {
+  position: absolute;
+  margin: 110% auto 0 auto;
+  width: 80%;
 }
 
-.na-palma-da-sua-mao-texto h1{
-    font-size: 50px;
-    text-align: end;
-}
-.na-palma-da-sua-mao-texto p{
-    font-size: 15px;
+.na-palma-da-sua-mao-texto {
+  background-color: var(--principal);
+  margin: 20% auto;
+  padding: 15px;
+  width: 90%;
+  height: 80%;
 }
 
-.na-palma-da-sua-mao-texto img{
-    width: 150px;
-    display: block;
-    margin: 15px auto;
+.na-palma-da-sua-mao-texto h1 {
+  font-size: 50px;
+  text-align: end;
+}
+.na-palma-da-sua-mao-texto p {
+  font-size: 15px;
+}
+
+.na-palma-da-sua-mao-texto img {
+  width: 150px;
+  display: block;
+  margin: 15px auto;
+}
+
+@media (max-width:400px){
+  .na-palma-da-sua-mao-imagem img {
+    margin: 140% auto 0 auto;
+    width: 70%;
+  }
 }
 
 @media (min-width: 600px) {
-    .na-palma-da-sua-mao-imagem img{
-        width:80%;
-        position: relative;
-    }
-    .na-palma-da-sua-mao-texto img{
-        width: 200px;
-        display: inline;
-        align-items: center;
-        margin: 10px auto;
-    }
-    .na-palma-da-sua-mao-texto h1{
-        font-size: 80px;
-    }
-    .na-palma-da-sua-mao-texto p{
-        font-size: 23px;
-    }
+  .na-palma-da-sua-mao-imagem img {
+    width: 65%;
+    margin: 68% auto 0;
+  }
+
+  .botoes-app {
+    margin: 10px auto;
+  }
+
+  .botoes-app img {
+    width: 200px;
+    display: inline-flex;
+    justify-content: space-evenly;
     
   }
 
+  .na-palma-da-sua-mao-texto {
+    background-color: var(--principal);
+    margin: 10% 10% 15% 10%;
+    padding: 15px;
+    width: 90%;
+    height: 80%;
+  }
+  
+  .na-palma-da-sua-mao-texto h1 {
+    font-size: 80px;
+  }
+  .na-palma-da-sua-mao-texto p {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .na-palma-da-sua-mao{
+    display: flex;
+  }
+  .na-palma-da-sua-mao-imagem img {
+    width: 90%;
+    position: absolute;
+    margin: 0 auto;
+  }
+  
+  .na-palma-da-sua-mao-texto {
+    background-color: transparent;
+    position: relative;
+    margin: 0 0 0 55%;
+    padding: 30px;
+    width: 50%;
+    height: 0;
+    text-align: end;
+  }
+}
+
+@media (min-width: 1700px) {
+  .na-palma-da-sua-mao-texto {
+    padding: 40px;
+  }
+  .na-palma-da-sua-mao-texto h1 {
+    font-size: 100px;
+  }
+  .na-palma-da-sua-mao-texto p {
+    font-size: 38px;
+  }
+}
+
 .rodape {
-    padding: 40px 20px 20px;
+  padding: 40px 20px 20px;
 }
 
 .rodape img {
-    width: 150px;
-    padding: 10px;
+  width: 150px;
+  padding: 10px;
 }
- 
-.rodape h3{
-    padding: 10px;
+
+.rodape h3 {
+  padding: 10px;
+}
+
+@media (min-width: 600px) {
+  .rodape > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .bloco-media-social {
+    padding: 5px;
+  }
 }
