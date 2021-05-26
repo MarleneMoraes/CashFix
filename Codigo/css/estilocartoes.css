@@ -1,0 +1,67 @@
+body {
+    background-color: var(--claro);
+    margin: 0 auto;
+  }
+  
+  .cabecalho {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  main {
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px auto;
+  }
+  
+  @media (min-width: 1000px) {
+    main {
+      width: 60%;
+    }
+      }
+
+  .abas {display: flex;
+      text-decoration: none;
+      list-style-type: none;}
+
+  .titulo{
+      color:var(--principal);
+      height: 45px;
+      padding: 10px 50px;
+      text-align: justify;
+  }
+
+  .card{
+    background-color: var(--branco);
+    margin: 1px auto;
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+    padding: 10px 10px 10px;
+    width: auto;
+    height: auto;
+}
+
+.card-informativo {
+  background-color: var(--preto);
+  margin: 10px auto;
+  border: 1px solid var(--cinza);
+  border-radius: 10px;
+  padding: 10px 10px 10px;
+  width: auto;
+  height: auto;
+  display: flex;}
+
+  .cartoes{
+      color:var(--principal);
+      text-align: center;
+  }
+  .cardobs {
+    background-color: var(--branco);
+    margin: px auto;
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+    padding: 10px 10px 10px;
+    width: auto;
+    height: auto;
+  }

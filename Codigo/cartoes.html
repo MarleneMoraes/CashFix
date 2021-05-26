@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/estilocartoes.css">
+    <link rel="shortcut icon" href="imagens/logotipo-colorida.png" type="image/x-icon">
+    <title>Cartõe | CashFix</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="container-fluid row cabecalho ">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <i class="fas fa-bars fa-2x"></i>
+            <a href="index.html">
+                <img src="imagens/logo-branca-colorida.png" alt="logo CashFix" title="CashFix">
+            </a>
+        </div>
+
+            <button class="botao botao-verde sair" type="button"><a href="index.html">Sair</a></button>
+    </header>
+
+        <!-- PRINCIPAL -->
+<main>
+    <div>
+        <ul class="abas">
+            <li><a href="pagina-interna.html">Início</a> /</li>
+            <li><a href="#">Cartões</a></li>
+        </ul>
+    </div>
+
+    <div class="titulo">
+            <h2>Cartões</h2>
+    </div>
+
+    <!-- ABAS -->
+    <div class="card">
+        <ul class= "abas">
+            <li>cartões</li>
+            <li>cadastrar despesas manualmente</li>
+        </ul>
+
+        <div class="card-informativo">
+            <div>
+                <h3 class="cartoes">Nubank</h3>
+                <div style="margin: 5px; border: 2px solid blueviolet;" class="card">
+                <p class="card">R$2.356,75</p>
+                <h6>15/06/2021</h6>
+                    </div>
+            </div>
+            <div>
+                <h3 style="border-color: red;" class="cartoes">Inter</h3>
+                <div style="margin: 5px; border: 2px solid orangered;" class="card">
+                <p class="card">R$1.910,20</p>
+                <h6>12/06/2021</h6>
+                    </div>
+            </div>
+            <div>
+                <h3 style="border-color: red;" class="cartoes">Digio</h3>
+                <div style="margin: 5px; border: 2px solid royalblue;" class="card">
+                <p class="card">R$5.875,88</p>
+                <h6>20/06/2021</h6>
+                    </div>
+            </div>
+            <button class="botao botao-verde detalhes">+ Cadastrar Cartão</button>
+        </div>
+        <small>*Caso queira editar o valor total da fatura, basta apenas clicar no valor diretamente!</small>
+        <div style=" background-color: black; color:white" class="card">
+                    <H1>GRÁFICO</H1>
+                    <H2>Valor</H2>
+                    <h2>mês</h2>
+                    <h2>ano</h2>
+                    <p>Um gráfico apresentando o históricos das faturas do cartão</p>
+
+        </div>
+
+            <div class="card">
+                <h3>Cadastre seu cartão</h3>
+                <input class="form cartão" type="text" name="cartao" id="cartao" placeholder="Nome do Cartão" autocomplete="off">
+                <input class="form cartão" type="number" name="cartao" id="cartao" placeholder="Limite" autocomplete="off">
+                <input class="form cartão" type="date" name="cartao" id="cartao" placeholder="Data de Vencimento" autocomplete="off"> <br>
+                <label for="">Cor</label>
+                <input class="form cartão" type="color" name="cartao" id="cartao"> <br>
+                <button class="botao botao-verde detalhes">+ Cadastrar cartão</button>
+            </div>
+
+                 <div class="card">
+                     <h3>Valor total da fatura</h3>
+                     <label for="">Selecione o cartão:</label>
+                    <input class="form cartão" type="text" name="cartao" id="cartao" placeholder="Selecionar Cartão" autocomplete="off">
+                    <input class="form cartão" type="number" name="cartao" id="cartao" placeholder="Valor total da fatura" autocomplete="off"> <br>
+                    <button class="botao botao-verde detalhes">Adicionar Fatura</button>
+                 </div>
+
+                 <div class="card">
+                    <h3>Adicionar despesas ao seu cartão</h3>
+                    <label for="">Selecione o cartão:</label>
+                    <input class="form cartão" type="text" name="cartao" id="cartao" placeholder="Selecionar Cartão" autocomplete="off">
+                   <input class="form cartão" type="text" name="cartao" id="cartao" placeholder="Descrição" autocomplete="off"> <br>
+                   <input class="form cartão" type="number" name="cartao" id="cartao" placeholder="Valor" autocomplete="off"> <br>
+                   <label for="">Débito parcelado? </label>
+                    <input class="form cartão" type="text" name="cartao" id="cartao" placeholder="Sim / Não" autocomplete="off"> <br>
+                   <button class="botao botao-verde detalhes">Adicionar Despesa</button>
+                </div>
+     </div>
+</main>
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <a href="index.html">
+            <img src="imagens/logo-branca.png" alt="logo CashFix" title="CashFix">
+        </a>
+        <hr>
+        <p>&copy; Copyright 2021 - Trabalho Interdisciplinar: Aplicações Web | <strong>ICEI PUC Minas</strong></p>
+    </footer>
+</html>
