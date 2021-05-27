@@ -14,23 +14,90 @@ body {
     justify-content: space-evenly;
     margin: 20px auto;
   }
+  h6 {
+    text-align: center;
+  }
   
+  li {text-decoration: none;
+      list-style-type: none;}
   @media (min-width: 1000px) {
     main {
       width: 60%;
     }
       }
 
-  .abas {display: flex;
-      text-decoration: none;
-      list-style-type: none;}
+  .menu {
+      display: flex;
+    }
+    
+    .textmenu{ color: var(--cinza);
+    font-size: 0.75rem;
+    margin: 1px;
+    color: #535151;}
+    
+    .textmenu:hover {
+        color: var(--principal);
+    }
+
+.card ul {
+    display: flex;
+}
+
+.card label {
+  padding: 10px;
+  color: var(--cinza);
+  font-size: 0.75rem;
+  margin: 1px;
+  color: #535151;
+  cursor: pointer;
+  text-align: center;
+}
+
+.card :checked ~ label {
+  color: var(--principal);
+  border-top: 5px solid #00A34F;
+}
+
+/* ABAS DE NAVEGAÇÃO*/
+.rd_tabs {
+  display: none;
+}
+
+.abas {    
+  background-color: var(--branco);
+  border: 1px solid var(--cinza);
+  border-radius: 10px;
+  margin: 20px 280px;
+  padding: 40px;
+  width: 790px;
+  height: auto;
+  left: 0;
+  display: none;
+  position: absolute;
+}
+
+.rd_tabs:checked ~ .abas {
+  display: block;
+}
+
+/* FIM ABAS DE NAVEGAÇÃO*/
 
   .titulo{
       color:var(--principal);
       height: 45px;
-      padding: 10px 50px;
-      text-align: justify;
+      padding: 10px 20px;
   }
+
+  .textsubmenu{
+    color: var(--cinza);
+    font-size: 0.75rem;
+    margin: 1px;
+    color: #535151;
+}
+    
+    .textsubmenu:hover {
+        color: var(--principal);
+    }
 
   .card{
     background-color: var(--branco);
@@ -43,25 +110,47 @@ body {
 }
 
 .card-informativo {
-  background-color: var(--preto);
-  margin: 10px auto;
-  border: 1px solid var(--cinza);
-  border-radius: 10px;
-  padding: 10px 10px 10px;
-  width: auto;
-  height: auto;
   display: flex;}
+
+  .botaoq {font-size: 0.8rem;
+  width: 6rem;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+  margin: 3px;}
 
   .cartoes{
       color:var(--principal);
       text-align: center;
   }
-  .cardobs {
-    background-color: var(--branco);
-    margin: px auto;
-    border: 1px solid var(--cinza);
-    border-radius: 10px;
-    padding: 10px 10px 10px;
-    width: auto;
-    height: auto;
+  
+  @media (min-width: 600px) {
+    .form {
+      width: 15rem;
+      height: 2rem;
+    }
   }
+
+  @media (min-width: 600px) {
+    .formcartao {
+      text-align: center;
+      margin: 1px 1px 5px;
+      border-radius: 0.1rem;
+      border-width: 0.013rem;
+      width: 5rem;
+
+    }
+  }
+
+  .formcor {
+    margin: 10px;
+    border-color: #00d668;
+  }
+
+  @media (min-width: 600px) {
+    .formcor {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
