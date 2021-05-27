@@ -1,5 +1,5 @@
-const emailEl = document.querySelector('#email');
-const passwordEl = document.querySelector('#password');
+const emailLogin = document.querySelector('#email');
+const senhaLogin = document.querySelector('#senha');
 
 const form = document.querySelector('#signup');
 
@@ -7,28 +7,28 @@ const form = document.querySelector('#signup');
 
 const checkEmail = () => {
     let valid = false;
-    const email = emailEl.value.trim();
+    const email = emailLogin.value.trim();
     if (!isRequired(email)) {
-        showError(emailEl, 'Email não pode ficar em branco.');
+        showError(emailLogin, 'Email não pode ficar em branco.');
     } else if (!isEmailValid(email)) {
-        showError(emailEl, 'Email inválido.')
+        showError(emailLogin, 'Email inválido.')
     } else {
-        showSuccess(emailEl);
+        showSuccess(emailLogin);
         valid = true;
     }
     return valid;
 };
 
-const checkPassword = () => {
+const checkSenha = () => {
     let valid = false;
 
 
-    const password = passwordEl.value.trim();
+    const senha = senhaLogin.value.trim();
 
-    if (!isRequired(password)) {
-        showError(passwordEl, 'Escolha uma senha.');
+    if (!isRequired(senha)) {
+        showError(senhaLogin, 'Escolha uma senha.');
     } else {
-        showSuccess(passwordEl);
+        showSuccess(senhaLogin);
         valid = true;
     }
 
@@ -36,12 +36,12 @@ const checkPassword = () => {
 };
 
 
-const isEmailValid = (email) => {
+const validEmail = (email) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 };
 
-const isPasswordSecure = (password) => {
+const validSenha = (password) => {
     const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
     return re.test(password);
 };
@@ -73,7 +73,7 @@ const showSuccess = (input) => {
     // hide the error message
     const error = formField.querySelector('small');
     error.textContent = '';
-}
+};
 
 
 form.addEventListener('submit', function (e) {
@@ -81,16 +81,15 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     // validate fields
-    let isEmailValid = checkEmail(),
-        isPasswordValid = checkPassword();
+    let validEmail = checkEmail(),
+        validSenha = checkSenha();
 
-    let isFormValid = isEmailValid &&
-        isPasswordValid;
+    let validFormulario = validEmail && validSenha;
 
     // submit to the server if the form is valid
-    if (isFormValid) {
+    if (validFormulario) {
 
-    }
+    };
 });
 
 
@@ -113,21 +112,21 @@ form.addEventListener('input', debounce(function (e) {
         case 'email':
             checkEmail();
             break;
-        case 'password':
-            checkPassword();
+        case 'senha':
+            checkSenha();
             break;
-    }
+    };
 }));
 
-emailEl.onblur = () => {
-    const email = emailEl.value.trim();
-    if (emailEl.value.length == 0) {
-        emailEl.style.border = 'thin red solid';
-    }
-}
+emailLogin.onblur = () => {
+    const email = emailLogin.value.trim();
+    if (emailLogin.value.length == 0) {
+        emailLogin.style.border = 'thin red solid';
+    };
+};
 
-passwordEl.onblur = () => {
-    if (passwordEl.value.length == 0) {
-        passwordEl.style.border = 'thin red solid';
+senhaLogin.onblur = () => {
+    if (senhaLogin.value.length == 0) {
+        senhaLogin.style.border = 'thin red solid';
     }
-}
+};
