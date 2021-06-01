@@ -1,156 +1,250 @@
-body {
-    background-color: var(--claro);
-    margin: 0 auto;
-  }
+
+body{
+     background-color: var(--claro);}
+
+.cabecalho {
+     display: flex;
+     justify-content: space-between;}
+
   
-  .cabecalho {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  main {
-    width: 90%;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 20px auto;
-  }
-  h6 {
-    text-align: center;
-  }
-  
-  li {text-decoration: none;
-      list-style-type: none;}
-  @media (min-width: 1000px) {
-    main {
-      width: 60%;
-    }
-      }
+li {
+     text-decoration: none;
+     list-style-type: none;}
 
-  .menu {
-      display: flex;
-    }
-    
-    .textmenu{ color: var(--cinza);
-    font-size: 0.75rem;
-    margin: 1px;
-    color: #535151;}
-    
-    .textmenu:hover {
-        color: var(--principal);
-    }
 
-.card ul {
-    display: flex;
+/*----ABAS: Inicio/Cartões----*/   
+.menu {
+     display: flex;
+     width: 800px;
+     height: 10px;
+     margin: 20px auto;
+     border-radius: 10px;
+     position: relative;}    
+         
+ .textmenu{
+     color: var(--cinza);
+     font-size: 0.75rem;
+     margin: 1px;
+     cursor: pointer;
+     color: #535151;}
+      
+ .textmenu:hover {
+     color: var(--principal);}
+
+/*----titulo----*/
+.titulo {
+     color: #00A34F;
+     display: flex;
+     width: 700px;
+     margin: 15px auto;
+     border-radius: 10px;
+     position: relative;
 }
 
-.card label {
-  padding: 10px;
-  color: var(--cinza);
-  font-size: 0.75rem;
-  margin: 1px;
-  color: #535151;
-  cursor: pointer;
-  text-align: center;
+/*----ABAS----*/
+.abas{
+     width: 803px ;
+     height: 1000px;
+     margin: 10px auto;
+     background-color: var(--branco);
+     border: 1px solid var(--cinza);
+     border-radius: 10px;
+     position: relative;
 }
 
-.card :checked ~ label {
-  color: var(--principal);
-  border-top: 5px solid #00A34F;
+.abas ul li{
+     float: left;
 }
 
-/* ABAS DE NAVEGAÇÃO*/
-.rd_tabs {
-  display: none;
+.abas .rd_tab { 
+     display:none;
 }
 
-.abas {    
-  background-color: var(--branco);
-  border: 1px solid var(--cinza);
-  border-radius: 10px;
-  margin: 20px 280px;
-  padding: 40px;
-  width: 790px;
-  height: auto;
-  left: 0;
-  display: none;
-  position: absolute;
+    /*----MARGEM(DESPESAS----*/
+.margin {
+     padding: 10px;
 }
-
-.rd_tabs:checked ~ .abas {
-  display: block;
+.margin h3 {
+     text-align: center;
+     margin: 50px 10px 10px;
 }
-
-/* FIM ABAS DE NAVEGAÇÃO*/
-
-  .titulo{
-      color:var(--principal);
-      height: 45px;
-      padding: 10px 20px;
-  }
-
-  .textsubmenu{
-    color: var(--cinza);
-    font-size: 0.75rem;
-    margin: 1px;
-    color: #535151;
+.textabas {
+     font-size: 0.75rem;
+     display: block;
+     margin: 10px;
+     padding: 1px;
+     cursor: pointer;
+     color: var(--preto);
+     font-family: var(--ff-titulo);
 }
     
-    .textsubmenu:hover {
-        color: var(--principal);
-    }
-
-  .card{
-    background-color: var(--branco);
-    margin: 1px auto;
-    border: 1px solid var(--cinza);
-    border-radius: 10px;
-    padding: 10px 10px 10px;
-    width: auto;
-    height: auto;
+.textabas:hover {
+     color: var(--principal);
 }
 
-.card-informativo {
-  display: flex;}
+/*----CONTEUDO:CARTÕES/DESPESAS----*/
+.tab-content{
+     border-top: solid 5px #00A34F;
+     background-color: var(--branco);
+     display: none;
+     position: absolute;
+     height: 927px;
+     width: 801px;
+     padding: 10px;
+     left: 0;}
 
-  .botaoq {font-size: 0.8rem;
-  width: 6rem;
-  height: 5rem;
-  align-items: center;
-  justify-content: center;
-  margin: 3px;}
+.rd_tab:checked ~ .tab-content{
+     display: block;
+}
 
-  .cartoes{
-      color:var(--principal);
-      text-align: center;
-  }
-  
-  @media (min-width: 600px) {
-    .form {
-      width: 15rem;
-      height: 2rem;
+.tab-content article{
+     padding: 5px;
+     color: #555;
+     }
+
+/*----CARTÃO-INFORMATIVO----*/
+.posictionCard {
+     display: flex;
+     
+}
+.cartoes {
+     border-radius: 10px;
+     margin: auto;
+     padding: 20px;
+    cursor: pointer;}
+.textnu{
+      color: var(--cinza-escuro);}
+        .nu{ 
+             border: 1px solid var(--principal);
+             border-radius: 7px;}
+                .nu:hover {
+                     border: 1px solid blueviolet;}
+.textin{
+     color: var(--cinza-escuro);}
+        .in{ 
+             border: 1px solid var(--principal);
+             border-radius: 7px;}
+                .in:hover {
+                     border: 1px solid orangered}
+.textdg{
+     color: var(--cinza-escuro);}
+        .dg{ 
+             border: 1px solid var(--principal);
+             border-radius: 7px;}
+                 .dg:hover {
+                     border: 1px solid navy;}
+.textnn{
+     color: var(--cinza-escuro);}
+          .nn{ 
+               border: 1px solid var(--principal);
+               border-radius: 7px;}
+                    .nn:hover {
+                         border: 1px solid cyan;}
+
+.cartoes h6 {
+     text-align: justify;
+     color: var(--cinza-escuro);
+     text-align: center;
+     margin: 5px;
     }
-  }
+.cartoes h4 {
+     margin: 0px;
+     text-align: center;}
 
-  @media (min-width: 600px) {
-    .formcartao {
-      text-align: center;
-      margin: 1px 1px 5px;
-      border-radius: 0.1rem;
+.cartoes input {
+      background-color: #c4f8dd;
+      display: none;
+      margin: 5px;
+      width: 5.5rem;
+      height: 1.5rem;
+      display: block;
+      font-family: var(--ff-texto);
+      padding: 0.3rem;
+      border-radius: 0.2rem;
       border-width: 0.013rem;
-      width: 5rem;
+      border-style: none;
+        }
 
-    }
-  }
+/*----button----*/
+.cartao {
+      border-radius:10px;
+      width: 3rem;
+      height: 3rem;
+      margin: auto;
+}
 
-  .formcor {
-    margin: 10px;
-    border-color: #00d668;
-  }
+.cartao2 {
+      margin: 10px 290px 10px;
+      width: 10rem;
+}
+.despesa {
+      margin: 30px 295px 10px;
+      width: 10rem;
+}
+.detalhes {
+      margin: 10px 295px 10px;
+      width: 10rem;
+}
+.salvar {
+      margin: 30px 295px 10px;
+      width: 10rem;
+}
+/*----CAMPOS DE TEXTO----*/
+h3 {
+      margin: 10px 10px 30px;
+}
+input{
+      display: block;
+      width: 15rem;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: #323232;
+      border: none;
+ }
 
-  @media (min-width: 600px) {
-    .formcor {
-      width: 2rem;
-      height: 2rem;
-    }
-  }
+ .labelForData {
+      margin: 30px 5px 0px;
+ 
+ }
+ input:focus, label:focus {
+      outline: none;
+ }
+ 
+ input {
+      border-bottom: 2px solid #323232;
+      padding: 5px;
+      font-size: .9rem;
+      margin-bottom: 25px;
 
+ }
+ input:focus {
+      border-color: #00a34f;
+ }
+/*----visualizar-Despesas----*/
+.visualizarDespesas {
+      margin: 50px 230px 10px;
+      width: 300px;
+      height: auto;
+      border: 1px solid var(--principal);
+      border-radius: 7px;
+      padding: 10px;
+      border-style: inset;
+}
+
+h4 {
+     margin: 10px;
+}
+.visualizarDespesas input {
+     background-color: #c4f8dd;
+     display: none;
+     margin: 5px;
+     width: 5.5rem;
+     height: 1.5rem;
+     display: block;
+     font-family: var(--ff-texto);
+     padding: 0.3rem;
+     border-radius: 0.2rem;
+     border-width: 0.013rem;
+     border-style: none;
+}
