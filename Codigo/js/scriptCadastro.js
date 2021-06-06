@@ -24,6 +24,8 @@ let btnSenha = document.querySelector('#verSenha')
 let btnConfirmar = document.querySelector('#verConfirmarSenha')
 let btnCadastrar = document.querySelector('#cadastrar')
 
+let mensagemErro = document.querySelector('#mensagemErro')
+let mensagemSucesso = document.querySelector('#mensagemSucesso')
 
 // Botão de visualizar senha
 btnSenha.addEventListener('click', ()=>{
@@ -103,9 +105,17 @@ confirmarSenha.addEventListener('keyup', () => {
 
 //Verificação das etapas
 btnCadastrar.addEventListener('click', ()=>{
-  if(validaNome && validaUsuario && validaSenha && validaConfirmarSenha){
-    alert('deu booom')
+  if(validaNome == true && validaUsuario == true && validaSenha == true && validaConfirmarSenha == true){
+    mensagemErro.setAttribute('style','display: none')
+    mensagemErro.innerHTML=''
+    mensagemSucesso.setAttribute('style','display: block')
+    mensagemSucesso.innerHTML='Cadastrando usuário...'
+    btnCadastrar.innerHTML='<a href="pagina-interna.html">Cadastre-se</a>'
   } else { 
-    alert('Verifique seus dados e tente novamente')
+    mensagemSucesso.setAttribute('style','display: none')
+    mensagemSucesso.innerHTML=''
+    mensagemErro.setAttribute('style','display: block')
+    mensagemErro.innerHTML='Preencha todos os campos corretamente'
+    btnCadastrar.innerHTML='<a href="@#">Cadastre-se</a>'
   }
 })
