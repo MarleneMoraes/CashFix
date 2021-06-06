@@ -114,8 +114,19 @@ btnCadastrar.addEventListener('click', (e) => {
     mensagemSucesso.innerHTML = 'Cadastrando usuário...'
     btnCadastrar.innerHTML = '<a href="pagina-interna.html">Cadastre-se</a>'
 
+    let listaUsuario = JSON.parse(localStorage.getItem('listaUsuario') || '[]')
+
+      listaUsuario.push(
+        {
+          nomeCadastrado: nome.value,
+          emailCadastrado: email.value,
+          senhaCadastrado: senha.value
+        }
+      )
+
+      localStorage.setItem('listaUsuario', JSON.stringify(listaUsuario))
    
-    const newNome = criarNovoUsuario();
+    /*const newNome = criarNovoUsuario();
     localStorage.setItem('nome', JSON.stringify(newNome));
     mostrarUsuarioCadastrado();
 
@@ -134,7 +145,7 @@ btnCadastrar.addEventListener('click', (e) => {
       const nome = localStorage.getItem('nome');
     
       alert(`${JSON.parse(nome).name} foi cadastrado(a) com sucesso!`);
-    }
+    }*/
   } else {
     mensagemSucesso.setAttribute('style', 'display: none')
     mensagemSucesso.innerHTML = ''
