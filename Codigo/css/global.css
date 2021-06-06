@@ -169,11 +169,25 @@ hr {
   position: relative;
 }
 
-.label i {
+i {
+  color: var(--cinza);
+}
+
+.fa-user, 
+.fa-list-alt,
+.fa-envelope, 
+.fa-lock {
   left: 2px;
   position: absolute;
-  color: var(--cinza);
-  padding: 20px;
+  padding: 18px;
+}
+
+.fa-eye-slash,
+.fa-eye {
+  position: absolute;
+  right:10px;
+  cursor: pointer;
+  padding: 18px;
 }
 
 .label input[type="text"] {

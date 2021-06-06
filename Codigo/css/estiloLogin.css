@@ -30,28 +30,29 @@ a {
     top: -15px;
 }
 
-.erro {
-    color: red;
-}
+/* Alinhamento dos botões de Mantenha Conectado e Esqueceu a Senha */
+.caixa-esqueceu{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content:space-between;
+    margin: 10px;
+  }
 
 /* Botões */
 
-.esqueceu-senha {
+.caixa {
+    color: var(--cinza-escuro);
+    font-size: 12px;
+}
+
+.esqueceu-senha a {
     color: var(--cinza);
-    display: block;
-    font-size: 0.75rem;
-    margin: 1px 0px 5px 155px;
-    color: #535151;
+    font-size: 12px;
 }
 
-.esqueceu-senha:hover {
+.esqueceu-senha a:hover {
     color: var(--principal);
-}
-
-@media (min-width:600px){
-    .esqueceu-senha {
-        margin: 1px 0px 5px 65%;
-    }
 }
 
 .entrar, .cadastrar {
@@ -69,15 +70,10 @@ a {
 }
 
 .entrar a {
-    color: white;
+    color: var(--branco);
 }
 
 .voltar{
     margin: 0px 0px 20px 15px;
 }
 
-.caixa {
-    color: #535151;
-    padding-top: 10px;
-    margin-left: 10px;
-}
