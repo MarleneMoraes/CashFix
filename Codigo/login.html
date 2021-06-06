@@ -22,15 +22,19 @@
     <main>
         <div class="login" id="entrar">
             <h1>Login</h1>
+
+            <div id='mensagemErro'></div>
+
             <form action="pagina-interna.html">
-                <label class="label" for="">
+
+                <label id="labelEmail" class="label" for="email">
                     <i class="fa fa-envelope icone1"></i>
-                    <input class="form usuario" type="text" name="usuario" id="email" placeholder="E-mail">
+                    <input id="email" class="form email" type="text" placeholder="E-mail">
                 </label>
 
-                <label class="label" for="senha">
+                <label id="labelSenha" class="label" for="senha">
                     <i class="fa fa-lock" aria-hidden="true"></i>
-                    <input class="form senha" type="password" name="password" id="senha" placeholder="Senha">
+                    <input id="senha" class="form senha" type="password"  placeholder="Senha">
                     <i class="far fa-eye-slash"></i>
                 </label>
                 <div class="caixa-esqueceu">
@@ -41,9 +45,9 @@
                         <a  href="#">Esqueceu sua senha?</a>
                     </div>
                 </div>
-                <button class="botao botao-verde entrar" type="submit" value="Entrar">
-                    <a href="pagina-interna.html"> Entrar
-                    </a></button>
+                <button id="entrar" class="botao botao-verde entrar">
+                    <a href=" ">Entrar</a>
+                </button>
                 <button class="botao botao-contorno cadastrar">
                     Ainda não possui uma conta? <a href="cadastro.html">Cadastre-se!</a>
                 </button>

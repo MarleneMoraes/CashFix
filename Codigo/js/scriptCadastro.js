@@ -105,27 +105,30 @@ confirmarSenha.addEventListener('keyup', () => {
 
 //Verificação das etapas
 btnCadastrar.addEventListener('click', (e) => {
-   e.preventDefault();
-   
-   if (validaNome == true && validaEmail == true && validaSenha == true && validaConfirmarSenha == true) {
+  e.preventDefault();
+
+  if (validaNome == true && validaEmail == true && validaSenha == true && validaConfirmarSenha == true) {
     mensagemErro.setAttribute('style', 'display: none')
     mensagemErro.innerHTML = ''
     mensagemSucesso.setAttribute('style', 'display: block')
     mensagemSucesso.innerHTML = 'Cadastrando usuário...'
-    btnCadastrar.innerHTML = '<a href="pagina-interna.html">Cadastre-se</a>'
 
     let listaUsuario = JSON.parse(localStorage.getItem('listaUsuario') || '[]')
 
-      listaUsuario.push(
-        {
-          nomeCadastrado: nome.value,
-          emailCadastrado: email.value,
-          senhaCadastrado: senha.value
-        }
-      )
+    listaUsuario.push(
+      {
+        nomeCadastrado: nome.value,
+        emailCadastrado: email.value,
+        senhaCadastrado: senha.value
+      }
+    )
 
-      localStorage.setItem('listaUsuario', JSON.stringify(listaUsuario))
-   
+    localStorage.setItem('listaUsuario', JSON.stringify(listaUsuario))
+
+    setTimeout(() => {
+      window.location.href = 'login.html'
+    }, 2000)
+
     /*const newNome = criarNovoUsuario();
     localStorage.setItem('nome', JSON.stringify(newNome));
     mostrarUsuarioCadastrado();
@@ -151,6 +154,5 @@ btnCadastrar.addEventListener('click', (e) => {
     mensagemSucesso.innerHTML = ''
     mensagemErro.setAttribute('style', 'display: block')
     mensagemErro.innerHTML = 'Preencha todos os campos corretamente'
-    btnCadastrar.innerHTML = '<a href="">Cadastre-se</a>'
   }
 })
