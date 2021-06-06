@@ -22,30 +22,34 @@
     <main>
         <div class="cadastro" id="realizarCadastro">
             <h1>Cadastro</h1>
+
+            <div id='mensagemErro'></div>
+            <div id='mensagemSucesso'></div>
+
             <form action="pagina-interna.html">
-                <label class="label" for="">
+                <label id="labelNome" class="label" for="nome">
                     <i class="fa fa-user"></i>
-                    <input class="form nome" type="text" name="nome" placeholder="Nome" id="nomeCadastro">
+                    <input id="nome" class="form nome" type="text" placeholder="Nome">
                 </label>
-                <label class="label" for="">
+                <label id="labelCpf" class="label" for="cpfCnpj">
                     <i class="fa fa-list-alt"></i>
-                    <input class="form cpf" maxlength="14" type="text" name="cpf" placeholder="CNPJ / CPF" id="cpfCadastro"> 
+                    <input id="cpfCnpj" class="form cpf" type="text" placeholder="CPF / CNPJ" > 
                 </label>
-                <label class="label" for="">
+                <label id="labelEmail" class="label" for="email">
                     <i class="fa fa-envelope"></i>
-                    <input class="form usuario" type="text" name="usuario" placeholder="Email" id="emailCadastro"> 
+                    <input id="email" class="form usuario" type="text" placeholder="Email" > 
                 </label>
-                <label class="label" for="senhaCadastro">
+                <label id="labelSenha" class="label" for="senha">
                     <i class="fa fa-lock"></i>
-                    <input class="form senha" type="password" name="password" placeholder="Senha" id="senhaCadastro">
+                    <input id="senha" class="form senha" type="password" placeholder="Senha" >
                     <i id="verSenha" class="fa fa-eye-slash"></i>
                 </label>
-                <label class="label" for="confiSenhaCadastro">
+                <label id="labelConfirmarSenha" class="label" for="confirmarSenha">
                     <i class="fa fa-lock"></i>
-                    <input class="form confirma-senha" type="password" name="confirm-password" placeholder="Confirmar Senha" id="confiSenhaCadastro"> 
+                    <input id="confirmarSenha" class="form confirmar-senha" type="password" placeholder="Confirmar Senha" > 
                     <i id="verConfirmarSenha" class="fa fa-eye-slash"></i>
                 </label>
-                <button class="botao botao-verde cadastrar" type="button" value="cadastrar">
+                <button id="Cadastrar" class="botao botao-verde cadastrar">
                     <a href="pagina-interna.html"> Cadastrar</a>
                 </button>
                 <button class="botao botao-contorno entrar">

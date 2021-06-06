@@ -13,6 +13,28 @@ h1{
     width: 320px;
 }
 
+/* Mensagens de Validação */
+#mensagemErro{
+    text-align:center;
+    color:#ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display:none;
+  }
+  
+  #mensagemSucesso{
+    text-align:center;
+    color: #00bb00;
+    background-color: #bbffbe;
+    padding: 10px;
+    border-radius: 4px;
+    display:none;
+  }
+
+  
+/* Responsividade */
+
 @media (min-width:600px){
     .cadastro {
         width: 450px;

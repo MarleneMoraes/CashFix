@@ -86,7 +86,7 @@ hr {
   padding: 0.375rem 0.75rem;
   border-radius: 0.25rem;
   border-width: 0.013rem;
-  border-color: #00d668;
+  border-color: var(--efeito-active);
 }
 
 @media (min-width: 600px) {
