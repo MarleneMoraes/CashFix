@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/estilocartoes.css">
+    <link rel="shortcut icon" href="imagens/logotipo-colorida.png" type="image/x-icon">
+    <title>Cartões | CashFix</title>
+</head>
+
+<body>
+        <!-- Cabeçalho -->
+        <header class="container-fluid row cabecalho ">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <i class="fas fa-bars fa-2x"></i>
+                <a href="index.html">
+                    <img src="imagens/logo-branca-colorida.png" alt="logo CashFix" title="CashFix">
+                </a>
+            </div>
+                <button class="botao botao-verde sair" type="button"><a href="index.html">Sair</a></button>
+        </header>
+        
+    <main>
+        <div>
+            <ul class="menu">
+                <a href="pagina-interna.html">
+                    <li class="textmenu">Início</li>
+                </a>/
+                <li class="textmenu"> Cartões</li>
+            </ul>
+        </div>
+    
+        <div class="titulo">
+                <h2>Cartões</h2>
+        </div>
+
+        <!--ABAS-->
+    <nav class="abas">  
+        <ul>
+            <li>
+                <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
+                <label for="tab1" class="textabas"><h5>Cartões</h5></label>
+                <div class="tab-content">
+                    <article class="posictionCard">
+                        <div class="cartoes textnu">
+                                <h4>Nubank</h4>
+                            <div class="nu">
+                                <input type="text" value="R$2.354,90">
+                                <h6>15/06/21</h6>
+                            </div>
+                        </div>
+                        <div class="cartoes textin">
+                                <h4>Inter</h4>
+                             <div class="in">
+                                <input type="text" value="R$2.354,90">
+                                <h6>15/06/21</h6>
+                            </div>
+                        </div>
+                        <div class="cartoes textdg">
+                                <h4>Digio</h4>
+                            <div class="dg">
+                                <input type="text" value="R$2.354,90">
+                                <h6>15/06/21</h6>
+                            </div>
+                        </div>
+                        <div class="cartoes textnn">
+                                <h4>Neon</h4>
+                            <div class="nn">
+                                <input type="text" value="R$2.354,90">
+                                <h6>15/06/21</h6>
+                            </div>
+                        </div>
+                         <button class="botao botao-verde cartao"><a href="#">+</a></button>
+                    </article>
+
+                    <!--ADICIONAR CARTÕES-->
+                    <div class="margin">
+                        <h3>Cadastrar Cartão</h3>
+                        <div class="half-box spacing">
+                            <div class="labelForData">
+                            <label>Nome</label>
+                            </div>
+                            <input type="name" name="name" id="name" placeholder="Nome do cartão" autocomplete="off">
+                        </div>
+                        <div class="half-box spacing">
+                            <div class="labelForData"><label>Limite</label></div>
+                            <input type="number" name="name" id="name" placeholder="Limite do cartão" autocomplete="off">
+                        </div>
+                        <div class="half-box spacing">
+                            <div class="labelForData"><label>Data de Vencimento</label></div>
+                            <input type="name" name="name" id="name" placeholder="Data de vencimento " autocomplete="off">
+                        </div>
+                        <button class="botao botao-verde cartao2"> + Cartão</button>
+                    </div>
+                    <hr>
+                </div>
+            </li>
+
+            <!--SEGUNDA ABA-->
+            <li>
+                <input type="radio" name="tabs" class="rd_tab" id="tab2">
+                <label for="tab2" class="textabas"><h5>Despesas</h5></label>
+                <div class="tab-content">
+                    <!--ADICIONAR DESPESAS-->
+                    <div class="margin">
+                        <h3>Adicionar Despesas</h3>
+                        <div class="half-box spacing">
+                            <div class="labelForData"><label>Despesa</label></div>
+                            <input type="text" name="name" id="name" placeholder="Descrição do débito" autocomplete="off">
+                        </div>
+                        <div class="half-box spacing">
+                            <div class="labelForData"><label>Valor</label></div>
+                            <input type="number" name="name" id="name" placeholder="Digite o valor" autocomplete="off">
+                        </div>
+                        <div class="half-box spacing">
+                            <div class="labelForData"><label>Observação</label></div>
+                            <input type="name" name="name" id="name" placeholder="Adicione um comentário" autocomplete="off">
+                        </div>
+                        <button class="botao botao-verde despesa"> + Despesa</button>
+                    </div>
+                    <!--VISUALIZAR DESPESAS-->
+                    <div class="margin">
+                        <h3>Visualizar despesas do cartão</h3>
+                        <label for="">Selecione: </label>
+                        <select id="cartao">
+                            <option value="NU">Cartões</option>
+                            <option value="NU">Nubank</option>
+                            <option value="IN">Inter</option>
+                            <option value="DG">Digio</option>
+                            <option value="DG">Neon</option>
+
+                        </select>
+                        <div class="visualizarDespesas">
+                            <h4>Nubank</h4>
+                            <div class="vd">
+                                <input type="text" value="R$588,72">
+                                <input type="text" value="R$588,72">
+                                <input type="text" value="R$588,72">
+                                <input type="text" value="R$588,72" >
+                            </div>
+                            <h5>Total:</h5>
+                            <input type="text" value="R$2.354,88" >
+                        </div>
+                        <button class="botao botao-verde salvar">Salvar</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+</nav>
+</main>
+<footer class="rodape">
+    <a href="index.html">
+        <img src="imagens/logo-branca.png" alt="logo CashFix" title="CashFix">
+    </a>
+    <hr>
+    <p>&copy; Copyright 2021 - Trabalho Interdisciplinar: Aplicações Web | <strong>ICEI PUC Minas</strong></p>
+</footer>
+</body>
+</html>

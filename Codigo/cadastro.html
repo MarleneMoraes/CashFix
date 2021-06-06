@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/estiloCadastro.css">
+    <link rel="shortcut icon" href="imagens/logotipo-colorida.png" type="image/x-icon">
+    <title>Cadastro | CashFix</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="row container-fluid cabecalho">
+        <a href="index.html"><img class="logo" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
+                title="CashFix"></a>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="cadastro" id="realizarCadastro">
+            <h1>Cadastro</h1>
+            <form action="pagina-interna.html">
+                <label class="label" for="">
+                    <i class="fa fa-user"></i>
+                    <input class="form nome" type="text" name="nome" placeholder="Nome" id="nomeCadastro">
+                <small class="erro"></small> </br>
+                </label>
+                <label class="label" for="">
+                    <i class="fa fa-list-alt"></i>
+                    <input class="form cpf" maxlength="14" type="text" name="cpf" placeholder="CNPJ / CPF" id="cpfCadastro"> 
+                <small class="erro"></small></br>
+                </label>
+                <label class="label" for="">
+                    <i class="fa fa-envelope"></i>
+                    <input class="form usuario" type="text" name="usuario" placeholder="Email" id="emailCadastro"> 
+                <small class="erro"></small></br>
+                </label>
+                <label class="label" for="">
+                    <i class="fa fa-lock"></i>
+                    <input class="form senha" type="password" name="password" placeholder="Senha" id="senhaCadastro">
+                <small class="erro"></small> </br>
+                </label>
+                <label class="label" for="">
+                    <i class="fa fa-lock"></i>
+                    <input class="form confirma-senha" type="password" name="confirm-password" placeholder="Confirmar Senha" id="confiSenhaCadastro"> 
+                <small class="erro"></small></br>
+                </label>
+                <button class="botao botao-verde cadastrar" onclick="cadastraUsuario()" type="button" value="cadastrar">
+                    <a href="pagina-interna.html"> Cadastrar</a>
+                </button>
+                <button class="botao botao-contorno entrar">
+                    Já possui uma conta? <a href="login.html">Login</a>
+                </button>
+            </form>
+        </div>
+
+        <!-- Botão de Voltar -->
+        <button class="botao botao-contorno voltar">
+            <a href="index.html">Voltar</a>
+        </button>
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <a href="index.html">
+            <img src="imagens/logo-branca.png" alt="logo CashFix" title="CashFix">
+        </a>
+        <hr>
+        <p>&copy; Copyright 2021 - Trabalho Interdisciplinar: Aplicações Web | <strong>ICEI PUC Minas</strong></p>
+    </footer>
+
+    <script src="./js/scriptCadastro.js"></script>
+    <script src="https://kit.fontawesome.com/83bbcb24d1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/estiloLogin.css">
+    <link rel="shortcut icon" href="imagens/logotipo-colorida.png" type="image/x-icon">
+    <title>Login | CashFix</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <a href="index.html"><img class="logo" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
+                title="CashFix"></a>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="login" id="entrar">
+            <h1>Login</h1>
+            <form action="pagina-interna.html">
+                <label class="label" for="">
+                    <i class="fa fa-envelope icone1"></i>
+                    <input class="form usuario" type="text" name="usuario" id="email" placeholder="E-mail">
+                </label>
+
+                <label class="label" for="">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input class="form senha" type="password" name="password" id="senha" placeholder="Senha">
+                    <i class="far fa-eye-slash"></i>
+                </label>
+                <div class="caixa-esqueceu">
+                    <div class="caixa">
+                        <input type="checkbox"> <label for="text">Manter-se conectado?</label>
+                    </div>
+                    <div class="esqueceu-senha">
+                        <a  href="#">Esqueceu sua senha?</a>
+                    </div>
+                </div>
+                <button class="botao botao-verde entrar" type="submit" value="Entrar">
+                    <a href="pagina-interna.html"> Entrar
+                    </a></button>
+                <button class="botao botao-contorno cadastrar">
+                    Ainda não possui uma conta? <a href="cadastro.html">Cadastre-se!</a>
+                </button>
+            </form>
+        </div>
+
+        <!-- Botão de Voltar -->
+        <button class="botao botao-contorno voltar">
+            <a href="index.html">Voltar</a>
+        </button>
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <a href="index.html">
+            <img src="imagens/logo-branca.png" alt="logo CashFix" title="CashFix">
+        </a>
+        <hr>
+        <p>&copy; Copyright 2021 - Trabalho Interdisciplinar: Aplicações Web | <strong>ICEI PUC Minas</strong></p>
+    </footer>
+
+    <script src="js/scriptLogin.js"></script>
+    <script src="https://kit.fontawesome.com/83bbcb24d1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
