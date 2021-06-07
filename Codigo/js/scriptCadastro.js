@@ -64,7 +64,7 @@ nome.addEventListener('keyup', () => {
 })
 
 cpfCnpj.addEventListener('keyup', () => {
-  if (cpfCnpj.value.length != 11 || cpfCnpj.value.length != 14) {
+  if (cpfCnpj.value.length != 11 && cpfCnpj.value.length != 14) {
     cpfCnpj.setAttribute('style', 'border-color: red')
     validaCpf = false
   } else {
