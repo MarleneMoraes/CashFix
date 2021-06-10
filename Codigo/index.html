@@ -14,7 +14,40 @@
 <body>
     <header class="cabecalho">
         <div class="menu-logo">
-            <i class="fas fa-bars fa-2x"></i>
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars fa-2x" id="botao-menu"></i>
+                <i class="fas fa-times" id="sair"></i>
+            </label>
+            <nav class="sidebar">
+                <ul>
+                    <li class="nav-link">
+                        <a href="#1" class="active">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#2" class="active">
+                            <i class="fas fa-users"></i>
+                            <span>Quem Somos</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#3" class="active">
+                            <i class="fas fa-handshake"></i>
+                            <span>Nosso Compromisso</span>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="nav-link">
+                            <a href="#4" class="active">
+                                <i class="fas fa-mobile"></i>
+                                <span>Na palma da sua mão</span>
+                            </a>
+                    </li>
+                </ul>
+            </nav>
 
             <a href="index.html"><img src="imagens/logo-branca-colorida.png" alt="logo CashFix" title="CashFix"></a>
         </div>
@@ -25,13 +58,13 @@
             <button type="button" class="botao botao-verde login"><a href="login.html">Login</a></button>
         </div>
     </header>
-    <main>
+    <main id="1">
         <div class="texto-inicial">
             <h1>CashFix</h1>
             <p>Controle e ajuste financeiro do seu jeito.</p>
         </div>
     </main>
-    <section class="quem-somos">
+    <section id="2" class="quem-somos">
         <div class="quem-somos-texto">
             <h2><strong>TRABALHO INTERDISCIPLINAR: APLICAÇÕES WEB</strong></h2>
             <hr class="sessao-hr">
@@ -47,7 +80,7 @@
             <img src="imagens/quem-somos.png" alt="Quem somos">
         </div>
     </section>
-    <section class="nosso-compromisso">
+    <section id="3" class="nosso-compromisso">
         <h1>Nosso Compromisso</h1>
         <hr class="sessao-hr">
         <div class="cartao-branco cartao-compromisso planejamento">
@@ -84,14 +117,14 @@
             </div>
         </div>
     </section>
-    <section class="na-palma-da-sua-mao">
-       
+    <section id="4" class="na-palma-da-sua-mao">
+
         <div class="na-palma-da-sua-mao-imagem">
             <picture>
                 <source media="(min-width:1000px)" class="desktop" srcset="imagens/na-sua-mao2.png">
                 <img src="imagens/Rectangle 346.png" alt="Mão segurando um smartphone">
             </picture>
-        </div> 
+        </div>
         <div class="na-palma-da-sua-mao-texto">
             <h1>Na palma da sua mão</h1>
             <p>Seguindo o caminho da tecnologia atual, disponibilizamos gratuitamente nosso aplicativo na principais
