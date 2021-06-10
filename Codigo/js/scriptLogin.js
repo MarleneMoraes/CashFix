@@ -14,51 +14,51 @@ let mensagemErro = document.querySelector('#mensagemErro')
 let listaUsuario = []
 
 let validacaoUsuario = {
-  email:'',
-  senha:'',
+    email: '',
+    senha: '',
 }
 
 
 // Botão de visualizar senha
 
-btnMostrarSenha.addEventListener('click', () => {  
-  if (senha.getAttribute('type') == 'password') {
-    senha.setAttribute('type', 'text')
-    btnMostrarSenha.setAttribute('class', 'far fa-eye')
-  } else{
-    senha.setAttribute('type', 'password')
-    btnMostrarSenha.setAttribute('class', 'far fa-eye-slash')
-  }
+btnMostrarSenha.addEventListener('click', () => {
+    if (senha.getAttribute('type') == 'password') {
+        senha.setAttribute('type', 'text')
+        btnMostrarSenha.setAttribute('class', 'far fa-eye')
+    } else {
+        senha.setAttribute('type', 'password')
+        btnMostrarSenha.setAttribute('class', 'far fa-eye-slash')
+    }
 })
 
 // Botão de verificação do login
 btnEntrar.addEventListener('click', () => {
-  listaUsuario = JSON.parse(localStorage.getItem('listaUsuario'))
+    listaUsuario = JSON.parse(localStorage.getItem('listaUsuario'))
 
-  listaUsuario.forEach((item) => {
-    if(email.value == item.emailCadastrado && senha.value == item.senhaCadastrado){
-      validacaoUsuario = {
-        email: item.emailCadastrado, 
-        senha: item.senhaCadastrado
-      }
+    listaUsuario.forEach((item) => {
+        if (email.value == item.emailCadastrado && senha.value == item.senhaCadastrado) {
+            validacaoUsuario = {
+                email: item.emailCadastrado,
+                senha: item.senhaCadastrado
+            }
+        }
+    })
+
+    //Validação e acesso a página inicial
+    if (email.value == validacaoUsuario.email && senha.value == validacaoUsuario.senha) {
+        // window.location.href = 'pagina-interna.html'
+
+        let token = Math.random().toString(16).substring(2)
+        localStorage.setItem('token', token)
+
+    } else {
+        email.setAttribute('style', 'border-color: red')
+        senha.setAttribute('style', 'border-color: red')
+
+        mensagemErro.setAttribute('style', 'display: block')
+        mensagemErro.innerHTML = 'Usuário ou senha incorretos'
+
+        email.focus()
     }
-  })
 
-  //Validação e acesso a página inicial
-  if(email.value == validacaoUsuario.email && senha.value == validacaoUsuario.senha){
-    window.location.href = 'pagina-interna.html'  
-
-    let token = Math.random().toString(16).substring(2)
-    localStorage.setItem('token', token)
-  
-  } else {
-    email.setAttribute('style', 'border-color: red')
-    senha.setAttribute('style', 'border-color: red')
-
-    mensagemErro.setAttribute('style', 'display: block')
-    mensagemErro.innerHTML = 'Usuário ou senha incorretos'
-
-    email.focus()
-  }
-  
 })
