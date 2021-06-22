@@ -2,6 +2,18 @@
     padding-top: 100px;
 }
 
+.hr-abas {
+    background-color: red;
+}
+
+.cx-img img {
+    float: left;
+    max-height: 150px;
+    width: 400px;
+    border-radius: 2em;
+    margin-bottom: 0px
+}
+
 .caixa1 {
     float: inline-start;
     text-align: left;
