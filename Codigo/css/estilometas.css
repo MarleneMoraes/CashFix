@@ -2,13 +2,16 @@ body {
   background-color: var(--claro);
 }
 
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+}
 
-
-/*---- ABAS:-Inicio/Metas ----*/
+/* Abas: Inicio/Metas */
 .menu {
   display: flex;
   height: 10px;
-  margin: 30px 20px 30px;
+  margin: 30px 20px;
 }
 
 .textmenu {
@@ -24,49 +27,51 @@ body {
   color: var(--principal);
 }
 
-/*----titulo----*/
+/* Titulo */
 .titulo {
   color: var(--principal);
-  margin: 10px 30px 10px;
+  margin: 10px 30px;
 }
 
-/* -- NOVA-META -- */
+/* Nova Meta */
 .novameta {
   background-color: var(--branco);
   border: 1px solid var(--cinza);
   border-radius: 5px;
   padding: 10px;
-  margin: 1px 20px 90px;
+  margin: 20px 90px;
   width: 500px;
 }
 .novameta h3 {
-  margin: 10px 10px 10px;
+  margin: 10px;
 }
 
 .labelForData {
-  margin: 10px 5px 5px;
+  margin: 10px 5px;
 }
 
 input {
   display: block;
   width: 13.5rem;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   box-sizing: border-box;
-  color: #323232;
+  color: var(--fundo-escuro);
   border: none;
 }
+
 input:focus,
 label:focus {
   outline: none;
 }
 
 input {
-  border-bottom: 2px solid #323232;
+  border-bottom: 2px solid var(--fundo-escuro);
   padding: 5px;
   font-size: 0.9rem;
   margin-bottom: 25px;
 }
+
 input:focus {
   border-color: var(--principal);
 }
@@ -74,16 +79,23 @@ input:focus {
 .criar-planejamento {
   margin: 0px 180px 5px;
 }
-/* -- LISTA -- */
+
+/* Lista */
 .listas {
   border-radius: 50px;
   padding: 0px;
 }
+
 .listas h2 {
-  margin: 10px 30px 10px;
+  margin: 10px 30px;
 }
 
-/* -- METAS -- */
+/* Metas */
+#sectionMeta {
+  display: flex;
+  margin: 0 auto;
+}
+
 .cardmetas {
   background-color: var(--branco);
   border: 1px solid var(--cinza);
@@ -91,21 +103,21 @@ input:focus {
   margin: 20px;
 }
 .cardmetas input {
-  margin: 10px 10px 10px;
+  margin: 10px;
   padding: 0px;
   border-bottom: none;
 }
 .cardmetas:hover {
-  background-color: #e1faed;
+  background-color: var(--branco);
 }
 .cardmetas h5 {
   font-size: x-small;
-  margin: 3px 3px 3px;
+  margin: 3px;
   cursor: pointer;
 }
 .cardmetas h6 {
   color: var(--cinza-escuro);
-  margin: 0px 5px 3px;
+  margin: 5px 3px;
 }
 
 .metas {

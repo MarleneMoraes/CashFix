@@ -3,11 +3,6 @@ body {
   margin: 0 auto;
 }
 
-.cabecalho {
-  display: flex;
-  justify-content: space-between;
-}
-
 main {
   width: 90%;
   display: flex;
