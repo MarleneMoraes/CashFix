@@ -129,26 +129,6 @@ btnCadastrar.addEventListener('click', (e) => {
       window.location.href = 'login.html'
     }, 2000)
 
-    /*const newNome = criarNovoUsuario();
-    localStorage.setItem('nome', JSON.stringify(newNome));
-    mostrarUsuarioCadastrado();
-
-    function criarNovoUsuario() {
-      const nome = {
-        name: $nome.value,
-        cpf: $cpfCnpj.value,
-        email: $email.value,
-        password: $senha.value
-      }
-    
-      return nome;
-    }
-    
-    function mostrarUsuarioCadastrado() {
-      const nome = localStorage.getItem('nome');
-    
-      alert(`${JSON.parse(nome).name} foi cadastrado(a) com sucesso!`);
-    }*/
   } else {
     mensagemSucesso.setAttribute('style', 'display: none')
     mensagemSucesso.innerHTML = ''

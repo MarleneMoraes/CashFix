@@ -49,6 +49,10 @@ hr {
     margin: 0 auto 20px 0;
 }
 
+li {
+    list-style-type: none;
+}
+
 
 /* Cabeçalho */
 
