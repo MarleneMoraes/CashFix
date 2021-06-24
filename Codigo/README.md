@@ -3,12 +3,14 @@
 **Descrição de arquivos código**
 
 - `css/` : pasta com arquivo de estilos CSS do projeto;
-- `js/` : pasta com arquivos JavaScript do projeto;
 - `imagens/`: diretório de imagens utilizadas nas demais páginas;
-
-- `index.html`: página principal a ser iniciada na abertura no navegador;
+- `js/` : pasta com arquivos JavaScript do projeto;
+- `atualizacaoperfil.html`: página de atualização do perfil
 - `cadastro.html`: página de formulário para registro do usuário na plataforma;
+- `cartoes.html`: página com opções de cadastro de cartões e contas existentes do usuário;
+- `index.html`: página principal a ser iniciada na abertura no navegador;
 - `login.html`: página com formulário de onde o usuário poderá autenticar seu acesso;
+- `metas.html`: página para adicionar as metas do cliente;
 - `pagina-interna.html`: pagina inicial após login do usuário;
-- `cartoes.html`: página com opções de cadastro de cartões e contas existentes do usuário.
+- `welcome.html`: página interna do usuário.
 
