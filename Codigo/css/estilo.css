@@ -161,7 +161,7 @@ label #sair {
 /* Seção inicial */
 
 main {
-    background-image: url(/Codigo/imagens/fundo-pag-inicial-2.png);
+    background-image: url('/imagens/fundo-pag-inicial-2.png');
     height: 100%;
 }
 
