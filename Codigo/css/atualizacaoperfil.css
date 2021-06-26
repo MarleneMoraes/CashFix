@@ -5,6 +5,11 @@ h1{
     margin-bottom: 25px;
 }
 
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+  }
+
 /* Card Cadastro */
 .perfil {
     background-color: var(--branco);
@@ -35,9 +40,8 @@ a {
     color: #00a34f;
 }
 body {
-
     background-size: cover;
-
+    background-position-y: 40px;
 
 }
 

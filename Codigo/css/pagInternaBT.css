@@ -1,0 +1,65 @@
+.principal {
+    padding-top: 100px;
+}
+
+.hr-abas {
+    background-color: red;
+}
+
+.cx-img img {
+    float: left;
+    max-height: 150px;
+    width: 400px;
+    border-radius: 2em;
+    margin-bottom: 0px
+}
+
+.caixa1 {
+    float: inline-start;
+    text-align: left;
+    color: #234880;
+    margin: 20px;
+    padding: 50px;
+    display: block;
+    border-radius: 2em;
+    box-shadow: 0px 0px 3px 1px;
+}
+
+.caixa1 p {
+    font-size: 14px;
+    font-style: italic;
+    margin: 0px;
+}
+
+.caixa2 {
+    float: left;
+    color: white;
+    background-color: rgb(49, 197, 140);
+    margin: 20px;
+    padding: 50px;
+    display: block;
+    border-radius: 2em;
+    box-shadow: 0px 0px 3px 1px;
+}
+
+.caixa4 {
+    float: left;
+    color: white;
+    background-color: rgb(197, 170, 49);
+    margin: 20px;
+    padding: 50px;
+    display: block;
+    border-radius: 2em;
+    box-shadow: 0px 0px 3px 1px;
+}
+
+.caixa6 {
+    float: left;
+    color: white;
+    background-color: rgb(197, 66, 49);
+    margin: 20px;
+    padding: 50px;
+    display: block;
+    border-radius: 2em;
+    box-shadow: 0px 0px 3px 1px;
+} 
