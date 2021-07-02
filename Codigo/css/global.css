@@ -76,6 +76,24 @@ li {
     }
 }
 
+/*Formatação do menu*/
+
+nav#menu{
+    display: block;
+  }
+  
+  nav#menu li{
+    display: inline-block;
+    padding: 10px;
+    margin: 2px;
+  
+  }
+  
+  nav#menu ul :hover {
+    transition: 1s;
+    color:var(--efeito-hover)
+  }  
+
 
 /* Botões */
 

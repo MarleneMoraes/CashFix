@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/estiloperfil copy.css">
+    <link rel="shortcut icon" href="imagens/logotipo-colorida.png" type="image/x-icon">
+    <title>Perfil | CashFix</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="row container-fluid cabecalho">
+        <a href="index.html"><img class="logo" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
+                title="CashFix"></a>
+        <nav id="menu">
+            <ul>
+                <li><a href="pagInternaBT.html">Home</a></li>
+                <li><a href="metas.html">Metas</a></li>
+                <li><a href="perfil copy.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+        <div class="perfil" id="realizarPerfil">
+            <h1>Perfil</h1>
+            <form action="pagina-internaBT.html">
+                <label class="label">
+                    <input class="form email" type="text" name="email" placeholder="Email" id="emailPerfil">
+                    <small class="erro"></small></br>
+                </label>
+                <label class="label">
+                    <input class="form renda" type="text" name="renda" placeholder="Renda Mensal" id="renda">
+                    <small class="erro"></small></br>
+                </label>
+                <div class="form-flex">
+                    <label class="label">
+                        <input class="form nome" type="text" name="nome" placeholder="Nome" id="nomePerfil">
+                        <small class="erro"></small> </br>
+                    </label>
+                    <label class="label">
+                        <input class="form sobrenome" type="text" name="sobrenome" placeholder="Sobrenome"
+                            id="sobrenomePerfil">
+                        <small class="erro"></small> </br>
+                    </label>
+                    <label class="label">
+                        <input class="form telefone" type="tel" name="telefone" placeholder="Telefone"
+                            id="TelefonePerfil">
+                        <small class="erro"></small> </br>
+                    </label>
+                </div>
+                <div class="parent">
+                    <div class="div1"> </div>
+                    <div class="div2"> </div>
+                </div>
+                <div class="form-flex">
+                    <label class="label">
+                        <input class="form endereco" type="text" name="endereco" placeholder="Endereço"
+                            id="enderecoPerfil">
+                        <small class="erro"></small></br>
+                    </label>
+                    <label class="label">
+                        <input class="form numero" type="number" name="numero" placeholder="Número" id="numeroPerfil"
+                            min="0">
+                        <small class="erro"></small></br>
+                    </label>
+                </div>
+                <div class="form-flex">
+                    <label class="label">
+                        <input class="form cidade" type="text" name="cidade" placeholder="Cidade" id="cidadePerfil">
+                        <small class="erro"></small></br>
+                    </label>
+                    <label class="label" for="inputState">
+                        <select id="inputState" class="form estado">
+                            <option selected>Estado</option>
+                            <optgroup label="Região Norte">
+                                <option value="AC">Acre</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="PA">Pará</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="TO">Tocantins</option>
+                            </optgroup>
+                            <optgroup label="Região Nordeste">
+                                <option value="AL">Alagoas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="SE">Sergipe</option>
+                            </optgroup>
+                            <optgroup label="Região Centro-Oeste">
+                                <option value="DF">Brasília</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                            </optgroup>
+                            <optgroup label="Região Sudeste">
+                                <option value="ES">Espírito Santo</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="SP">São Paulo</option>
+                            </optgroup>
+                            <optgroup label="Região Sul">
+                                <option value="PR">Paraná</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="SC">Santa Catarina</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                    <label class="label">
+                        <input class="form cep" type="text" name="cep" placeholder="Cep" id="cepPerfil">
+                        <small class="erro"></small></br>
+                    </label>
+                </div>
+            </form>
+        </div>
+
+        <!-- Botão de Voltar -->
+        <button class="botao botao-contorno voltar">
+            <a href="pagInternaBT.html">Voltar</a>
+        </button>
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <a href="index.html">
+            <img src="imagens/logo-branca.png" alt="logo CashFix" title="CashFix">
+        </a>
+        <hr>
+        <p>&copy; Copyright 2021 - Trabalho Interdisciplinar: Aplicações Web | <strong>ICEI PUC Minas</strong></p>
+    </footer>
+
+    <script src="./js/scriptCadastro.js"></script>
+    <script src="https://kit.fontawesome.com/83bbcb24d1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

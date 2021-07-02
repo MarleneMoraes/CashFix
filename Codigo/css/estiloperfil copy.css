@@ -1,0 +1,78 @@
+h1 {
+  color: var(--principal);
+  font-size: 30px;
+}
+
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Formatação do menu*/
+
+nav#menu{
+  display: block;
+}
+
+nav#menu li{
+  display: inline-block;
+  padding: 10px;
+  margin: 2px;
+
+}
+
+nav#menu ul :hover {
+  transition: 1s;
+  color:var(--efeito-hover)
+}
+
+
+/* Card Cadastro */
+.perfil {
+  background-color: var(--branco);
+  margin: 80px auto;
+  border: 1px solid var(--cinza);
+  border-radius: 10px;
+  padding: 1.25rem;
+  width: 70%;
+}
+
+.label input[type="text"] {
+  padding: 10px;
+}
+
+.email,
+.renda {
+  width: 98%;
+}
+
+.form-flex {
+  display: flex;
+  width: 98%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.nome,
+.sobrenome,
+.telefone,
+.cidade,
+.estado,
+.cep, 
+.numero  {
+  width: 100%;
+  min-width: 313.5px;
+}
+
+.endereco{
+    width: 100%;
+    min-width: 626px;
+}
+
+.voltar {
+  margin: 0px 0px 20px 15px;
+}
+.erro {
+  color: red;
+}
