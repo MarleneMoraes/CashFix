@@ -6,6 +6,8 @@
   --básica: #69f0aa;
   --efeito-hover: #004a24;
   --efeito-active: #00d668;
+  --erro: #ff0000;
+  --fundo-erro:
   --preto: #000000;
   --cinza: #bbb;
   --cinza-escuro: #3c3c3c;
@@ -62,7 +64,7 @@ li {
 
 .cabecalho {
   width: 100%;
-  background: url(../imagens/bg-texture.png);
+  background: url(/imagens/bg-texture.png);
   padding: 15px;
   color: var(--branco);
   -webkit-box-shadow: 1px 13px 10px -9px rgba(50, 50, 50, 0.5);
@@ -178,7 +180,7 @@ label #out {
     display: inline-flex;
   }
 
-  .logoDesktop{
+  .logoDesktop {
     width: 10rem;
   }
 }
@@ -193,10 +195,12 @@ label #out {
   .logoDesktop,
   .menuDesktop {
     display: inline-flex;
+    width: 100%;
   }
 
   .logoDesktop {
-    margin: 10px;
+    margin: 10px 0px;
+
   }
 
   nav.menuDesktop {
