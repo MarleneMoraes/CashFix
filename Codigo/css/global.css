@@ -7,8 +7,8 @@
   --efeito-hover: #004a24;
   --efeito-active: #00d668;
   --erro: #ff0000;
-  --fundo-erro:
   --preto: #000000;
+  --preto-fosco: #212529;
   --cinza: #bbb;
   --cinza-escuro: #3c3c3c;
   --claro: #fafafa;
@@ -71,6 +71,7 @@ li {
   -moz-box-shadow: 1px 13px 10px -9px rgba(50, 50, 50, 0.5);
   box-shadow: 1px 13px 10px -9px rgba(50, 50, 50, 0.5);
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -276,6 +277,21 @@ label #out {
   color: var(--branco);
   background-color: var(--efeito-active);
   border: none;
+}
+
+.navegacao {
+  margin: 15px 20px;
+}
+
+.voltar {
+  margin: 0px 20px 15px;
+}
+
+@media (max-width: 760px) {
+  .voltar {
+    display: block;
+    margin: 15px auto;
+  }
 }
 
 /* Outros botões */
