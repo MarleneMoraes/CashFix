@@ -14,70 +14,115 @@
 <body>
     <!-- Cabeçalho -->
     <header class="row container-fluid cabecalho">
-        <a href="index.html"><img class="logo" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
+        <div class="menulateralint">
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars fa-2x" id="btn-menu"></i>
+                <i class="fas fa-times" id="out"></i>
+            </label>
+            <a href="index.html"><img class="logo" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
+                    title="CashFix"></a>
+            <nav class="menulateral">
+                <ul>
+                    <li class="nav-link">
+                        <a href="pagInternaBT.html">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="metas.html">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Metas</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="perfil copy.html">
+                            <i class="far fa-user"></i>
+                            <span>Perfil</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="cartoes.html">
+                            <i class="far fa-credit-card"></i>
+                            <span>Cartões</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <a href="index.html"><img class="logoDesktop" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
                 title="CashFix"></a>
-        <nav id="menu">
+        <nav class="menuDesktop">
             <ul>
                 <li><a href="pagInternaBT.html">Home</a></li>
                 <li><a href="metas.html">Metas</a></li>
                 <li><a href="perfil copy.html">Perfil</a></li>
+                <li><a href="cartoes.html">Cartões</a></li>
             </ul>
         </nav>
+
+        <div id="usuario"></div>
+
+        <button class="botao botao-verde sair" type="button"><a href="index.html">Sair</a></button>
     </header>
 
     <!-- Conteúdo principal -->
     <main>
+        <div id="mensagemErro"></div>
+        <div id="mensagemSucesso"></div>
 
         <div class="perfil" id="realizarPerfil">
             <h1>Perfil</h1>
             <form action="pagina-internaBT.html">
-                <label class="label">
+                <div class="form-flex">
+                    <label id="labelNome" class="label">
+                        <input id="nomePerfil" class="form nome" type="text" name="nome" placeholder="Nome">
+                        <p><small class="erro"></small></p>
+                    </label>
+                    <label id="labelSobrenome" class="label">
+                        <input id="sobrenomePerfil" class="form sobrenome" type="text" name="sobrenome" placeholder="Sobrenome">
+                        <p><small class="erro"></small></p>
+                    </label>
+
+                </div>
+                <label id="labelEmail" class="label">
                     <input class="form email" type="text" name="email" placeholder="Email" id="emailPerfil">
                     <small class="erro"></small></br>
+                    <p><small class="erro"></small></p>
                 </label>
-                <label class="label">
-                    <input class="form renda" type="text" name="renda" placeholder="Renda Mensal" id="renda">
-                    <small class="erro"></small></br>
-                </label>
+
                 <div class="form-flex">
-                    <label class="label">
-                        <input class="form nome" type="text" name="nome" placeholder="Nome" id="nomePerfil">
-                        <small class="erro"></small> </br>
+                    <label id="labelRenda" class="label">
+                        <input class="form renda" type="text" name="renda" placeholder="Renda Mensal" id="renda">
+                        <p><small class="erro"></small></p>
                     </label>
-                    <label class="label">
-                        <input class="form sobrenome" type="text" name="sobrenome" placeholder="Sobrenome"
-                            id="sobrenomePerfil">
-                        <small class="erro"></small> </br>
-                    </label>
-                    <label class="label">
-                        <input class="form telefone" type="tel" name="telefone" placeholder="Telefone"
-                            id="TelefonePerfil">
-                        <small class="erro"></small> </br>
+                    <label id="labelTelefone" class="label">
+                        <input id="TelefonePerfil" class="form telefone" type="tel" name="telefone"
+                            placeholder="Telefone">
+                        <p><small class="erro"></small></p>
                     </label>
                 </div>
-                <div class="parent">
-                    <div class="div1"> </div>
-                    <div class="div2"> </div>
-                </div>
                 <div class="form-flex">
-                    <label class="label">
+                    <label id="labelEndereco" class="label">
                         <input class="form endereco" type="text" name="endereco" placeholder="Endereço"
                             id="enderecoPerfil">
                         <small class="erro"></small></br>
                     </label>
-                    <label class="label">
+                    <label id="labelNumero" class="label">
                         <input class="form numero" type="number" name="numero" placeholder="Número" id="numeroPerfil"
                             min="0">
-                        <small class="erro"></small></br>
+                        <p><small class="erro"></small></p>
                     </label>
                 </div>
                 <div class="form-flex">
-                    <label class="label">
+                    <label id="labelCidade" class="label">
                         <input class="form cidade" type="text" name="cidade" placeholder="Cidade" id="cidadePerfil">
-                        <small class="erro"></small></br>
+                        <p><small class="erro"></small></p>
                     </label>
-                    <label class="label" for="inputState">
-                        <select id="inputState" class="form estado">
+                    <label id="labelEstado" class="label" for="inputState">
+                        <select id="inputEstado" class="form estado">
                             <option selected>Estado</option>
                             <optgroup label="Região Norte">
                                 <option value="AC">Acre</option>
@@ -118,9 +163,9 @@
                             </optgroup>
                         </select>
                     </label>
-                    <label class="label">
+                    <label id="labelCep" class="label">
                         <input class="form cep" type="text" name="cep" placeholder="Cep" id="cepPerfil">
-                        <small class="erro"></small></br>
+                        <p><small class="erro"></small></p>
                     </label>
                 </div>
             </form>
@@ -142,7 +187,7 @@
         <p>&copy; Copyright 2021 - Trabalho Interdisciplinar: Aplicações Web | <strong>ICEI PUC Minas</strong></p>
     </footer>
 
-    <script src="./js/scriptCadastro.js"></script>
+    <script src="/js/scriptPerfil.js"></script>
     <script src="https://kit.fontawesome.com/83bbcb24d1.js" crossorigin="anonymous"></script>
 </body>
 
