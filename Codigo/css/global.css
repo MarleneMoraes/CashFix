@@ -76,23 +76,98 @@ li {
     }
 }
 
-/*Formatação do menu*/
-
-nav#menu{
+/* Menu */
+.sidebar {
+    position: fixed;
+    width: 300px;
+    left: -300px;
+    height: 100%;
+    background-color: black;
+    transition: all .5s ease;
+  }
+  
+  
+  
+  .sidebar a {
     display: block;
+    height: 65px;
+    width: 100%;
+    color: var(--branco);
+    line-height: 65px;
+    padding-left: 30px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-left: 5px solid transparent;
+    transition: all .5s ease;
   }
   
-  nav#menu li{
-    display: inline-block;
-    padding: 10px;
-    margin: 2px;
-  
+  .sidebar a {
+    color: var(--branco);
   }
   
-  nav#menu ul :hover {
-    transition: 1s;
-    color:var(--efeito-hover)
-  }  
+  .navlink:hover {
+    color: var(--principal);
+  }
+  
+  .navlink a:active{
+    color: var(--efeito-active);
+  }
+  
+  
+  .sidebar a i {
+    font-size: 23px;
+    margin-right: 16px;
+  }
+  
+  .sidebar a span {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+ label #btn-menu,
+  label #out {
+    position: absolute;
+    color: var(--claro);
+    transition: all .5s ease;
+}
+
+label #out {
+    border-radius: 5px;
+    background-color: black;
+    margin: 15px 30px;
+    cursor: pointer;
+    
+    border: 1px solid #262626;
+    height: 45px;
+    width: 45px;  
+    line-height: 45px;
+    text-align: center;
+}
+  
+  label #out{
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  #check:checked ~ .sidebar{
+    left: 0;
+  }
+  
+  #check:checked ~ label #btn-menu{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  #check:checked ~ label #out{
+    margin-left: 310px;
+    opacity: 1;
+    visibility: visible;
+  }
 
 
 /* Botões */
