@@ -14,7 +14,6 @@ a:hover {
     color: var(--branco);
 }
 
-
 section {
     width: 100%;
     height: 100vh;
@@ -61,7 +60,7 @@ section {
 @media (min-width: 1000px) {
     .login {
         display: none;
-    }   
+    }
     .cadastre,
     .acesse {
         display: inline;
@@ -73,7 +72,7 @@ section {
 /* Seção inicial */
 
 main {
-    background-image: url('/imagens/fundo-pag-inicial-2.png');
+    background-image: url('../imagens/fundo-pag-inicial-2.png');
     height: 100%;
 }
 
