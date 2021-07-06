@@ -68,6 +68,8 @@ li {
   -webkit-box-shadow: 1px 13px 10px -9px rgba(50, 50, 50, 0.5);
   -moz-box-shadow: 1px 13px 10px -9px rgba(50, 50, 50, 0.5);
   box-shadow: 1px 13px 10px -9px rgba(50, 50, 50, 0.5);
+  display: flex;
+  justify-content: space-between;
 }
 
 .cabecalho img {
@@ -172,8 +174,15 @@ label #out {
 }
 
 .logoDesktop,
-.menuDesktop {
+.menuDesktop,
+#usuario {
   display: none;
+}
+
+@media (min-width: 760px) {
+  #usuario {
+    display: inline-flex;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -183,9 +192,13 @@ label #out {
     display: none;
   }
 
-  #menuDesktop {
+  .logoDesktop,
+  .menuDesktop {
     display: inline-flex;
-    justify-content: space-evenly;
+  }
+
+  .logoDesktop {
+    
   }
 
   nav.menuDesktop {
