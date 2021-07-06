@@ -76,12 +76,6 @@ li {
   width: 6.25rem;
 }
 
-@media (min-width: 600px) {
-  .cabecalho img {
-    max-width: 9.375rem;
-  }
-}
-
 /* Menu */
 
 .menulateral {
@@ -183,6 +177,10 @@ label #out {
   #usuario {
     display: inline-flex;
   }
+
+  .logoDesktop{
+    width: 10rem;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -198,7 +196,7 @@ label #out {
   }
 
   .logoDesktop {
-    
+    margin: 10px;
   }
 
   nav.menuDesktop {
@@ -211,7 +209,7 @@ label #out {
     margin: 2px;
   }
 
-  nav.menuDesktop ul :hover {
+  nav.menuDesktop ul:hover {
     transition: 1s;
     color: var(--efeito-hover);
   }
