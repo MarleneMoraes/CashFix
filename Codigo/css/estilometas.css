@@ -1,57 +1,174 @@
-body {
-    background-color: var(--claro);
-}
+
+body{
+      background-color: var(--claro) !important;
+    }
 
 .cabecalho {
-    display: flex;
-    justify-content: space-between;
-}
+      display: flex;
+      justify-content: space-between;
+    }
 
 li {
-    text-decoration: none;
-    list-style-type: none;
-}
+      text-decoration: none;
+      list-style-type: none;
+    }
 
+a:link { 
+      text-decoration:none;
+      color: var(--claro) !important;
+     } 
 
-/*Formatação do menu*/
+/*---- ABAS:-Inicio/Metas ----*/   
+.menu{
+      margin: 20px 20px 0px;
+     }
 
-nav#menu {
-    display: block;
-}
+.breadcrumb-item {
+      color: var(--cinza-escuro) !important;
+     }
+     .breadcrumb-item:hover {
+      color: var(--principal) !important;
+     }
 
-nav#menu li {
-    display: inline-block;
-    padding: 10px;
-    margin: 2px;
-}
+/*----cards----*/
+.card-principal{
+      background-color: var(--branco) !important;
+      padding: 5px 0px 1px;
+      margin: 20px 10px 50px;
+      border-radius: 5px;
+      border: 1px solid var(--cinza);
+     }
 
-nav#menu ul :hover {
-    transition: 1s;
-    color: var(--efeito-hover)
-}
+.card-secundario{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+     }
+     .card-secundario label{
+           font-weight: bold;
+     }
+.novameta{
+      background-color: var(--branco); 
+      padding: 0px;
+      margin: 0px 50px 0px;
+      border-radius: 3px;
+     }
 
-.linkMenu {
-    text-decoration: none !important;
-}
+.editarmeta{
+      background-color: var(--branco); 
+      padding: 0px;
+      margin: 0px 50px 0px;
+      border-radius: 3px;
+     }
 
+.container1{
+      background-color: var(--claro);
+      margin: 3% 1% 1%;
+      padding: 57px 25px 0px;
+      border: 1px solid var(--cinza);
+      border-radius: 5px;
+      display: none;
+      }
 
-/*---- ABAS:-Inicio/Metas ----*/
-
+.container2{
+      background-color: var(--claro);
+      margin: 3% 1% 1%;
+      padding: 0px 15px 20px;
+      border: 1px solid var(--cinza);
+      border-radius: 5px;
+      display: none;
+      }
 
 /*----titulo----*/
-
 .titulo {
-    color: var(--principal);
-    margin: 10px 30px 10px;
-}
+      color: var(--principal);
+      margin: 10px 30px 0px;
+      font-family: var(--ff-titulo);
+     }
 
-.tituloMain {
-    color: var(--claro);
-    margin: 10px 30px 10px;
-}
+ /*----input----*/
+input {
+      border: none !important;
+      background-color: var(--claro) !important;
+     }
 
+input {
+      border-bottom: 2px solid #323232 !important;
+     }
+     input:focus {
+           border-color: var(--principal) !important;
+          }
+     input:disabled {
+           background-color: var(--fundo) !important;
+           border: none !important;
+          }
+        
+.input-meta{
+      margin: 0px 0px 20px;
+      }
 
-/* -- NOVA-META -- */
+.input-data{
+      display: flex;
+      }
+.input-data-formulario{
+      margin: 10px;
+      }
 
+.input-valor{
+      margin: 20px 0px 30px;
+      }
+ /* ----select---- */
+ select {
+      border: 2px solid #323232 !important;
+      margin: 20px 0px 20px !important;
+      width: 50% !important;
+     }
+     select:focus {
+           border-color: var(--principal) !important;
+          }
 
-/* -- LISTA -- */
+/* ----buttons---- */
+.button-centralize {
+      text-align: center;
+      }
+      
+.criar-meta {
+      margin: 15px 0px 20px;
+      }
+      
+.salvar-metas{
+      margin: 0px;
+      }
+
+.editar-meta-text{
+      margin: 0px;
+      padding: 0px 100px 0px;
+      }
+
+ /* ----span-lista---- */
+.badge {
+      background-color: var(--claro);
+      color: var(--principal) !important;
+      }
+      .badge:hover {
+            background-color: var(--efeito-hover);
+            color: var(--branco) !important;
+          }
+      .badge:active {
+            background-color: var(--efeito-active);
+            color: var(--branco) !important;
+          }
+
+ /* ----lista---- */
+.lista-metas {
+      background-color: var(--preto-fosco);
+      padding: 0px 30px 30px !important;
+      margin: 10px 20px 20px !important;
+      border-radius: 5px;
+      }
+
+.lista-metas-cabecalho {
+      color: var(--principal);
+      }
+
+ /* ----fim---- */
