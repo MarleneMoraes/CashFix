@@ -1,53 +1,57 @@
-body{
-     background-color: var(--claro);
-    }
+body {
+    background-color: var(--claro);
+}
 
 .cabecalho {
-     display: flex;
-     justify-content: space-between;
-    }
+    display: flex;
+    justify-content: space-between;
+}
 
 li {
-     text-decoration: none;
-     list-style-type: none;
-    }
+    text-decoration: none;
+    list-style-type: none;
+}
+
 
 /*Formatação do menu*/
 
-nav#menu{
-     display: block;
-   }
-   
-   nav#menu li{
-     display: inline-block;
-     padding: 10px;
-     margin: 2px;
-   }
-   
-   nav#menu ul :hover {
-     transition: 1s;
-     color:var(--efeito-hover)
-   }
-   
-.linkMenu {
-     text-decoration: none !important;
+nav#menu {
+    display: block;
 }
 
-/*---- ABAS:-Inicio/Metas ----*/   
+nav#menu li {
+    display: inline-block;
+    padding: 10px;
+    margin: 2px;
+}
+
+nav#menu ul :hover {
+    transition: 1s;
+    color: var(--efeito-hover)
+}
+
+.linkMenu {
+    text-decoration: none !important;
+}
+
+
+/*---- ABAS:-Inicio/Metas ----*/
 
 
 /*----titulo----*/
+
 .titulo {
-     color: var(--principal);
-     margin: 10px 30px 10px;
-    }
+    color: var(--principal);
+    margin: 10px 30px 10px;
+}
+
 .tituloMain {
-     color: var(--claro);
-     margin: 10px 30px 10px;
+    color: var(--claro);
+    margin: 10px 30px 10px;
 }
 
 
- /* -- NOVA-META -- */
+/* -- NOVA-META -- */
 
 
- /* -- LISTA -- */
+/* -- LISTA -- */
