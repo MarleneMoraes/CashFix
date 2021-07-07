@@ -40,19 +40,20 @@ btnEntrar.addEventListener('click', () => {
             validacaoUsuario = {
                 email: item.emailCadastrado,
                 senha: item.senhaCadastrado
-
             }
+            
+            setTimeout(() => {
+                window.location.href = 'pagInternaBT.html'
+              }, 2000)
         }
     })
 
     //Validação e acesso a página inicial
     if (email.value == validacaoUsuario.email && senha.value == validacaoUsuario.senha) {
         
-
         let token = Math.random().toString(16).substring(2)
         localStorage.setItem('token', token)
-        
-
+                 
     } else {
         email.setAttribute('style', 'border-color: red')
         senha.setAttribute('style', 'border-color: red')
