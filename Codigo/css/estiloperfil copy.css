@@ -1,12 +1,14 @@
 h1 {
   color: var(--principal);
   font-size: 30px;
+  margin: 10px 50px;
 }
+
 
 /* Card Perfil */
 .perfil {
   background-color: var(--branco);
-  margin: 80px auto;
+  margin: 50px auto;
   border: 1px solid var(--cinza);
   border-radius: 10px;
   padding: 1.25rem;
