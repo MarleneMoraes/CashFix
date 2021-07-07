@@ -13,6 +13,15 @@ h1 {
   width: 340px;
 }
 
+.textmenu,
+.fa-chevron-right {
+  color: var(--cinza);
+  font-size: 1rem;
+  margin: 1px;
+  cursor: pointer;
+  color: #535151;
+}
+
 .form {
   margin: 4px;
 }

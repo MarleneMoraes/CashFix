@@ -6,204 +6,224 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/estilocartoes.css">
+    <link rel="stylesheet" href="css/estiloCartoes.css">
     <link rel="shortcut icon" href="imagens/logotipo-colorida.png" type="image/x-icon">
     <title>Cartões | CashFix</title>
 </head>
 
 <body>
-        <!-- Cabeçalho -->
-        <header class="row container-fluid cabecalho">
-            <div class="menulateralint">
-                <input type="checkbox" id="check">
-                <label for="check">
-                    <i class="fas fa-bars fa-2x" id="btn-menu"></i>
-                    <i class="fas fa-times" id="out"></i>
-                </label>
-                <a href="index.html"><img class="logo" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
-                        title="CashFix"></a>
-                <nav class="menulateral">
-                    <ul>
-                        <li class="nav-link">
-                            <a href="pagInternaBT.html">
-                                <i class="fas fa-home"></i>
-                                <span>Home</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="metas.html">
-                                <i class="fas fa-chart-bar"></i>
-                                <span>Metas</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="perfil copy.html">
-                                <i class="far fa-user"></i>
-                                <span>Perfil</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="cartoes.html">
-                                <i class="far fa-credit-card"></i>
-                                <span>Cartões</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-    
-            <a href="index.html"><img class="logoDesktop" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
+    <!-- Cabeçalho -->
+    <header class="row container-fluid cabecalho">
+        <div class="menulateralint">
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars fa-2x" id="btn-menu"></i>
+                <i class="fas fa-times" id="out"></i>
+            </label>
+            <a href="index.html"><img class="logo" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
                     title="CashFix"></a>
-            <nav class="menuDesktop">
+            <nav class="menulateral">
                 <ul>
-                    <li><a href="pagInternaBT.html">Home</a></li>
-                    <li><a href="metas.html">Metas</a></li>
-                    <li><a href="perfil copy.html">Perfil</a></li>
-                    <li><a href="cartoes.html">Cartões</a></li>
+                    <li class="nav-link">
+                        <a href="pagInternaBT.html">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="metas.html">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Metas</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="perfil copy.html">
+                            <i class="far fa-user"></i>
+                            <span>Perfil</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="cartoes.html">
+                            <i class="far fa-credit-card"></i>
+                            <span>Cartões</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
-    
-            <div id="usuario"></div>
-    
-            <button class="botao botao-verde sair" type="button"><a href="index.html">Sair</a></button>
-        </header>
-        
-    <main>
-        <div>
-            <ul class="menu">
-                <a href="pagina-interna.html">
-                    <li class="textmenu">Início</li>
-                </a>/
-                <li class="textmenu"> Cartões</li>
+        </div>
+
+        <a href="index.html"><img class="logoDesktop" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
+                title="CashFix"></a>
+        <nav class="menuDesktop">
+            <ul>
+                <li><a href="pagInternaBT.html">Home</a></li>
+                <li><a href="metas.html">Metas</a></li>
+                <li><a href="perfil copy.html">Perfil</a></li>
+                <li><a href="cartoes.html">Cartões</a></li>
             </ul>
+        </nav>
+
+        <div id="usuario"></div>
+
+        <button class="botao botao-verde sair" type="button"><a href="index.html">Sair</a></button>
+    </header>
+    <main>
+        <div id="mensagemErro"></div>
+        <div id="mensagemSucesso"></div>
+
+        <div class="navegacao">
+            <a class="textmenu" href="pagina-interna.html">Início</a>
+            <i class="fas fa-chevron-right"></i> <a class="textmenu" href="cartoes.html">Cartões</a>
         </div>
-    
-        <div class="titulo">
-                <h2>Cartões</h2>
-        </div>
+        
+        <div class="cartoes">
+            <h1>Cartões</h1>
 
-        <!--ABAS-->
-    <nav class="abas">  
-        <ul>
-            <li>
-                <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
-                <label for="tab1" class="textabas"><h5>Cartões</h5></label>
-                <div class="tab-content">
-                    <article class="posictionCard">
-                        <div class="cartoes textnu">
-                                <h4>Nubank</h4>
-                            <div class="nu">
-                                <input type="text" value="R$2.354,90">
-                                <h6>15/06/21</h6>
-                            </div>
-                        </div>
-                        <div class="cartoes textin">
-                                <h4>Inter</h4>
-                             <div class="in">
-                                <input type="text" value="R$2.354,90">
-                                <h6>15/06/21</h6>
-                            </div>
-                        </div>
-                        <div class="cartoes textdg">
-                                <h4>Digio</h4>
-                            <div class="dg">
-                                <input type="text" value="R$2.354,90">
-                                <h6>15/06/21</h6>
-                            </div>
-                        </div>
-                        <div class="cartoes textnn">
-                                <h4>Neon</h4>
-                            <div class="nn">
-                                <input type="text" value="R$2.354,90">
-                                <h6>15/06/21</h6>
-                            </div>
-                        </div>
-                         <button class="botao botao-verde cartao"><a href="#">+</a></button>
-                    </article>
+            <!--Navegação em abas-->
+            <nav class="abas">
+                <ul>
+                    <li>
+                        <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
 
-                    <!--ADICIONAR CARTÕES-->
-                    <div class="margin">
-                        <h3>Cadastrar Cartão</h3>
-                        <div class="half-box spacing">
-                            <div class="labelForData">
-                            <label>Nome</label>
+                        <!--Aba 1: Cartões-->
+                        <label for="tab1" class="textabas">
+                            <h2>Cartões</h2>
+                        </label>
+                        <div class="tab-content">
+                            <section class="posicaoCartao">
+                                <div class="textoCartao">
+                                    <h4>Nubank</h4>
+                                    <div class="nubank">
+                                        <input type="text" value="R$2.354,90">
+                                        <p class="data">15/06/21</p>
+                                    </div>
+                                </div>
+                                <div class="textoCartao">
+                                    <h4>Inter</h4>
+                                    <div class="inter">
+                                        <input type="text" value="R$2.354,90">
+                                        <p class="data">15/06/21</p>
+                                    </div>
+                                </div>
+                                <div class="textoCartao">
+                                    <h4>Digio</h4>
+                                    <div class="digio">
+                                        <input type="text" value="R$2.354,90">
+                                        <p class="data">15/06/21</p>
+                                    </div>
+                                </div>
+                                <div class="textoCartao">
+                                    <h4>Neon</h4>
+                                    <div class="neon">
+                                        <input type="text" value="R$2.354,90">
+                                        <p class="data">15/06/21</p>
+                                    </div>
+                                </div>
+                                <button id="cartaoAdd" class="botao botao-verde cartao">+</button>
+
+                            </section>
+                            <!-- Cadastrar Cartão -->
+                            <section id="cadastroCartao">
+                                <div class="sessaoCadastro">
+                                    <hr>
+                                    <h3>Cadastrar Cartão</h3>
+                                    <div class="form-flex">
+                                        <label>Nome<input id="nome" class="form nome" type="text" name="nome"
+                                                placeholder="Nome do cartão">
+                                        </label>
+
+                                        <label>Limite
+                                            <input id="limite" class="form limite" type="number" name="Limite"
+                                                placeholder="Limite do cartão" min="0">
+                                        </label>
+                                        <label>Data de Vencimento
+                                            <input id="vencimento" class="form vencimento" type="date" name="vencimento"
+                                                placeholder="Data de Vencimento">
+                                        </label>
+                                    </div>
+                                    <button class="botao botao-verde salvar"> Salvar</button>
+                                </div>
+                            </section>
+                        </div>
+                    </li>
+
+                    <!--Aba 2: Extrato-->
+                    <li>
+                        <input type="radio" name="tabs" class="rd_tab" id="tab2">
+                        <label for="tab2" class="textabas">
+                            <h2>Extrato</h2>
+                        </label>
+                        <div class="tab-content">
+                            <!--Extrato do Cartão -->
+                            <h3>Extrato do Cartão</h3>
+                            <select id="tipoCartao" class="form tipoCartao">
+                                <option selected>Selecione</option>
+                                <option value="NU">Nubank</option>
+                                <option value="IN">Inter</option>
+                                <option value="DG">Digio</option>
+                                <option value="DG">Neon</option>
+                            </select>
+                            <div class="visualizarExtrato">
+                                <h4>Title</h4>
+                                <div class="extratoCartao">
+                                    <input type="text" value="R$588,72">
+                                    <input type="text" value="R$588,72">
+                                    <input type="text" value="R$588,72">
+                                    <input type="text" value="R$588,72">
+                                </div>
+                                <h5>Total:</h5>
+                                <input type="text" value="R$2.354,88">
                             </div>
-                            <input type="name" name="name" id="name" placeholder="Nome do cartão" autocomplete="off">
-                        </div>
-                        <div class="half-box spacing">
-                            <div class="labelForData"><label>Limite</label></div>
-                            <input type="number" name="name" id="name" placeholder="Limite do cartão" autocomplete="off">
-                        </div>
-                        <div class="half-box spacing">
-                            <div class="labelForData"><label>Data de Vencimento</label></div>
-                            <input type="name" name="name" id="name" placeholder="Data de vencimento " autocomplete="off">
-                        </div>
-                        <button class="botao botao-verde cartao2"> + Cartão</button>
-                    </div>
-                    <hr>
-                </div>
-            </li>
+                            <button class="botao botao-verde salvar">Salvar</button>
 
-            <!--SEGUNDA ABA-->
-            <li>
-                <input type="radio" name="tabs" class="rd_tab" id="tab2">
-                <label for="tab2" class="textabas"><h5>Despesas</h5></label>
-                <div class="tab-content">
-                    <!--ADICIONAR DESPESAS-->
-                    <div class="margin">
-                        <h3>Adicionar Despesas</h3>
-                        <div class="half-box spacing">
-                            <div class="labelForData"><label>Despesa</label></div>
-                            <input type="text" name="name" id="name" placeholder="Descrição do débito" autocomplete="off">
-                        </div>
-                        <div class="half-box spacing">
-                            <div class="labelForData"><label>Valor</label></div>
-                            <input type="number" name="name" id="name" placeholder="Digite o valor" autocomplete="off">
-                        </div>
-                        <div class="half-box spacing">
-                            <div class="labelForData"><label>Observação</label></div>
-                            <input type="name" name="name" id="name" placeholder="Adicione um comentário" autocomplete="off">
-                        </div>
-                        <button class="botao botao-verde despesa"> + Despesa</button>
-                    </div>
-                    <!--VISUALIZAR DESPESAS-->
-                    <div class="margin">
-                        <h3>Visualizar despesas do cartão</h3>
-                        <label for="">Selecione: </label>
-                        <select id="cartao">
-                            <option value="NU">Cartões</option>
-                            <option value="NU">Nubank</option>
-                            <option value="IN">Inter</option>
-                            <option value="DG">Digio</option>
-                            <option value="DG">Neon</option>
+                            <!-- ADICIONAR DESPESAS -->
+                            <section id="adicionarDespesa">
+                                <div class="sessaoDespesas">
+                                    <hr>
+                                    <h3>Adicionar Despesas</h3>
+                                    <div class="form-flex">
+                                        <label for="despesa">Despesa
+                                            <input id="despesa" class="form despesa" type="text" name="despesa"
+                                                placeholder="Descrição de Débito">
+                                        </label>
+                                        <label for="valor">Valor
+                                            <input id="valor" class="form valor" type="number" name="valor"
+                                                placeholder="Valor da Despesa" min="0">
+                                        </label>
+                                         <label for="observacao">Observação
+                                        <textarea id="observacao" class="form observacao" rows="6"
+                                            placeholder="Adicione um comentário"></textarea></label>
+                                    </div>
+                                   
 
-                        </select>
-                        <div class="visualizarDespesas">
-                            <h4>Nubank</h4>
-                            <div class="vd">
-                                <input type="text" value="R$588,72">
-                                <input type="text" value="R$588,72">
-                                <input type="text" value="R$588,72">
-                                <input type="text" value="R$588,72" >
-                            </div>
-                            <h5>Total:</h5>
-                            <input type="text" value="R$2.354,88" >
-                        </div>
-                        <button class="botao botao-verde salvar">Salvar</button>
-                    </div>
-                </div>
-            </li>
-        </ul>
-</nav>
-</main>
-<footer class="rodape">
-    <a href="index.html">
-        <img src="imagens/logo-branca.png" alt="logo CashFix" title="CashFix">
-    </a>
-    <hr>
-    <p>&copy; Copyright 2021 - Trabalho Interdisciplinar: Aplicações Web | <strong>ICEI PUC Minas</strong></p>
-</footer>
+                                    <button class="botao botao-verde maisdespesa"> + Despesa</button>
+                                </div>
+                            </section>
 
-<script src="https://kit.fontawesome.com/83bbcb24d1.js" crossorigin="anonymous"></script>
+
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+
+    </main>
+
+    <!-- Botão de Voltar -->
+    <button class="botao botao-contorno voltar">
+        <a href="pagInternaBT.html">Voltar</a>
+    </button>
+
+
+    <footer class="rodape">
+        <a href="index.html">
+            <img src="imagens/logo-branca.png" alt="logo CashFix" title="CashFix">
+        </a>
+        <hr>
+        <p>&copy; Copyright 2021 - Trabalho Interdisciplinar: Aplicações Web | <strong>ICEI PUC Minas</strong></p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/83bbcb24d1.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

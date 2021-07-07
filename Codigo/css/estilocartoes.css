@@ -2,56 +2,46 @@ body {
   background-color: var(--claro);
 }
 
-.cabecalho {
-  display: flex;
-  justify-content: space-between;
-}
-
-li {
-  text-decoration: none;
-  list-style-type: none;
-}
-
-/*----ABAS: Inicio/Cartões----*/
-.menu {
-  display: flex;
-  width: 800px;
-  height: 10px;
-  margin: 20px auto;
-  border-radius: 10px;
-  position: relative;
-}
-
-.textmenu {
-  color: var(--cinza);
-  font-size: 0.75rem;
-  margin: 1px;
-  cursor: pointer;
-  color: #535151;
-}
-
-.textmenu:hover {
+h1 {
   color: var(--principal);
+  font-size: 30px;
 }
 
-/*----titulo----*/
-.titulo {
-  color: #00a34f;
-  display: flex;
-  width: 700px;
-  margin: 15px auto;
-  border-radius: 10px;
-  position: relative;
+h2 {
 }
 
-/*----ABAS----*/
-.abas {
-  width: 803px;
-  height: 1000px;
-  margin: 10px auto;
+h3 {
+  text-align: center;
+  padding: 10px;
+}
+
+h4 {
+  margin: 0px;
+  text-align: center;
+  color: var(--cinza-escuro);
+}
+
+/* Card Cartões */
+
+.cartoes {
   background-color: var(--branco);
+  margin: 80px auto;
   border: 1px solid var(--cinza);
   border-radius: 10px;
+  padding: 1.25rem;
+  width: 340px;
+}
+
+@media (min-width: 760px) {
+  .cartoes {
+    width: 560px;
+  }
+}
+
+/* Abas */
+.abas {
+  width: 100%;
+  height: 100vh;
   position: relative;
 }
 
@@ -63,39 +53,29 @@ li {
   display: none;
 }
 
-/*----MARGEM(DESPESAS----*/
-.margin {
-  padding: 10px;
-}
-
-.margin h3 {
-  text-align: center;
-  margin: 50px 10px 10px;
-}
-
 .textabas {
   font-size: 0.75rem;
   display: block;
   margin: 10px;
   padding: 1px;
   cursor: pointer;
-  color: var(--preto);
-  font-family: var(--ff-titulo);
 }
 
 .textabas:hover {
   color: var(--principal);
 }
 
-/*----CONTEUDO:CARTÕES/DESPESAS----*/
+.textabas:active {
+  color: var(--efeito-active);
+}
+
+/* Corpo das Abas */
 .tab-content {
-  border-top: solid 5px #00a34f;
+  border-top: solid 3px var(--principal);
   background-color: var(--branco);
   display: none;
   position: absolute;
-  height: 927px;
-  width: 801px;
-  padding: 10px;
+  width: 100%;
   left: 0;
 }
 
@@ -103,82 +83,156 @@ li {
   display: block;
 }
 
-.tab-content article {
+.tab-content section {
   padding: 5px;
   color: #555;
 }
 
-/*----CARTÃO-INFORMATIVO----*/
-.posictionCard {
+/* Cartões Salvos */
+.posicaoCartao {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.cartoes {
+
+.textmenu,
+.fa-chevron-right {
+  color: var(--cinza);
+  font-size: 1rem;
+  margin: 1px;
+  cursor: pointer;
+  color: #535151;
+}
+
+.textmenu:hover {
+  color: var(--principal);
+}
+
+.nubank, 
+.inter,
+.digio,
+.neon {
+  border: 1px solid var(--principal);
+  border-radius: 7px;
+}
+
+.nubank:hover {
+  border: 1px solid blueviolet;
+}
+
+.inter:hover {
+  border: 1px solid orangered;
+}
+
+.digio:hover {
+  border: 1px solid navy;
+}
+.neon:hover {
+  border: 1px solid cyan;
+}
+
+.data {
+  text-align: justify;
+  color: var(--cinza-escuro);
+  text-align: center;
+  margin: 5px;
+  font: bolder 0.67em;
+}
+
+/* Cadastrar Cartão */
+
+/* Extrato */
+.visualizarExtrato {
+  display: block;
+  margin: 10px auto;
+  width: 300px;
+  border: 1px inset var(--principal);
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.tipoCartao {
+  width: 120px;
+  height: 30px;
+  margin: 0px;
+}
+
+.nome,
+.limite,
+.vencimento,
+.despesa,
+.valor,
+.observacao {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin: 10px 0px;
+}
+
+@media (min-width: 760px) {
+  .form-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-flex label{
+    margin: 10px;
+  }
+
+  .vencimento,
+  .valor {
+    width: 160px;
+  }
+
+  .nome{
+    width: 300px;
+  }
+  
+  .despesa {
+    width: 250px;
+    height: 50px;
+  }
+
+  .observacao {
+    height: 150px;
+    width: 430px;
+    margin: 20px 0px;
+  }
+}
+
+/* Botões */
+.cartao {
+  border-radius: 10px;
+  width: 3rem;
+  height: 3rem;
+  margin: auto;
+}
+
+.salvar,
+.maisdespesa {
+  padding: 5px;
+  float: right;
+}
+
+/*----CARTÃO-INFORMATIVO----*/
+
+/*.cartoes {
   border-radius: 10px;
   margin: auto;
   padding: 20px;
   cursor: pointer;
 }
 
-.textnu {
-  color: var(--cinza-escuro);
-}
 
-.nu {
-  border: 1px solid var(--principal);
-  border-radius: 7px;
-}
-.nu:hover {
-  border: 1px solid blueviolet;
-}
-
-.textin {
-  color: var(--cinza-escuro);
-}
-
-.in {
-  border: 1px solid var(--principal);
-  border-radius: 7px;
-}
-
-.in:hover {
-  border: 1px solid orangered;
-}
-
-.textdg {
-  color: var(--cinza-escuro);
-}
-
-.dg {
-  border: 1px solid var(--principal);
-  border-radius: 7px;
-}
-
-.dg:hover {
-  border: 1px solid navy;
-}
-
-.textnn {
-  color: var(--cinza-escuro);
-}
-.nn {
-  border: 1px solid var(--principal);
-  border-radius: 7px;
-}
-.nn:hover {
-  border: 1px solid cyan;
-}
-
+Data do cartão
 .cartoes h6 {
   text-align: justify;
   color: var(--cinza-escuro);
   text-align: center;
   margin: 5px;
-}
-.cartoes h4 {
-  margin: 0px;
-  text-align: center;
-}
+}*/
 
+/* Input verde
 .cartoes input {
   background-color: #c4f8dd;
   display: none;
@@ -191,87 +245,4 @@ li {
   border-radius: 0.2rem;
   border-width: 0.013rem;
   border-style: none;
-}
-
-/*----button----*/
-.cartao {
-  border-radius: 10px;
-  width: 3rem;
-  height: 3rem;
-  margin: auto;
-}
-
-.cartao2 {
-  margin: 10px 290px 10px;
-  width: 10rem;
-}
-.despesa {
-  margin: 30px 295px 10px;
-  width: 10rem;
-}
-.detalhes {
-  margin: 10px 295px 10px;
-  width: 10rem;
-}
-.salvar {
-  margin: 30px 295px 10px;
-  width: 10rem;
-}
-/*----CAMPOS DE TEXTO----*/
-h3 {
-  margin: 10px 10px 30px;
-}
-input {
-  display: block;
-  width: 15rem;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: #323232;
-  border: none;
-}
-
-.labelForData {
-  margin: 30px 5px 0px;
-}
-input:focus,
-label:focus {
-  outline: none;
-}
-
-input {
-  border-bottom: 2px solid #323232;
-  padding: 5px;
-  font-size: 0.9rem;
-  margin-bottom: 25px;
-}
-input:focus {
-  border-color: #00a34f;
-}
-/*----visualizar-Despesas----*/
-.visualizarDespesas {
-  margin: 50px 230px 10px;
-  width: 300px;
-  height: auto;
-  border: 1px solid var(--principal);
-  border-radius: 7px;
-  padding: 10px;
-  border-style: inset;
-}
-
-h4 {
-  margin: 10px;
-}
-.visualizarDespesas input {
-  background-color: #c4f8dd;
-  display: none;
-  margin: 5px;
-  width: 5.5rem;
-  height: 1.5rem;
-  display: block;
-  font-family: var(--ff-texto);
-  padding: 0.3rem;
-  border-radius: 0.2rem;
-  border-width: 0.013rem;
-  border-style: none;
-}
+}*/
