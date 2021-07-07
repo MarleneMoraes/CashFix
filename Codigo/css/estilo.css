@@ -152,11 +152,39 @@ main {
     display: none;
 }
 
+@media (min-width: 300px) {
+    .cartao-compromisso {
+        display: inline-flex;
+        flex-wrap: wrap;
+        margin: 1rem;
+    }
+.quem-somos   {
+    height: 120vh;
+}
+.nosso-compromisso {
+    height: 210vh;
+}
+.na-palma-da-sua-mao
+{
+    height: 150vh;
+}
+}
+
 @media (min-width: 600px) {
     .cartao-compromisso {
         display: inline-flex;
         flex-wrap: wrap;
         margin: 1rem;
+    }
+    .quem-somos   {
+        height: 120vh;
+    }
+    .nosso-compromisso {
+        height: 210vh;
+    }
+    .na-palma-da-sua-mao
+    {
+        height: 150vh;
     }
 }
 
@@ -165,6 +193,16 @@ main {
         display: inline-flex;
         flex-wrap: wrap;
         margin: 1rem 0.3rem;
+    }
+    .quem-somos   {
+        height: 120vh;
+    }
+    .nosso-compromisso {
+        height: 100vh;
+    }
+    .na-palma-da-sua-mao
+    {
+        height: 130vh;
     }
 }
 
