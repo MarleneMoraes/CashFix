@@ -5,14 +5,15 @@ body {
 h1 {
   color: var(--principal);
   font-size: 30px;
+  margin: 10px 50px;
 }
 
 h2 {
+  text-align: center;
+  padding: 10px;
 }
 
 h3 {
-  text-align: center;
-  padding: 10px;
 }
 
 h4 {
@@ -25,68 +26,26 @@ h4 {
 
 .cartoes {
   background-color: var(--branco);
-  margin: 80px auto;
+  margin: 50px auto;
   border: 1px solid var(--cinza);
   border-radius: 10px;
   padding: 1.25rem;
-  width: 340px;
+  width: 90%;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 760px){
   .cartoes {
-    width: 560px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .flex {
+  width: 45%;
   }
 }
 
-/* Abas */
-.abas {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
-.abas ul li {
-  float: left;
-}
-
-.abas .rd_tab {
-  display: none;
-}
-
-.textabas {
-  font-size: 0.75rem;
-  display: block;
-  margin: 10px;
-  padding: 1px;
-  cursor: pointer;
-}
-
-.textabas:hover {
-  color: var(--principal);
-}
-
-.textabas:active {
-  color: var(--efeito-active);
-}
-
-/* Corpo das Abas */
-.tab-content {
-  border-top: solid 3px var(--principal);
-  background-color: var(--branco);
-  display: none;
-  position: absolute;
-  width: 100%;
-  left: 0;
-}
-
-.rd_tab:checked ~ .tab-content {
-  display: block;
-}
-
-.tab-content section {
-  padding: 5px;
-  color: #555;
-}
 
 /* Cartões Salvos */
 .posicaoCartao {
@@ -97,18 +56,17 @@ h4 {
 
 .textmenu,
 .fa-chevron-right {
-  color: var(--cinza);
+  color: var(--cinza-escuro);
   font-size: 1rem;
   margin: 1px;
   cursor: pointer;
-  color: #535151;
 }
 
 .textmenu:hover {
   color: var(--principal);
 }
 
-.nubank, 
+.nubank,
 .inter,
 .digio,
 .neon {
@@ -173,9 +131,10 @@ h4 {
   .form-flex {
     display: flex;
     flex-wrap: wrap;
+    width: 50%;
   }
 
-  .form-flex label{
+  .form-flex label {
     margin: 10px;
   }
 
@@ -184,10 +143,10 @@ h4 {
     width: 160px;
   }
 
-  .nome{
+  .nome {
     width: 300px;
   }
-  
+
   .despesa {
     width: 250px;
     height: 50px;
@@ -213,36 +172,3 @@ h4 {
   padding: 5px;
   float: right;
 }
-
-/*----CARTÃO-INFORMATIVO----*/
-
-/*.cartoes {
-  border-radius: 10px;
-  margin: auto;
-  padding: 20px;
-  cursor: pointer;
-}
-
-
-Data do cartão
-.cartoes h6 {
-  text-align: justify;
-  color: var(--cinza-escuro);
-  text-align: center;
-  margin: 5px;
-}*/
-
-/* Input verde
-.cartoes input {
-  background-color: #c4f8dd;
-  display: none;
-  margin: 5px;
-  width: 5.5rem;
-  height: 1.5rem;
-  display: block;
-  font-family: var(--ff-texto);
-  padding: 0.3rem;
-  border-radius: 0.2rem;
-  border-width: 0.013rem;
-  border-style: none;
-}*/

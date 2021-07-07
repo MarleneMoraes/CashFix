@@ -67,146 +67,113 @@
 
         <button class="botao botao-verde sair" type="button"><a href="index.html">Sair</a></button>
     </header>
-    <main>
-        <div id="mensagemErro"></div>
-        <div id="mensagemSucesso"></div>
+    <div id="mensagemErro"></div>
+    <div id="mensagemSucesso"></div>
 
-        <div class="navegacao">
-            <a class="textmenu" href="pagina-interna.html">Início</a>
-            <i class="fas fa-chevron-right"></i> <a class="textmenu" href="cartoes.html">Cartões</a>
-        </div>
-        
-        <div class="cartoes">
-            <h1>Cartões</h1>
+    <div class="navegacao">
+        <a class="textmenu" href="pagina-interna.html">Início</a>
+        <i class="fas fa-chevron-right"></i> <a class="textmenu" href="cartoes.html">Cartões</a>
+    </div>
 
-            <!--Navegação em abas-->
-            <nav class="abas">
-                <ul>
-                    <li>
-                        <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
+    <h1>Cartões</h1>
 
-                        <!--Aba 1: Cartões-->
-                        <label for="tab1" class="textabas">
-                            <h2>Cartões</h2>
-                        </label>
-                        <div class="tab-content">
-                            <section class="posicaoCartao">
-                                <div class="textoCartao">
-                                    <h4>Nubank</h4>
-                                    <div class="nubank">
-                                        <input type="text" value="R$2.354,90">
-                                        <p class="data">15/06/21</p>
-                                    </div>
-                                </div>
-                                <div class="textoCartao">
-                                    <h4>Inter</h4>
-                                    <div class="inter">
-                                        <input type="text" value="R$2.354,90">
-                                        <p class="data">15/06/21</p>
-                                    </div>
-                                </div>
-                                <div class="textoCartao">
-                                    <h4>Digio</h4>
-                                    <div class="digio">
-                                        <input type="text" value="R$2.354,90">
-                                        <p class="data">15/06/21</p>
-                                    </div>
-                                </div>
-                                <div class="textoCartao">
-                                    <h4>Neon</h4>
-                                    <div class="neon">
-                                        <input type="text" value="R$2.354,90">
-                                        <p class="data">15/06/21</p>
-                                    </div>
-                                </div>
-                                <button id="cartaoAdd" class="botao botao-verde cartao">+</button>
+    <main class="cartoes">
+        <!--Cartões Salvos-->
+        <article class="flex">
+            <h2>Cartões Salvos</h2>
+            <div class="textoCartao posicaoCartao">
+                <div class="nubank">
+                    <h4>Nubank</h4>
+                    <input type="text" value="R$2.354,90">
+                    <p class="data">15/06/21</p>
+                </div>
+            </div>
+            <div class="textoCartao posicaoCartao">
+                <div class="inter">
+                    <h4>Inter</h4>
+                    <input type="text" value="R$2.354,90">
+                    <p class="data">15/06/21</p>
+                </div>
+            </div>
+            <div class="textoCartao posicaoCartao">
+                <div class="digio">
+                    <h4>Digio</h4>
+                    <input type="text" value="R$2.354,90">
+                    <p class="data">15/06/21</p>
+                </div>
+            </div>
+            <div class="textoCartao posicaoCartao">
 
-                            </section>
-                            <!-- Cadastrar Cartão -->
-                            <section id="cadastroCartao">
-                                <div class="sessaoCadastro">
-                                    <hr>
-                                    <h3>Cadastrar Cartão</h3>
-                                    <div class="form-flex">
-                                        <label>Nome<input id="nome" class="form nome" type="text" name="nome"
-                                                placeholder="Nome do cartão">
-                                        </label>
+                <div class="neon">
+                    <h4>Neon</h4>
+                    <input type="text" value="R$2.354,90">
+                    <p class="data">15/06/21</p>
+                </div>
+            </div>
+            <button id="cartaoAdd" class="botao botao-verde cartao">+</button>
 
-                                        <label>Limite
-                                            <input id="limite" class="form limite" type="number" name="Limite"
-                                                placeholder="Limite do cartão" min="0">
-                                        </label>
-                                        <label>Data de Vencimento
-                                            <input id="vencimento" class="form vencimento" type="date" name="vencimento"
-                                                placeholder="Data de Vencimento">
-                                        </label>
-                                    </div>
-                                    <button class="botao botao-verde salvar"> Salvar</button>
-                                </div>
-                            </section>
-                        </div>
-                    </li>
+            <!-- Cadastrar Cartão -->
+            <div class="sessaoCadastro">
+                <hr>
+                <h2>Cadastrar Cartão</h2>
+                <div class="form-flex">
+                    <label>Nome<input id="nome" class="form nome" type="text" name="nome" placeholder="Nome do cartão">
+                    </label>
 
-                    <!--Aba 2: Extrato-->
-                    <li>
-                        <input type="radio" name="tabs" class="rd_tab" id="tab2">
-                        <label for="tab2" class="textabas">
-                            <h2>Extrato</h2>
-                        </label>
-                        <div class="tab-content">
-                            <!--Extrato do Cartão -->
-                            <h3>Extrato do Cartão</h3>
-                            <select id="tipoCartao" class="form tipoCartao">
-                                <option selected>Selecione</option>
-                                <option value="NU">Nubank</option>
-                                <option value="IN">Inter</option>
-                                <option value="DG">Digio</option>
-                                <option value="DG">Neon</option>
-                            </select>
-                            <div class="visualizarExtrato">
-                                <h4>Title</h4>
-                                <div class="extratoCartao">
-                                    <input type="text" value="R$588,72">
-                                    <input type="text" value="R$588,72">
-                                    <input type="text" value="R$588,72">
-                                    <input type="text" value="R$588,72">
-                                </div>
-                                <h5>Total:</h5>
-                                <input type="text" value="R$2.354,88">
-                            </div>
-                            <button class="botao botao-verde salvar">Salvar</button>
+                    <label>Limite
+                        <input id="limite" class="form limite" type="number" name="Limite"
+                            placeholder="Limite do cartão" min="0">
+                    </label>
+                    <label>Data de Vencimento
+                        <input id="vencimento" class="form vencimento" type="date" name="vencimento"
+                            placeholder="Data de Vencimento">
+                    </label>
+                </div>
+                <button class="botao botao-verde salvar"> Salvar</button>
+            </div>
+        </article>
 
-                            <!-- ADICIONAR DESPESAS -->
-                            <section id="adicionarDespesa">
-                                <div class="sessaoDespesas">
-                                    <hr>
-                                    <h3>Adicionar Despesas</h3>
-                                    <div class="form-flex">
-                                        <label for="despesa">Despesa
-                                            <input id="despesa" class="form despesa" type="text" name="despesa"
-                                                placeholder="Descrição de Débito">
-                                        </label>
-                                        <label for="valor">Valor
-                                            <input id="valor" class="form valor" type="number" name="valor"
-                                                placeholder="Valor da Despesa" min="0">
-                                        </label>
-                                         <label for="observacao">Observação
-                                        <textarea id="observacao" class="form observacao" rows="6"
-                                            placeholder="Adicione um comentário"></textarea></label>
-                                    </div>
-                                   
+        <article class="flex">
+            <!--Extrato do Cartão -->
+            <h2>Extrato do Cartão</h2>
+            <select id="tipoCartao" class="form tipoCartao">
+                <option selected>Selecione</option>
+                <option value="NU">Nubank</option>
+                <option value="IN">Inter</option>
+                <option value="DG">Digio</option>
+                <option value="DG">Neon</option>
+            </select>
+            <div class="visualizarExtrato">
+                <h4>Title</h4>
+                <div class="extratoCartao">
+                    <input type="text" value="R$588,72">
+                    <input type="text" value="R$588,72">
+                    <input type="text" value="R$588,72">
+                    <input type="text" value="R$588,72">
+                </div>
+                <h5>Total:</h5>
+                <input type="text" value="R$2.354,88">
+            </div>
+            <button class="botao botao-verde salvar">Salvar</button>
 
-                                    <button class="botao botao-verde maisdespesa"> + Despesa</button>
-                                </div>
-                            </section>
-
-
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-
-
+            <!--Adicionar despesas-->
+            <hr>
+            <h3>Adicionar Despesas</h3>
+            <div class="form-flex">
+                <label for="despesa">Despesa
+                    <input id="despesa" class="form despesa" type="text" name="despesa"
+                        placeholder="Descrição de Débito">
+                </label>
+                <label for="valor">Valor
+                    <input id="valor" class="form valor" type="number" name="valor" placeholder="Valor da Despesa"
+                        min="0">
+                </label>
+                <label for="observacao">Observação
+                    <textarea id="observacao" class="form observacao" rows="6"
+                        placeholder="Adicione um comentário"></textarea></label>
+            </div>
+            <button class="botao botao-verde maisdespesa"> + Despesa</button>
+        </article>
     </main>
 
     <!-- Botão de Voltar -->
