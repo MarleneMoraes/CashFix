@@ -60,7 +60,11 @@ a {
     height: 3rem;
     margin: 8px;
     display: block;
-    color: #535151;
+    color: var(--cinza);
+}
+
+.cadastrar > span {
+    color: var(--principal);
 }
 
 @media (min-width:600px){

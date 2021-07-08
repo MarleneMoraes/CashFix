@@ -10,7 +10,7 @@
     --preto: #000000;
     --preto-fosco: #212529;
     --cinza: #bbb;
-    --cinza-escuro: #3c3c3c;
+    --cinza-escuro: #535151;
     --claro: #fafafa;
     --fundo: #dadada;
     --fundo-escuro: #2c2c2c;
@@ -83,7 +83,7 @@ li {
     width: 300px;
     left: -300px;
     height: 100%;
-    background-color: black;
+    background: url(../imagens/bg-texture.png);
     transition: all 0.5s ease;
     z-index: 999;
 }
@@ -136,7 +136,7 @@ label #out {
 label #out {
     position: absolute;
     border-radius: 5px;
-    background-color: black;
+    background: url(../imagens/bg-texture.png);
     margin: 15px 30px;
     cursor: pointer;
     border: 1px solid #262626;

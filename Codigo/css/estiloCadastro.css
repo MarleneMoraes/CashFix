@@ -31,7 +31,14 @@ h1{
     height: 3rem;
     margin: 8px;
     display: block;
-    color: #535151;
+}
+
+.entrar > span{
+    color: var(--principal);
+}
+
+.entrar:hover {
+    color: var(--branco);
 }
 
 @media (min-width:600px){
