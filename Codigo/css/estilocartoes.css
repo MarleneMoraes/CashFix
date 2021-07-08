@@ -10,9 +10,7 @@ h1 {
 
 h2 {
   padding: 10px;
-}
-
-h3 {
+  text-align: center;
 }
 
 h4 {
@@ -32,7 +30,10 @@ h4 {
   width: 90%;
 }
 
-@media (min-width: 760px){
+@media (min-width: 1000px){
+  h2 {
+    text-align: left;
+  }
   .cartoes {
     display: flex;
     flex-flow: row wrap;
@@ -43,14 +44,32 @@ h4 {
   .flex {
   width: 45%;
   }
+
+  .responsivehr{
+    display: none;
+  }
+
+}
+
+.sectionTop,
+.sectionMobile {
+  padding-bottom: 40px;
+  margin: 0px auto;
 }
 
 
 /* Cartões Salvos */
-.posicaoCartao {
+.cartoesSalvos {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.cartao {
+  margin: 5px;
+  padding: 10px;
 }
 
 .textmenu,
@@ -65,28 +84,34 @@ h4 {
   color: var(--principal);
 }
 
-.nubank,
-.inter,
-.digio,
-.neon {
+#nubank,
+#inter,
+#digio,
+#neon,
+#cartao {
   border: 1px solid var(--principal);
   border-radius: 7px;
 }
 
-.nubank:hover {
+#nubank:hover {
   border: 1px solid blueviolet;
 }
 
-.inter:hover {
+#inter:hover {
   border: 1px solid orangered;
 }
 
-.digio:hover {
+#digio:hover {
   border: 1px solid navy;
 }
-.neon:hover {
+#neon:hover {
   border: 1px solid cyan;
 }
+
+#cartao:hover {
+  border: 1px solid var(--efeito-hover);
+}
+
 
 .data {
   text-align: justify;
@@ -97,6 +122,12 @@ h4 {
 }
 
 /* Cadastrar Cartão */
+
+#sessaoCadastro{
+  visibility: hidden;
+}
+
+
 
 /* Extrato */
 .visualizarExtrato {
@@ -130,7 +161,7 @@ h4 {
   .form-flex {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    margin: 0 auto;
   }
 
   .form-flex label {
@@ -159,15 +190,18 @@ h4 {
 }
 
 /* Botões */
-.cartao {
-  border-radius: 10px;
-  width: 3rem;
-  height: 3rem;
-  margin: auto;
+.addCartao,  
+.maisdespesa,
+.salvar{
+  float: right;
 }
 
-.salvar,
-.maisdespesa {
+.salvar {
   padding: 5px;
-  float: right;
+}
+
+@media (min-width: 760px) and (max-width: 999px) {
+  .maisdespesa {
+    margin-top: -20px;
+  }
 }
