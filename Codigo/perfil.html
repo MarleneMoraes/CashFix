@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/estiloperfil copy.css">
+    <link rel="stylesheet" href="css/estiloperfil.css">
     <link rel="shortcut icon" href="imagens/logotipo-colorida.png" type="image/x-icon">
     <title>Perfil | CashFix</title>
 </head>
@@ -25,7 +25,7 @@
             <nav class="menulateral">
                 <ul>
                     <li class="nav-link">
-                        <a href="pagInternaBT.html">
+                        <a href="pagInterna.html">
                             <i class="fas fa-home"></i>
                             <span>Home</span>
                         </a>
@@ -37,7 +37,7 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="perfil copy.html">
+                        <a href="perfil.html">
                             <i class="far fa-user"></i>
                             <span>Perfil</span>
                         </a>
@@ -56,14 +56,14 @@
                 title="CashFix"></a>
         <nav class="menuDesktop">
             <ul>
-                <li><a href="pagInternaBT.html">Home</a></li>
+                <li><a href="pagInterna.html">Home</a></li>
                 <li><a href="metas.html">Metas</a></li>
-                <li><a href="perfil copy.html">Perfil</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
                 <li><a href="cartoes.html">Cartões</a></li>
             </ul>
         </nav>
 
-        <div id="usuario"></div>
+        <div id="usuario"><p></p></div>
 
         <button class="botao botao-verde sair" type="button"><a href="index.html">Sair</a></button>
     </header>
@@ -89,13 +89,12 @@
                         <p><small class="erro"></small></p>
                     </label>
                     <label id="labelSobrenome" class="label">
-                        <input id="sobrenomePerfil" class="form sobrenome" type="text" name="sobrenome" placeholder="Sobrenome" autocomplete="off">
+                        <input id="sobrenome" class="form sobrenome" type="text" name="sobrenome" placeholder="Sobrenome" autocomplete="off">
                         <p><small class="erro"></small></p>
                     </label>
-
                 </div>
                 <label id="labelEmail" class="label">
-                    <input class="form email" type="text" name="email" placeholder="Email" id="emailPerfil" autocomplete="off">
+                    <input class="form email" type="text" name="email" placeholder="Email" id="email" autocomplete="off">
                     <small class="erro"></small></br>
                     <p><small class="erro"></small></p>
                 </label>
@@ -111,6 +110,7 @@
                         <p><small class="erro"></small></p>
                     </label>
                 </div>
+
                 <div class="form-flex">
                     <label id="labelEndereco" class="label">
                         <input class="form endereco" type="text" name="endereco" placeholder="Endereço"
@@ -123,6 +123,7 @@
                         <p><small class="erro"></small></p>
                     </label>
                 </div>
+
                 <div class="form-flex">
                     <label id="labelCidade" class="label">
                         <input class="form cidade" type="text" name="cidade" placeholder="Cidade" id="cidadePerfil" autocomplete="off">
@@ -194,7 +195,7 @@
         <p>&copy; Copyright 2021 - Trabalho Interdisciplinar: Aplicações Web | <strong>ICEI PUC Minas</strong></p>
     </footer>
 
-    <script src="js/scriptPerfil.js"></script>
+    <script src="./js/scriptPerfil.js"></script>
     <script src="https://kit.fontawesome.com/83bbcb24d1.js" crossorigin="anonymous"></script>
 </body>
 
