@@ -4,7 +4,7 @@ const nome = document.querySelector('#nome')
 let labelNome = document.querySelector('#labelNome')
 let validaNome = false
 
-const nome = document.querySelector('#sobrenome')
+const sobrenome = document.querySelector('#sobrenome')
 let labelSobrenome = document.querySelector('#labelSobrenome')
 let validaSobrenome = false
 
@@ -22,7 +22,6 @@ let validaTelefone = false
 
 let endereco = document.querySelector('#endereco')
 let labelEndereco = document.querySelector('#labelEndereco')
-let validaEndereco = false
 
 let numero = document.querySelector('#numero')
 let labelNumero = document.querySelector('#labelNumero')
@@ -34,7 +33,6 @@ let validaCidade = false
 
 let estado = document.querySelector('#estado')
 let labelEstado = document.querySelector('#labelEstado')
-let validaEstado = false
 
 let cep = document.querySelector('#cep')
 let labelCep = document.querySelector('#labelCep')
@@ -48,7 +46,7 @@ let usuario = document.querySelector('#usuario')
 
 //Saudação
 usuario.setAttribute('style', 'color:white')
-usuario.innerHTML = '<p>Olá ${nomeCadastrado}!</p>'
+usuario.innerHTML = `<p>Olá ${nomeCadastrado}!</p>`
 
 
 //Validação de Cadastro
@@ -93,10 +91,6 @@ btnSalvar.addEventListener('click', (e) => {
     )
 
     localStorage.setItem('listaUsuario', JSON.stringify(listaUsuario))
-
-    setTimeout(() => {
-      window.location.href = 'login.html'
-    }, 2000)
 
   } else {
     mensagemSucesso.setAttribute('style', 'display: none')
