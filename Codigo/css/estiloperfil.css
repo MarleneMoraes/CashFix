@@ -4,7 +4,7 @@ h1 {
   margin: 10px 50px;
 }
 
-#usuario{
+#usuario {
   font: normal 15px var(--ff-texto);
 }
 
@@ -15,6 +15,7 @@ h1 {
   border: 1px solid var(--cinza);
   border-radius: 10px;
   padding: 1.25rem;
+  padding-bottom: 3rem;
   width: 340px;
 }
 
@@ -48,6 +49,11 @@ h1 {
   padding: 10px;
 }
 
+.salvar {
+  float: right;
+  margin-right: 5px;
+}
+
 @media (min-width: 760px) {
   .perfil {
     width: 560px;
@@ -75,6 +81,10 @@ h1 {
 
   .numero {
     width: 100px;
+  }
+
+  .salvar {
+    margin-right: 13px;
   }
 }
 
