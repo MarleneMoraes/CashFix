@@ -1,4 +1,4 @@
-var btn = document.getElementById('#nova-meta');
+var btn = document.getElementById('nova-meta');
 var container1 = document.querySelector('.container1');
 
 btn.addEventListener('click', function() {
