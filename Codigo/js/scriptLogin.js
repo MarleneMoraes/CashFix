@@ -43,7 +43,7 @@ btnEntrar.addEventListener('click', () => {
             }
             
             setTimeout(() => {
-                window.location.href = 'pagInternaBT.html'
+                window.location.href = 'pagInterna.html'
               }, 2000)
         }
     })
