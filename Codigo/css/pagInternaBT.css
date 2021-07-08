@@ -1,9 +1,23 @@
+/* Corpo da página*/
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-titulo) !important;
+}
+
+h1 {
+  color: var(--principal) !important;
+  font: 700 30px !important;
+  margin: 10px 0px;
+}
+
 .principal {
     padding-top: 50px;
 }
 
 .hr-abas {
-    background-color: red;
+    background-color: var(--principal);
 }
 
 .cx-img img {
@@ -17,7 +31,7 @@
 .caixa1 {
     float: inline-start;
     text-align: left;
-    color: #234880;
+    color: var(--cinza-escuro);
     margin: 20px;
     padding: 50px;
     display: block;
@@ -31,10 +45,12 @@
     margin: 0px;
 }
 
-.caixa2 {
+.caixa2,
+.caixa4, 
+.caixa6 {
     float: left;
     color: white;
-    background-color: rgb(49, 197, 140);
+    background-color: var(--principal);
     margin: 20px;
     padding: 50px;
     display: block;
@@ -43,23 +59,30 @@
 }
 
 .caixa4 {
-    float: left;
-    color: white;
     background-color: rgb(197, 170, 49);
-    margin: 20px;
-    padding: 50px;
-    display: block;
-    border-radius: 2em;
-    box-shadow: 0px 0px 3px 1px;
 }
 
 .caixa6 {
-    float: left;
-    color: white;
     background-color: rgb(197, 66, 49);
-    margin: 20px;
-    padding: 50px;
-    display: block;
-    border-radius: 2em;
-    box-shadow: 0px 0px 3px 1px;
 }
+
+/* Links da página */
+
+
+.menuDesktop a,
+.bloco a,
+.btn-link {
+    color: var(--principal) !important;
+  }
+  
+  .menuDesktop a:hover,
+  .bloco a:hover,
+  .btn-link:hover {
+    color: var(--efeito-hover) !important;
+  }
+  
+  .menuDesktop a:active,
+  .bloco a:active,
+  .btn-link:active {
+    color: var(--efeito-active) !important;
+  }
