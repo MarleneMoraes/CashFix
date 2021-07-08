@@ -168,8 +168,7 @@ label #out {
 }
 
 .logoDesktop,
-.menuDesktop,
-#usuario {
+.menuDesktop {
     display: none;
 }
 
