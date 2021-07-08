@@ -1,44 +1,20 @@
-/*aparecer mensagem do usuário logado
-let usuario = document.querySelector('#usuario')
-
-//Saudação
-usuario.setAttribute('style', 'color:white')  
-usuario.innerHTML = `<p>Olá ${nomeCadastrado}! Sua sessão expirará em</p>`;
-
-*/
-
-/* clicar no botão + e aparecer a sessão 
-
-let cartao = document.querySelector('#sessaoCadastro')
 let botaoMais = document.querySelector('#cartaoAdd')
-let tipoCartao = document.querySelector('#tipoCartao')
+let cartao = document.querySelector('#sessaoCadastro')
 
-function sessaoCadastrar () {
-     cartao.setAttribute ('style', 'opacity:visible')
-}
+const tipoCartao = document.querySelector('#tipoCartao')
+const tituloExtrato = document.querySelector('#tituloExtrato')
 
-if (cartao.getAttribute('style') == 'opacity:hidden;') {
-       
-    } 
-
-
-
-    
-
-
-tipoCartao.addEventListener()*/
-
-/*var btn = document.getElementById('nova-meta');
-var container1 = document.querySelector('.container1');
-
-btn.addEventListener('click', function() {
-    
-  if(container1.style.display === 'block') {
-      container1.style.display = 'none';
-  } else {
-      container1.style.display = 'block';
-  }
+botaoMais.addEventListener("click", function () {
+    if (cartao.style.display === "none") {
+        cartao.style.display = "block"
+    } else {
+        cartao.style.display = "none"
+    }
 });
 
+//const select = document.querySelector('select');
+//const h4 = document.querySelector('h4');
 
-visibility: visible;*/
+tipoCartao.addEventListener('change', (option) => {
+  tituloExtrato.textContent = option.target.value
+});

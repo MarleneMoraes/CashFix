@@ -124,10 +124,8 @@ h4 {
 /* Cadastrar Cartão */
 
 #sessaoCadastro{
-  visibility: hidden;
+  display: none;
 }
-
-
 
 /* Extrato */
 .visualizarExtrato {
