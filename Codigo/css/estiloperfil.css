@@ -4,6 +4,9 @@ h1 {
   margin: 10px 50px;
 }
 
+#usuario{
+  font: normal 15px var(--ff-texto);
+}
 
 /* Card Perfil */
 .perfil {
@@ -21,7 +24,7 @@ h1 {
   font-size: 1rem;
   margin: 1px;
   cursor: pointer;
-  color: #535151;
+  color: var(--cinza-escuro);
 }
 
 .form {
