@@ -108,38 +108,38 @@
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="caixa1">
                                 <p>Saldo Atual:</p>
-                                <h3>R$ 2.685,67</h3><br>
+                                <h3 id="saldoAtual">R$0.00</h3><br>
 
                                 <table id="idTabela" class="table table-striped">
                                     <tr>
                                         <td>Data</td>
                                         <td>Categoria</td>
-                                        <td>Crédito</td>
-                                        <td>Débito</td>
+                                        <td>Transação</td>
+                                        <td>Valor</td>
                                     </tr>
                                     <tr>
-                                        <td>22-12-20</td>
-                                        <td class="categoria">Alimentação</td>
                                         <td></td>
-                                        <td>R$ 566,25</td>
+                                        <td class="categoria"></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
-                                        <td>16-02-21</td>
-                                        <td class="categoria">TV / Internet / Telefone</td>
                                         <td></td>
-                                        <td>R$ 270,00</td>
+                                        <td class="categoria"></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
-                                        <td>22-12-20</td>
-                                        <td class="categoria">Alimentação</td>
                                         <td></td>
-                                        <td>R$ 566,25</td>
+                                        <td class="categoria"></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
-                                        <td>22-12-20</td>
-                                        <td class="categoria">Alimentação</td>
                                         <td></td>
-                                        <td>R$ 566,25</td>
+                                        <td class="categoria"></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                 </table>
                                 <button type="button" class="btn btn-link">Ver Extrato Completo</button>
@@ -148,11 +148,11 @@
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="caixa2">
                                 Valor
-                                <input id="Valor" class="form-control" type="number" min="0" placeholder="R$"><br>
+                                <input id="Valor" class="form-control" type="number" min="0" placeholder="R$" autocomplete="off"><br>
 
                                 <div class="form-check">
                                     <input  id="RadioEntrada" class="form-check-input" type="radio" name="exampleRadios"
-                                         value="Entrada">
+                                         value="Entrada" checked>
                                     <label class="form-check-label" for="exampleRadios1">
                                         Entrada (crédito)
                                     </label>
@@ -165,13 +165,14 @@
                                     </label>
                                 </div>
                                 <br>Categoria
-                                <select id="seletorCategoria" class="form-select">
-                                    <option selected value="1">Alimentação</option>
-                                    <option value="2">Transporte</option>
-                                    <option value="3">TV / Internet / Telefone</option>
-                                    <option value="4">Salário</option>
-                                    <option value="5">Saúde</option>
-                                    <option value="6">Outros</option>
+                                <select id="seletorCategoria" class="form-select" autocomplete="off">
+                                    <option selected>Selecione</option>
+                                    <option value="Alimentação">Alimentação</option>
+                                    <option value="Transporte">Transporte</option>
+                                    <option value="TV / Internet / Telefone">TV / Internet / Telefone</option>
+                                    <option value="Salário">Salário</option>
+                                    <option value="Saúde">Saúde</option>
+                                    <option value="Outros">Outros</option>
                                 </select><br>
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
@@ -214,12 +215,8 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
-
-
         </section>
 
     </main>
