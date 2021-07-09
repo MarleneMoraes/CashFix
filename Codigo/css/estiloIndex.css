@@ -73,6 +73,8 @@ section {
 
 main {
     background-image: url('../imagens/fundo-pag-inicial-2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
 }
 

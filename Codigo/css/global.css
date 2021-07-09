@@ -84,6 +84,7 @@ li {
     left: -300px;
     height: 100%;
     background: url(../imagens/bg-texture.png);
+    top: 60.5px;
     transition: all 0.5s ease;
     z-index: 999;
 }
@@ -391,11 +392,13 @@ i {
 /* FOOTER */
 
 .rodape {
-    position: relative;
+    bottom: 0;
+    position: absolute;
     padding: 20px;
     background-image: url(../imagens/bg-texture.png);
     color: var(--fundo);
     text-align: center;
+    width: 100%;
 }
 
 .rodape img {
