@@ -110,7 +110,7 @@ btnSeletorCategoria.addEventListener('click', () => {
 
 async function MostrarSaldoTotal() {
     let respostaTabela = await JSON.parse(localStorage.getItem('ValoresCadastrados') || '[]')
-    let respostaSaldo = await JSON.parse(localStorage.getItem('SaldoTotal'))
+    let respostaSaldo = await JSON.parse(localStorage.getItem('saldoTotal'))
 
     let converterSaldoParaNumber = parseInt(respostaSaldo)
     let saldo = 0;
@@ -118,22 +118,26 @@ async function MostrarSaldoTotal() {
     respostaTabela.map((item, index, array) => {
         for (let i = 0; i < array.length; i++) {
             console.log(array[i].opcaoRadios)
-            if (array[i].opcaoRadios === "Saida") {
+            if (array[i].opcaoRadios === 'Saida') {
                 saldo -= parseInt(array[i].valor)
             }
         }
 
-        console.log("esse e o saldo", saldo)
-
-
-        if (array[index].opcaoRadios === "Entrada") {
+        if (array[index].opcaoRadios === 'Entrada') {
             converterSaldoParaNumber = saldo + parseInt(array[index].valor)
         }
 
     })
 
-    await localStorage.setItem("SaldoTotal", JSON.stringify(converterSaldoParaNumber))
-    saldoAtual.innerHTML = (`R$ ${SaldoTotal.value}`)
-    console.log(converterSaldoParaNumber)
-
+    await localStorage.setItem('saldoTotal', JSON.stringify(converterSaldoParaNumber))
+    imprimirSaldoAtual()
 }
+
+function imprimirSaldoAtual() {
+   let saldoTotal = JSON.parse(localStorage.getItem('saldoTotal') || '0.00')
+
+    saldoAtual.innerHTML = `R$ ${saldoTotal}` 
+}
+
+imprimirSaldoAtual()
+
