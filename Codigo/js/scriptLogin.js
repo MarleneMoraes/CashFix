@@ -43,7 +43,7 @@ btnEntrar.addEventListener('click', () => {
 
             setTimeout(() => {
                 window.location.href = 'pagInterna.html'
-            }, 2000)
+            }, 200)
         }
     })
 
@@ -60,7 +60,6 @@ btnEntrar.addEventListener('click', () => {
         mensagemErro.setAttribute('style', 'display: block')
         mensagemErro.innerHTML = 'Usuário ou senha incorretos'
 
-        email.focus()
     }
 
 })
