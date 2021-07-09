@@ -106,8 +106,6 @@ btnSeletorCategoria.addEventListener('click', () => {
     cadastroDeCategorias()
 })
 
-
-
 async function MostrarSaldoTotal() {
     let respostaTabela = await JSON.parse(localStorage.getItem('ValoresCadastrados') || '[]')
     let respostaSaldo = await JSON.parse(localStorage.getItem('saldoTotal'))

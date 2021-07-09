@@ -42,13 +42,6 @@ let btnSalvar = document.querySelector('#salvar')
 
 let mensagemSucesso = document.querySelector('#mensagemSucesso')
 
-let usuario = document.querySelector('#usuario')
-let nomeCadastrado = localStorage.getItem("listaUsuario")
-
-//Saudação
-usuario.setAttribute('style', 'color:white')
-usuario.innerHTML = "<p>Olá " + nomeCadastrado + "!</p>"
-
 
 //Validação de Cadastro
 nome.addEventListener('keyup', () => {
