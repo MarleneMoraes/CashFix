@@ -97,7 +97,7 @@ li {
   border-radius: 3px;
 }
 
-.container1 {
+.containerNovaMeta {
   background-color: var(--claro);
   margin: 3% 1% 1%;
   padding: 57px 25px 0px;
@@ -106,7 +106,7 @@ li {
   display: none;
 }
 
-.container2 {
+.containerEditarMeta {
   background-color: var(--claro);
   margin: 3% 1% 1%;
   padding: 0px 15px 20px;

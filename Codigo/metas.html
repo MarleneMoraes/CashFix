@@ -93,7 +93,7 @@
             <div class="card-secundario">
                 <div class="novameta">
                     <div class="button-centralize">
-                        <button id='nova-meta' class="botao botao-verde btn-editar-meta">
+                        <button id='btnNovaMeta' class="botao botao-verde btn-editar-meta">
                             <h6 class="editar-meta-text">Nova Meta</h6>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-chevron-down seta-button" viewBox="0 0 16 16">
@@ -103,32 +103,33 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="container1">
+                    <div class="containerNovaMeta">
+                        <div id="mensagemErro"></div>
                         <div>
                             <label>Nome</label>
-                            <input class="form-control form-control-sm input-meta" type="text"
-                                placeholder="Descrição da meta" aria-label="default input example">
+                            <input id="novoNomeMeta" class="form-control form-control-sm input-meta" type="text"
+                                placeholder="Descrição da meta" aria-label="default input example" autocomplete="off">
                         </div>
                         <div class="input-data">
                             <div class="input-data-formulario">
                                 <label>Inicio</label>
-                                <input class="form-control form-control-sm" type="date" placeholder="01/01/2021"
-                                    aria-label=".form-control-lg example">
+                                <input id="novaDataInicio" class="form-control form-control-sm" type="date"
+                                    aria-label=".form-control-lg example" autocomplete="off">
                             </div>
                             <div class="input-data-formulario">
                                 <label>Final</label>
-                                <input class="form-control form-control-sm" type="date" placeholder="01/01/2021"
-                                    aria-label=".form-control-lg example">
+                                <input id="novaDataFinal" class="form-control form-control-sm" type="date"
+                                    aria-label=".form-control-lg example" autocomplete="off">
                             </div>
                         </div>
                         <div class="input-valor">
                             <label>Valor</label>
-                            <input class="form-control form-control-sm" type="number" placeholder="R$00.000,00"
-                                aria-label=".form-control-sm example">
+                            <input id="novoValor" class="form-control form-control-sm" type="number" min="0"
+                                aria-label=".form-control-sm example" autocomplete="off">
                         </div>
                         <div class="button-centralize">
-                            <button class="botao botao-verde criar-meta">
-                                <a href="#">Criar</a>
+                            <button id="btnCriarMeta" class="botao botao-verde criar-meta">
+                                Criar
                             </button>
                         </div>
                     </div>
@@ -137,7 +138,7 @@
 
                 <div class="editarmeta">
                     <div class="button-centralize">
-                        <button id='editar-meta' class="botao botao-verde btn-editar-meta">
+                        <button id='btnEditarMeta' class="botao botao-verde btn-editar-meta">
                             <h6 class="editar-meta-text">Editar Meta</h6>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-chevron-down seta-button" viewBox="0 0 16 16">
@@ -147,12 +148,13 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="container2">
-                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <div class="containerEditarMeta">
+                        <select id="idSelect" class="form-select form-select-sm" aria-label=".form-select-sm example">
                             <option selected>Selecionar meta</option>
-                            <option value="1">Carro</option>
-                            <option value="2">Casa</option>
-                            <option value="3">Viajar</option>
+                            <option value="Carro">Carro</option>
+                            <option value="Casa">Casa</option>
+                            <option value="Viagem">Viagem</option>
+                            <option value="Intercâmbio/Estudos">Intercâmbio/Estudos</option>
                         </select>
                         <div>
                             <label>Nome</label>
@@ -188,40 +190,38 @@
 
             <div class="lista-metas">
                 <h2 class="tituloMain">Lista de metas</h2>
-                <table class="table table-dark table-hover">
-                    <thead>
-                        <tr class="lista-metas-cabecalho">
-                            <th scope="col"></th>
-                            <th scope="col">Meta</th>
-                            <th scope="col">Saldo</th>
-                            <th scope="col">Tempo</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
+                <table id="idTabela" class="table table-dark table-hover">
 
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Carro</td>
-                            <td>R$9.010,00</td>
-                            <td>4 meses</td>
-                            <td><a href="#"><span class="badge">excluir</span></a></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Casa</td>
-                            <td>R$2.400,00</td>
-                            <td>5 anos</td>
-                            <td><a href="#"><span class="badge">excluir</span></a></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Viajar</td>
-                            <td>R$5.765,00</td>
-                            <td>3 semanas</td>
-                            <td><a href="#"><span class="badge">excluir</span></a></td>
-                        </tr>
-                    </tbody>
+                    <tr class="lista-metas-cabecalho">
+                        <th scope="col"></th>
+                        <th scope="col">Meta</th>
+                        <th scope="col">Saldo</th>
+                        <th scope="col">Tempo</th>
+                        <th scope="col"></th>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">1</th>
+                        <td class="categoria">Carro</td>
+                        <td>R$9.010,00</td>
+                        <td>4 meses</td>
+                        <td><a href="#"><span class="badge">excluir</span></a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td class="categoria">Casa</td>
+                        <td>R$2.400,00</td>
+                        <td>5 anos</td>
+                        <td><a href="#"><span class="badge">excluir</span></a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td class="categoria">Viajar</td>
+                        <td>R$5.765,00</td>
+                        <td>3 semanas</td>
+                        <td><a href="#"><span class="badge">excluir</span></a></td>
+                    </tr>
+
                 </table>
             </div>
         </div>
