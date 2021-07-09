@@ -33,6 +33,7 @@ let novaDataInicio = document.querySelector('#novaDataInicio')
 let novaDataFinal = document.querySelector('#novaDataFinal')
 let novoValor = document.querySelector('#novoValor')
 let btnCriarMeta = document.querySelector('#btnCriarMeta')
+let ordemMeta = 0
 
 //Objeto tipo Date
 let data = new Date()
@@ -81,7 +82,7 @@ function calcularTempo (data1, data2){
 //Tabela preta
 
 async function mostrarTabela() {
-  let resposta = await JSON.parse(localStorage.getItem('ValoresCadastrados') || '[]')
+  let resposta = await JSON.parse(localStorage.getItem('metasCadastradas') || '[]')
 
   idTabela.innerHTML = `
     <thead>
@@ -93,7 +94,7 @@ async function mostrarTabela() {
         <th scope="col"></th>
       </tr>
     </thead>
-`
+  `
 
   for (let valor of resposta) {
 
@@ -108,7 +109,7 @@ async function mostrarTabela() {
             <button type="button" class="btn btn-outline-success btn-sm">Excluir</button>
           </td>
       </tr>
-      `
+    `
 
   }
 }
@@ -117,18 +118,21 @@ mostrarTabela()
 btnCriarMeta.addEventListener('click', () => {
 
   async function adicionarMeta() {
-    let resposta = await JSON.parse(localStorage.getItem('ValoresCadastrados') || '[]')
+    let resposta = await JSON.parse(localStorage.getItem('metasCadastradas') || '[]')
     let valoresCadastro = {
+      ordemMeta: ordemMeta.value,
       meta: novoNomeMeta.value,
       valorMeta: novoValor.value
     }
 
     resposta.push(valoresCadastro)
-    await localStorage.setItem('ValoresCadastrados', JSON.stringify(resposta))
+    await localStorage.setItem('metasCadastradas', JSON.stringify(resposta))
     mostrarTabela()
     MostrarSaldoTotal()
 
   }
+
+  ordemMeta+=1
   adicionarMeta()
 })
 
