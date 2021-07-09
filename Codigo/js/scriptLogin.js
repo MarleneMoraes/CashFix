@@ -18,7 +18,6 @@ let validacaoUsuario = {
     senha: '',
 }
 
-
 // Botão de visualizar senha
 
 btnMostrarSenha.addEventListener('click', () => {
@@ -41,19 +40,19 @@ btnEntrar.addEventListener('click', () => {
                 email: item.emailCadastrado,
                 senha: item.senhaCadastrado
             }
-            
+
             setTimeout(() => {
                 window.location.href = 'pagInterna.html'
-              }, 2000)
+            }, 2000)
         }
     })
 
     //Validação e acesso a página inicial
     if (email.value == validacaoUsuario.email && senha.value == validacaoUsuario.senha) {
-        
+
         let token = Math.random().toString(16).substring(2)
         localStorage.setItem('token', token)
-                 
+
     } else {
         email.setAttribute('style', 'border-color: red')
         senha.setAttribute('style', 'border-color: red')

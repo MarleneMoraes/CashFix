@@ -43,10 +43,11 @@ let btnSalvar = document.querySelector('#salvar')
 let mensagemSucesso = document.querySelector('#mensagemSucesso')
 
 let usuario = document.querySelector('#usuario')
+let nomeCadastrado = localStorage.getItem("listaUsuario")
 
 //Saudação
 usuario.setAttribute('style', 'color:white')
-usuario.innerHTML = `<p>Olá ${nomeCadastrado}!</p>`
+usuario.innerHTML = "<p>Olá " + nomeCadastrado + "!</p>"
 
 
 //Validação de Cadastro
@@ -75,7 +76,7 @@ email.addEventListener('keyup', () => {
 btnSalvar.addEventListener('click', (e) => {
   e.preventDefault();
 
-  if (validaNome == true && validaEmail == true) {
+  if ((validaNome == true) && (validaEmail == true)) {
     mensagemErro.setAttribute('style', 'display: none')
     mensagemErro.innerHTML = ''
     mensagemSucesso.setAttribute('style', 'display: block')
@@ -83,12 +84,10 @@ btnSalvar.addEventListener('click', (e) => {
 
     let listaUsuario = JSON.parse(localStorage.getItem('listaUsuario') || '[]')
 
-    listaUsuario.push(
-      {
-        nomeCadastrado: nome.value,
-        emailCadastrado: email.value,
-      }
-    )
+    listaUsuario.push({
+      nomeCadastrado: nome.value,
+      emailCadastrado: email.value,
+    })
 
     localStorage.setItem('listaUsuario', JSON.stringify(listaUsuario))
 

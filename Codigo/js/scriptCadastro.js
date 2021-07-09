@@ -107,32 +107,37 @@ confirmarSenha.addEventListener('keyup', () => {
 btnCadastrar.addEventListener('click', (e) => {
   e.preventDefault();
 
-  if (validaNome == true && validaEmail == true && validaSenha == true && validaConfirmarSenha == true) {
-    mensagemErro.setAttribute('style', 'display: none')
-    mensagemErro.innerHTML = ''
-    mensagemSucesso.setAttribute('style', 'display: block')
-    mensagemSucesso.innerHTML = 'Cadastrando usuário...'
-
-    let listaUsuario = JSON.parse(localStorage.getItem('listaUsuario') || '[]')
-
-    listaUsuario.push(
-      {
-        nomeCadastrado: nome.value,
-        emailCadastrado: email.value,
-        senhaCadastrado: senha.value
-      }
-    )
-
-    localStorage.setItem('listaUsuario', JSON.stringify(listaUsuario))
-
-    setTimeout(() => {
-      window.location.href = 'login.html'
-    }, 2000)
-
-  } else {
-    mensagemSucesso.setAttribute('style', 'display: none')
-    mensagemSucesso.innerHTML = ''
-    mensagemErro.setAttribute('style', 'display: block')
-    mensagemErro.innerHTML = 'Preencha todos os campos corretamente'
+  async function handleRegistration(){
+    if (validaNome == true && validaEmail == true && validaSenha == true && validaConfirmarSenha == true) {
+      mensagemErro.setAttribute('style', 'display: none')
+      mensagemErro.innerHTML = ''
+      mensagemSucesso.setAttribute('style', 'display: block')
+      mensagemSucesso.innerHTML = 'Cadastrando usuário...'
+  
+      let listaUsuario = await JSON.parse(localStorage.getItem('listaUsuario') || '[]')
+  
+      listaUsuario.push(
+        {
+          nomeCadastrado: nome.value,
+          emailCadastrado: email.value,
+          senhaCadastrado: senha.value
+        }
+      )
+  
+      await localStorage.setItem('listaUsuario', JSON.stringify(listaUsuario));
+  
+      setTimeout(() => {
+        window.location.href = 'login.html'
+      }, 2000)
+  
+    } else {
+      mensagemSucesso.setAttribute('style', 'display: none')
+      mensagemSucesso.innerHTML = ''
+      mensagemErro.setAttribute('style', 'display: block')
+      mensagemErro.innerHTML = 'Preencha todos os campos corretamente'
+    }
   }
+
+  // Chamada da função
+  handleRegistration();
 })
