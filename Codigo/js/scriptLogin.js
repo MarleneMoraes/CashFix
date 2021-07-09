@@ -1,7 +1,6 @@
-//Variáveis
 let btnMostrarSenha = document.querySelector('.fa-eye-slash')
 
-let btnEntrar = document.querySelector('#entrar')
+let btnEntrar = document.getElementById('entrarBtn')
 
 let email = document.querySelector('#email')
 let labelEmail = document.querySelector('#labelEmail')
@@ -31,12 +30,15 @@ btnMostrarSenha.addEventListener('click', () => {
 })
 
 // Botão de verificação do login
-btnEntrar.addEventListener('click', () => {
+btnEntrar.addEventListener('click', (event) => {
+    event.preventDefault();
+
     listaUsuario = JSON.parse(localStorage.getItem('listaUsuario'))
 
     listaUsuario.forEach((item) => {
         if (email.value == item.emailCadastrado && senha.value == item.senhaCadastrado) {
             validacaoUsuario = {
+                nome: item.nome,
                 email: item.emailCadastrado,
                 senha: item.senhaCadastrado
             }
@@ -44,23 +46,13 @@ btnEntrar.addEventListener('click', () => {
             setTimeout(() => {
                 window.location.href = 'pagInterna.html'
             }, 200)
+        } else {
+            console.log('erro')
+            email.setAttribute('style', 'border-color: red')
+            senha.setAttribute('style', 'border-color: red')
+    
+            mensagemErro.setAttribute('style', 'display: block')
+            mensagemErro.innerHTML = 'Usuário ou senha incorretos'
         }
-    })
-
-    //Validação e acesso a página inicial
-    if (email.value == validacaoUsuario.email && senha.value == validacaoUsuario.senha) {
-
-        let token = Math.random().toString(16).substring(2)
-        localStorage.setItem('token', token)
-
-    } else {
-        email.setAttribute('style', 'border-color: red')
-        senha.setAttribute('style', 'border-color: red')
-
-        mensagemErro.setAttribute('style', 'display: block')
-        mensagemErro.innerHTML = 'Usuário ou senha incorretos'
-
-    }
-
+    });
 })
-
