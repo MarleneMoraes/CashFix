@@ -56,6 +56,18 @@ nome.addEventListener('keyup', () => {
   }
 })
 
+sobrenome.addEventListener('keyup', () => {
+  if (sobrenome.value.length <= 1) {
+    labelSobrenome.setAttribute('style', 'color: red')
+    sobrenome.setAttribute('style', 'border-color: red')
+    validaSobrenome = false
+  } else {
+    labelSobrenome.setAttribute('style', 'color: green')
+    sobrenome.setAttribute('style', 'border-color: var(--efeito-active)')
+    validaSobrenome = true
+  }
+})
+
 email.addEventListener('keyup', () => {
   if (document.forms[0].email.value == "" || document.forms[0].email.value.indexOf('@') == -1 || document.forms[0].email.value.indexOf('.') == -1) {
     email.setAttribute('style', 'border-color: red')
@@ -69,7 +81,7 @@ email.addEventListener('keyup', () => {
 btnSalvar.addEventListener('click', (e) => {
   e.preventDefault();
 
-  if ((validaNome == true) && (validaEmail == true)) {
+  if ((validaNome == true) && (validaSobrenome == true) && (validaEmail == true)) {
     mensagemErro.setAttribute('style', 'display: none')
     mensagemErro.innerHTML = ''
     mensagemSucesso.setAttribute('style', 'display: block')

@@ -1,5 +1,5 @@
 body {
-  background-color: var(--claro);
+  background-color: var(--claro) !important;
 }
 
 /* Corpo da página*/
