@@ -30,7 +30,7 @@ function mostrarTabela() {
         <th scope="col"></th>
         <th scope="col">Meta</th>
         <th scope="col">Valor</th>
-        <th scope="col">Tempo</th>
+        <th scope="col">Ano</th>
         <th scope="col"></th>
       </tr>
     </thead>
