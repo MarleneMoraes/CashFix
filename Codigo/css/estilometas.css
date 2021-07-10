@@ -64,61 +64,31 @@ li {
 }
 
 /*----cards----*/
-.card-principal {
-  background-color: var(--branco) !important;
-  width: 95%;
-  padding: 5px 1px;
-  margin: 20px auto;
-  border-radius: 5px;
-  border: 1px solid var(--cinza);
-}
-
 .card-secundario {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: var(--branco);
-  margin: 10px 0px 0px;
+ 
 }
 .card-secundario label {
   font-weight: bold;
 }
-.novameta {
-  background-color: var(--branco);
-  padding: 0px;
-  margin: 7px 50px 0px;
-  border-radius: 3px;
-}
-
-.editarmeta {
-  background-color: var(--branco);
-  padding: 0px;
-  margin: 7px 50px 0px;
-  border-radius: 3px;
+.novameta{
+  border-radius: 10px;
+  width: 60%;
 }
 
 .containerNovaMeta {
-  background-color: var(--claro);
-  margin: 3% 1% 1%;
-  padding: 57px 25px 0px;
+  background-color: var(--branco);
+  margin: 15px;
+  padding: 30px;
   border: 1px solid var(--cinza);
   border-radius: 5px;
-  display: none;
-}
-
-.containerEditarMeta {
-  background-color: var(--claro);
-  margin: 3% 1% 1%;
-  padding: 0px 15px 20px;
-  border: 1px solid var(--cinza);
-  border-radius: 5px;
-  display: none;
 }
 
 /*----input----*/
 input {
   border: none !important;
-  background-color: var(--claro) !important;
 }
 
 input {
@@ -138,9 +108,16 @@ input:disabled {
 
 .input-data {
   display: flex;
+  flex-direction: column;
+}
+@media(min-width:760px){
+  .input-data {
+    flex-direction:initial;
+  }
 }
 .input-data-formulario {
   margin: 10px;
+  flex-grow: 1;
 }
 
 .input-valor {

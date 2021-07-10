@@ -57,9 +57,9 @@
             </div>
         </div>
         <!--Menu Versão Desktop-->
-            <a href="index.html"><img class="logoDesktop" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
-                    title="CashFix"></a>
-        
+        <a href="index.html"><img class="logoDesktop" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
+                title="CashFix"></a>
+
 
         <div class="col-4">
             <nav class="menuDesktop">
@@ -91,18 +91,8 @@
         <div class="card-principal">
             <div class="card-secundario">
                 <div class="novameta">
-                    <div class="button-centralize">
-                        <button id='btnNovaMeta' class="botao botao-verde btn-editar-meta">
-                            <h6 class="editar-meta-text">Nova Meta</h6>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-chevron-down seta-button" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="containerNovaMeta">
+                    <div class="containerNovaMeta ">
+                        <h3>Nova Meta</h3>
                         <div id="mensagemErro"></div>
                         <div>
                             <label>Nome</label>
@@ -134,95 +124,46 @@
                     </div>
                 </div>
 
-
-                <div class="editarmeta">
-                    <div class="button-centralize">
-                        <button id='btnEditarMeta' class="botao botao-verde btn-editar-meta">
-                            <h6 class="editar-meta-text">Editar Meta</h6>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-chevron-down seta-button" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="containerEditarMeta">
-                        <select id="idSelect" class="form-select form-select-sm" aria-label=".form-select-sm example">
-                            <option selected>Selecionar meta</option>
-                            <option value="Carro">Carro</option>
-                            <option value="Casa">Casa</option>
-                            <option value="Viagem">Viagem</option>
-                            <option value="Intercâmbio/Estudos">Intercâmbio/Estudos</option>
-                        </select>
-                        <div>
-                            <label>Nome</label>
-                            <input class="form-control form-control-sm input-meta" type="text"
-                                placeholder="Descrição da meta" aria-label="default input example" disabled>
-                        </div>
-                        <div class="input-data">
-                            <div class="input-data-formulario">
-                                <label>Inicio</label>
-                                <input class="form-control form-control-sm" type="text" placeholder="01/01/2021"
-                                    aria-label=".form-control-lg example" disabled>
-                            </div>
-                            <div class="input-data-formulario">
-                                <label>Final</label>
-                                <input class="form-control form-control-sm" type="text" placeholder="01/01/2021"
-                                    aria-label=".form-control-lg example" disabled>
-                            </div>
-                        </div>
-                        <div class="input-valor">
-                            <label>Valor</label>
-                            <input class="form-control form-control-sm" type="number" placeholder="R$00.000,00"
-                                aria-label=".form-control-sm example" disabled>
-                        </div>
-                        <div class="button-centralize">
-                            <button class="botao botao-verde salvar-meta">
-                                <a href="#">Salvar</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
-            <div class="lista-metas">
-                <h2 class="tituloMain">Lista de metas</h2>
-                <table id="idTabela" class="table table-dark table-hover">
+        </div>
 
-                    <tr class="lista-metas-cabecalho">
-                        <th scope="col"></th>
-                        <th scope="col">Meta</th>
-                        <th scope="col">Saldo</th>
-                        <th scope="col">Tempo</th>
-                        <th scope="col"></th>
-                    </tr>
+        <div class="lista-metas">
+            <h2 class="tituloMain">Lista de metas</h2>
+            <table id="idTabela" class="table table-dark table-hover">
 
-                    <tr>
-                        <th scope="row">1</th>
-                        <td class="categoria">Carro</td>
-                        <td>R$9.010,00</td>
-                        <td>4 meses</td>
-                        <td><a href="#"><span class="badge">excluir</span></a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td class="categoria">Casa</td>
-                        <td>R$2.400,00</td>
-                        <td>5 anos</td>
-                        <td><a href="#"><span class="badge">excluir</span></a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td class="categoria">Viajar</td>
-                        <td>R$5.765,00</td>
-                        <td>3 semanas</td>
-                        <td><a href="#"><span class="badge">excluir</span></a></td>
-                    </tr>
+                <tr class="lista-metas-cabecalho">
+                    <th scope="col"></th>
+                    <th scope="col">Meta</th>
+                    <th scope="col">Saldo</th>
+                    <th scope="col">Tempo</th>
+                    <th scope="col"></th>
+                </tr>
 
-                </table>
-            </div>
+                <tr>
+                    <th scope="row">1</th>
+                    <td class="categoria">Carro</td>
+                    <td>R$9.010,00</td>
+                    <td>4 meses</td>
+                    <td><a href="#"><span class="badge">excluir</span></a></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td class="categoria">Casa</td>
+                    <td>R$2.400,00</td>
+                    <td>5 anos</td>
+                    <td><a href="#"><span class="badge">excluir</span></a></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td class="categoria">Viajar</td>
+                    <td>R$5.765,00</td>
+                    <td>3 semanas</td>
+                    <td><a href="#"><span class="badge">excluir</span></a></td>
+                </tr>
+
+            </table>
+        </div>
         </div>
     </main>
 
