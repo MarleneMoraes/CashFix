@@ -15,6 +15,8 @@ _Curso de Sistemas de Informação, Unidade São Gabriel_
 
 _Instituto de Informática e Ciências Exatas (ICEI)_
 
+_Orientadores: Ilo Rivero e João Caram_
+
 _Pontifícia Universidade de Minas Gerais (PUC MINAS), Belo Horizonte – MG – Brasil_
 
 ---
@@ -25,25 +27,23 @@ _Pontifícia Universidade de Minas Gerais (PUC MINAS), Belo Horizonte – MG –
 
 ## 1. Introdução
 
-Texto
+O projeto Cashfix tem a finalidade de propor ao usuário a organização financeira, projeção de saldo de acordo com o período estabelecido controle sobre movimentação de valores.
 
-### 1.1 Contextualização
+### 1.1 Problema
 
-Texto
-
-### 1.2 Problema
+Falta de registro de despesas e rendimentos ao longo da vida financeira.
 
 Dificuldades em realizar aquisições em período próximo de acordo com a realidade do usuário.
 
 Falta de organização financeira nos compromissos honrados.
 
-### 1.3 Objetivo geral
+### 1.2 Objetivo geral
 
 Prospecção financeira para metas pessoais
 
 Organização com finalidade em quitar gastos fora do orçamento
 
-### 1.4 Requisitos do Projeto
+### 1.3 Requisitos do Projeto
 
 O Ca$hFix possui quatro requisitos principais, baseados no objetivo da plataforma:
 
@@ -54,7 +54,7 @@ O Ca$hFix possui quatro requisitos principais, baseados no objetivo da plataform
 
 ## 2. Participantes do processo
 
-Texto
+As personas representam o usuário final ou o público-alvo do projeto Cashfix e servem para guiar o desenvolvimento do projeto para que a solução esteja realmente atendendo a dor de maneira eficiente.
 
 ### 2.1. Personas
 
@@ -125,31 +125,20 @@ O projeto emprega tecnologias de alto nível, voltadas para uma melhor performan
 
 ## 5.Sistema desenvolvido
 
-- Página Inicial: Tem a função de informar o usuário os princípios da aplicação. Nela o usuário encontra informações sobre a finalidade do Cashfix e também a funcionalidade de abrir conta ou se cadastrar.
-- Pagina de Cadastrp: Possui um formulário onde o usuário poderá se cadastrar para usar a aplicação Cashfix
-- Pagina de Login: Pagina onde o usuário cadastrado pode logar para usar os serviços disponíveis.
-- Pagina Interna: Primeira página que é exibida para o usuário. Nela o usuario poderá acessar funcionalidades para controle e visualização dos dados na sua conta Cashfix.
--
-Faça aqui uma breve descrição do software e coloque as principais telas com uma explicação de como usar cada uma.
+- <b>Página Inicial:</b> Tem a função de informar o usuário os princípios da aplicação. Nela o usuário encontra informações sobre a finalidade do Cashfix e também a funcionalidade de abrir conta ou se cadastrar.
+- <b>Pagina de Cadastro:</b> Possui um formulário onde o usuário poderá se cadastrar para usar a aplicação Cashfix;
+- <b>Pagina de Login:</b> Pagina onde o usuário cadastrado pode logar para usar os serviços disponíveis ou acessar a página de cadastro através de link direto.
+- <b>Pagina Interna:</b> Primeira página que é exibida para o usuário. Nela o usuario poderá acessar funcionalidades para controle e visualização dos dados na sua conta Cashfix.
+- <b>Página Cartões:</b> Página para que o usuário possa incluir cartões com valores de dados de outras contas existentes;
+- <b>Página Perfil:</b> Página para inserir dados pessoais do usuário;
+- <b>Página Metas:</b> Página em que o usuário insere os valores que deseja alcançar.
 
-## 6. Avaliação
+## 6. Conclusão
 
-Faça aqui sobre a avaliação do software. Indique se ele atendeu as expectativas e ele é viável. Para não ficar subjetivo, o ideal é fazer um questionário e pedir ao usuário do processo que faça a avaliação
+Durante o trabalho forma abordados assuntos ministrados na disciplina de Desenvolvimento de Interfaces Web. Utilizou-se conceitos de layout grid e Bootstrap para construção de layouts. Para construção de layouts responsivos implementou-se media queries. 
 
-## 7. Conclusão
+Ao longo do projeto foram criadas funcionalidades que, com o passar das reuniões, foram ficando obsoletas e acabaram sendo integradas e distribuídas em outras paginas. Houveram algumas dificuldades em implementações usando javascript.
 
-Apresente aqui a conclusão do seu trabalho. Discussão dos resultados obtidos no trabalho, onde se verifica as observações pessoais de cada aluno. Poderá também apresentar sugestões de novas linhas de estudo.
+Concluímos que o trabalho interdisciplinar foi muito importante para o desenvolvimento de habilidades na criação de sistemas e manipulação de dados no ambiente web.
 
-# REFERÊNCIAS
 
-# APÊNDICES
-
-**Colocar link:**
-
-Do código;
-
-Dos artefatos;
-
-Da apresentação final;
-
-Do vídeo de apresentação.
