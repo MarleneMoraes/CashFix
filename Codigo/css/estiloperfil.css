@@ -123,3 +123,8 @@ h1 {
 .erro {
   color: red;
 }
+
+.rodape {
+  bottom: 0;
+  position: absolute;
+}
