@@ -392,8 +392,7 @@ i {
 /* FOOTER */
 
 .rodape {
-    bottom: 0;
-    position: absolute;
+    position: relative;
     padding: 20px;
     background-image: url(../imagens/bg-texture.png);
     color: var(--fundo);

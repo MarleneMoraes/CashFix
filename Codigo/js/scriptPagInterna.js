@@ -1,141 +1,105 @@
 // Chamada das variáveis
-let idTabela = document.querySelector('#idTabela')
-let InputValor = document.querySelector('#Valor')
-let seletorCategoria = document.querySelector('#seletorCategoria')
-let categoria = document.querySelector('.categoria')
-let btnSeletorCategoria = document.querySelector('#buttonSalvarAplicacao')
-let saldoAtual = document.querySelector('#saldoAtual')
+const idTabela = document.querySelector('#idTabela');
+const InputValor = document.querySelector('#Valor');
+const seletorCategoria = document.querySelector('#seletorCategoria');
+const categoria = document.querySelector('.categoria');
+const taxacao = document.querySelector('.taxacao');
+
+const btnSalvarAplicacao = document.querySelector('#buttonSalvarAplicacao')
+const saldoAtual = document.querySelector('#saldoAtual')
 
 // Buttons Radios Entrada e saida
-let RadioEntrada = document.querySelector('#RadioEntrada')
-let RadioSaida = document.querySelector('#RadioSaida')
+const radioEntrada = document.querySelector('#RadioEntrada')
+const radioSaida = document.querySelector('#RadioSaida')
 
 // Variaveis gerais
-let respostaRadioSelecionado = ''
-let respostaCategoriaSelecionada = ''
+const respostaRadioSelecionado = ''
+const respostaCategoriaSelecionada = ''
 
-//Saudação
-/*let usuario = document.querySelector('#usuario')
-let listaUsuario = JSON.parse(localStorage.getItem('listaUsuario'))
-usuario.setAttribute('style', 'color:white')
-
-
-listaUsuario.forEach((item) => {
-  if (usuarioLogado.value == item.nomeCadastrado) {
-    usuarioLogado = item.nomeCadastrado.validaNome
-    usuario.innerHTML = `<p>Olá ${usuarioLogado}!</p>`
-  }
-})
-
-//Validação e acesso a página inicial
-if (email.value == validacaoUsuario.email && senha.value == validacaoUsuario.senha) {
-
-  let token = Math.random().toString(16).substring(2)
-  localStorage.setItem('token', token)
-
-} else {
-  email.setAttribute('style', 'border-color: red')
-  senha.setAttribute('style', 'border-color: red')
-
-  mensagemErro.setAttribute('style', 'display: block')
-  mensagemErro.innerHTML = 'Usuário ou senha incorretos'
-
-}*/
-
-
-seletorCategoria.addEventListener('change', (option) => {
-    respostaCategoriaSelecionada = option.target.value
-})
-
-RadioEntrada.addEventListener('click', () => {
-    respostaRadioSelecionado = 'Entrada'
-})
-
-RadioSaida.addEventListener('click', () => {
-    respostaRadioSelecionado = 'Saida'
-})
 
 //Objeto tipo Date
 let data = new Date()
 let dia = data.getDate()
 let mes = data.getMonth() //month conta de 0 a 11, por isso soma 1
 let ano = data.getFullYear()
-let dataString = dia + '-' + (mes + 1) + '-' + ano
+let dataString = dia + '/' + (mes + 1) + '/' + ano
 
-async function mostrarTabela() {
-    let resposta = await JSON.parse(localStorage.getItem('ValoresCadastrados') || '[]')
+// Exibe a tabela de transações
+function mostrarTabela() {
+    const aplicacoes = JSON.parse(localStorage.getItem('aplicacoes') || '[]')
 
     idTabela.innerHTML = `
     <tr>
-        <td>Data</td>
-        <td>Categoria</td>
-        <td>Transação</td>
-        <td>Valor</td>
-     </tr>
-  `
+    <td>Data</td>
+    <td>Categoria</td>
+    <td>Transação</td>
+    <td>Valor</td>
+    </tr>
+    `
 
-    for (let valor of resposta) {
+    aplicacoes.forEach(aplicacao => {
         idTabela.innerHTML += `
         <tr>
-            <td>${dataString}</td>
-            <td class="categoria">${valor.categoria}</td>
-            <td>${valor.opcaoRadios}</td>
-            <td>R$ ${valor.valor}</td>
+        <td>${aplicacao.data}</td>
+        <td class="categoria">${aplicacao.categoria}</td>
+        <td>${aplicacao.tipoTrasacao}</td>
+        <td>R$ ${parseFloat(Number(aplicacao.valor)).toFixed(2)}</td>
         </tr>
         `
-    }
+    });
 }
-mostrarTabela()
 
-btnSeletorCategoria.addEventListener('click', () => {
 
-    async function cadastroDeCategorias() {
-        let resposta = await JSON.parse(localStorage.getItem('ValoresCadastrados') || '[]')
-        let valoresCadastro = {
-            valor: InputValor.value,
-            opcaoRadios: respostaRadioSelecionado,
-            categoria: respostaCategoriaSelecionada
-        }
-
-        resposta.push(valoresCadastro)
-        await localStorage.setItem('ValoresCadastrados', JSON.stringify(resposta))
-        mostrarTabela()
-        MostrarSaldoTotal()
-
+btnSalvarAplicacao.addEventListener('click', () => {
+    const novaAplicacao = {
+        data: dataAtual(),
+        valor: InputValor.value,
+        tipoTrasacao: radioEntrada.checked ? 'Crédito' : 'Débito',
+        categoria: seletorCategoria.value,
+        taxacaoMensal: taxacao.checked
     }
-    cadastroDeCategorias()
-})
 
-async function MostrarSaldoTotal() {
-    let respostaTabela = await JSON.parse(localStorage.getItem('ValoresCadastrados') || '[]')
-    let respostaSaldo = await JSON.parse(localStorage.getItem('saldoTotal'))
+    cadastrarAplicacao(novaAplicacao);
+    mostrarSaldoTotal();
+    mostrarTabela();
+});
 
-    let converterSaldoParaNumber = parseInt(respostaSaldo)
-    let saldo = 0;
+function cadastrarAplicacao(novaAplicacao) {
+    let listaDeAplicacoes = JSON.parse(localStorage.getItem('aplicacoes') || '[]');
 
-    respostaTabela.map((item, index, array) => {
-        for (let i = 0; i < array.length; i++) {
-            console.log(array[i].opcaoRadios)
-            if (array[i].opcaoRadios === 'Saida') {
-                saldo -= parseInt(array[i].valor)
-            }
+    listaDeAplicacoes.push(novaAplicacao);
+
+    localStorage.setItem('aplicacoes', JSON.stringify(listaDeAplicacoes));
+}
+
+
+function dataAtual() {
+    var data = new Date(),
+        dia = data.getDate().toString(),
+        diaF = (dia.length == 1) ? '0' + dia : dia,
+        mes = (data.getMonth() + 1).toString(), //+1 pois no getMonth Janeiro começa com zero.
+        mesF = (mes.length == 1) ? '0' + mes : mes,
+        anoF = data.getFullYear();
+    return diaF + "/" + mesF + "/" + anoF;
+}
+
+
+function mostrarSaldoTotal() {
+    const aplicacoes = JSON.parse(localStorage.getItem('aplicacoes') || '[]');
+
+    let saldoTotal = 0;
+
+    aplicacoes.forEach(aplicacao => {
+        if (aplicacao.tipoTrasacao === 'Crédito') {
+            saldoTotal += Number(aplicacao.valor);
+        } else {
+            saldoTotal -= Number(aplicacao.valor);
         }
-
-        if (array[index].opcaoRadios === 'Entrada') {
-            converterSaldoParaNumber = saldo + parseInt(array[index].valor)
-        }
-
     })
 
-    await localStorage.setItem('saldoTotal', JSON.stringify(converterSaldoParaNumber))
-    imprimirSaldoAtual()
+    saldoAtual.textContent = `R$ ${saldoTotal.toFixed(2)}`;
 }
 
-function imprimirSaldoAtual() {
-   let saldoTotal = JSON.parse(localStorage.getItem('saldoTotal') || '0.00')
+mostrarTabela();
 
-    saldoAtual.innerHTML = `R$ ${saldoTotal}` 
-}
-
-imprimirSaldoAtual()
-
+mostrarSaldoTotal();

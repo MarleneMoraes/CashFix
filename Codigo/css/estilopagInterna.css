@@ -1,5 +1,8 @@
-/* Corpo da página*/
+body {
+  background-color: var(--claro);
+}
 
+/* Corpo da página*/
 h1,
 h2,
 h3 {
@@ -13,68 +16,60 @@ h1 {
 }
 
 .principal {
-    padding-top: 50px;
-}
-
-.hr-abas {
-    background-color: var(--principal);
+  padding-top: 50px;
 }
 
 .cx-img img {
-    float: left;
-    max-height: 150px;
-    width: 400px;
-    border-radius: 2em;
-    margin-bottom: 0px
+  float: left;
+  max-height: 150px;
+  width: 400px;
+  border-radius: 2em;
+  margin-bottom: 0px;
+}
+
+.caixa1,
+.caixa2 {
+  margin: 20px auto;
+  padding: 30px;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 1px;
 }
 
 .caixa1 {
-    float: inline-start;
-    text-align: left;
-    color: var(--cinza-escuro);
-    margin: 20px;
-    padding: 50px;
-    display: block;
-    border-radius: 2em;
-    box-shadow: 0px 0px 3px 1px;
+  float: inline-start;
+  text-align: left;
+  color: var(--cinza-escuro);
+}
+
+.caixa2 {
+  float: left;
+  color: white;
+  background-color: var(--principal);
 }
 
 .caixa1 p {
-    font-size: 14px;
-    font-style: italic;
-    margin: 0px;
-}
-
-.caixa2,
-.caixa4, 
-.caixa6 {
-    float: left;
-    color: white;
-    background-color: var(--principal);
-    margin: 20px;
-    padding: 50px;
-    display: block;
-    border-radius: 2em;
-    box-shadow: 0px 0px 3px 1px;
+  font-size: 14px;
+  font-style: italic;
+  margin: 0px;
 }
 
 /* Links da página */
 
-
 .menuDesktop a,
 .bloco a,
 .btn-link {
-    color: var(--principal) !important;
-  }
-  
-  .menuDesktop a:hover,
-  .bloco a:hover,
-  .btn-link:hover {
-    color: var(--efeito-hover) !important;
-  }
-  
-  .menuDesktop a:active,
-  .bloco a:active,
-  .btn-link:active {
-    color: var(--efeito-active) !important;
-  }
+  color: var(--principal) !important;
+}
+
+.menuDesktop a:hover,
+.bloco a:hover,
+.btn-link:hover {
+  color: var(--efeito-hover) !important;
+}
+
+.menuDesktop a:active,
+.bloco a:active,
+.btn-link:active {
+  color: var(--efeito-active) !important;
+}

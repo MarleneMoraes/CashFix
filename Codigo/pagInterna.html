@@ -89,23 +89,11 @@
                 </div>
             </div>
 
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-                        type="button" role="tab" aria-controls="home" aria-selected="true">Gerenciar
-                        Movimentação</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-                        type="button" role="tab" aria-controls="profile" aria-selected="false">Poupança Futura</button>
-                </li>
-            </ul>
-
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <!--MOVIMENTAÇÃO DE CONTA-->
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
                             <div class="caixa1">
                                 <p>Saldo Atual:</p>
                                 <h3 id="saldoAtual">R$0.00</h3><br>
@@ -142,10 +130,9 @@
                                         <td></td>
                                     </tr>
                                 </table>
-                                <button type="button" class="btn btn-link">Ver Extrato Completo</button>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
                             <div class="caixa2">
                                 Valor
                                 <input id="Valor" class="form-control" type="number" min="0" placeholder="R$" autocomplete="off"><br>
@@ -175,7 +162,7 @@
                                     <option value="Outros">Outros</option>
                                 </select><br>
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <input class="form-check-input taxacao" type="checkbox" id="flexSwitchCheckDefault">
                                     <label class="form-check-label" for="flexSwitchCheckDefault">Transação fixa (repetir
                                         mensalmente)</label>
 
@@ -187,34 +174,6 @@
 
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <!--POUPANÇA FUTURA-->
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="caixa1">
-                                <p>Valor atual:</p>
-                                <h3>R$ 3.350,00</h3><br>
-                                <hr class="hr-abas">
-                                <p>Faltam R$ 2.650,00 para alcançar seu alvo de</p>
-                                <h3 class="red-text">R$ 6.000,00</h3><br>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="caixa2">
-                                Qual valor disponível hoje?
-                                <input class="form-control" type="number" min="0" placeholder="R$"><br> Quanto deseja
-                                poupar?
-                                <input class="form-control" type="number" min="0" placeholder="R$"><br> Durante quanto
-                                tempo?
-                                <input class="form-control" type="number" placeholder="Valor inteiro">
-                                <select class="form-select">
-                                    <option value="1">Quinzenas</option>
-                                    <option selected value="2">Meses</option>
-                                    <option value="3">Anos</option>
-                                </select><br><br><br>
-                                <button type="button" class="btn btn-success">Salvar</button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
