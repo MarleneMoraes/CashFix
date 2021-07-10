@@ -55,9 +55,9 @@
             </div>
         </div>
         <!--Menu Versão Desktop-->
-            <a href="index.html"><img class="logoDesktop" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
-                    title="CashFix"></a>
-        
+        <a href="index.html"><img class="logoDesktop" src="imagens/logo-branca-colorida.png" alt="logo CashFix"
+                title="CashFix"></a>
+
 
         <div class="col-4">
             <nav class="menuDesktop">
@@ -96,49 +96,8 @@
         <article class="flex">
             <section class="sectionTop">
                 <h2>Cartões Salvos</h2>
-                <div id="idCartoesSalvos" class="cartoesSalvos">
-                    <div class="cartao posicaoCartao">
-                        <div id="nubank">
-                            <h4>Nubank</h4>
-                            <input type="text" value="R$2.354,90">
-                            <p class="data">15/06/21</p>
-                        </div>
-                    </div>
-                    <div class="cartao posicaoCartao">
-                        <div id="inter">
-                            <h4>Inter</h4>
-                            <input type="text" value="R$2.354,90">
-                            <p class="data">15/06/21</p>
-                        </div>
-                    </div>
-                    <div class="cartao posicaoCartao">
-                        <div id="digio">
-                            <h4>Digio</h4>
-                            <input type="text" value="R$2.354,90">
-                            <p class="data">15/06/21</p>
-                        </div>
-                    </div>
-                    <div class="cartao posicaoCartao">
-                        <div id="neon">
-                            <h4>Neon</h4>
-                            <input type="text" value="R$2.354,90">
-                            <p class="data">15/06/21</p>
-                        </div>
-                    </div>
-                    <div class="cartao posicaoCartao">
-                        <div id="cartao">
-                            <h4>Cartao</h4>
-                            <input type="text">
-                            <p class="data"></p>
-                        </div>
-                    </div>
-                    <div class="cartao posicaoCartao">
-                        <div id="cartao">
-                            <h4>Cartao</h4>
-                            <input type="text">
-                            <p class="data"></p>
-                        </div>
-                    </div>
+                <div id="cartoesSalvos" class="cartoesSalvos">
+
                 </div>
                 <button id="cartaoAdd" class="botao botao-verde addCartao" onclick="sessaoCadastrar()">+</button>
             </section>
@@ -164,53 +123,8 @@
                     <button id="salvarCartao" class="botao botao-verde salvar"> Salvar</button>
                 </div>
             </section>
-            <hr class="responsivehr">
         </article>
 
-        <article class="flex">
-            <section class="sectionTop">
-                <!--Extrato do Cartão -->
-                <h2>Extrato do Cartão</h2>
-                <select id="tipoCartao" class="form tipoCartao" autocomplete="off">
-                    <option selected>Selecione</option>
-                    <option value="Nubank">Nubank</option>
-                    <option value="Inter">Inter</option>
-                    <option value="Digio">Digio</option>
-                    <option value="Neon">Neon</option>
-                </select>
-                <div class="visualizarExtrato">
-                    <h4 id="tituloExtrato">Nome do Cartão</h4>
-                    <div class="extratoCartao">
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                    </div>
-                    <h5>Total:</h5>
-                    <p></p>
-                </div>
-                <button class="botao botao-verde salvar">Salvar</button>
-            </section>
-
-            <!--Adicionar despesas-->
-            <section class="sectionMobile">
-                <hr>
-                <h2>Adicionar Despesas</h2>
-                <div class="form-flex">
-                    <label for="despesa">Despesa
-                        <input id="despesa" class="form despesa" type="text" name="despesa"
-                            placeholder="Descrição de Débito">
-                    </label>
-                    <label for="valor">Valor
-                        <input id="valor" class="form valor" type="number" name="valor" placeholder="Valor da Despesa"
-                            min="0">
-                    </label>
-                    <label for="observacao">Observação
-                        <textarea id="observacao" class="form observacao" rows="6"
-                            placeholder="Adicione um comentário"></textarea></label>
-                </div>
-                <button class="botao botao-verde maisdespesa"> + Despesa</button>
-            </section>
-        </article>
     </main>
 
 

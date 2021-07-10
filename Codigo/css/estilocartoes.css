@@ -84,32 +84,9 @@ h4 {
   color: var(--principal);
 }
 
-#nubank,
-#inter,
-#digio,
-#neon,
 #cartao {
   border: 1px solid var(--principal);
   border-radius: 7px;
-}
-
-#nubank:hover {
-  border: 1px solid blueviolet;
-}
-
-#inter:hover {
-  border: 1px solid orangered;
-}
-
-#digio:hover {
-  border: 1px solid navy;
-}
-#neon:hover {
-  border: 1px solid cyan;
-}
-
-#cartao:hover {
-  border: 1px solid var(--efeito-hover);
 }
 
 
