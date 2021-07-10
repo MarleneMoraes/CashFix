@@ -39,14 +39,7 @@ h4 {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .flex {
-  width: 45%;
-  }
-
-  .responsivehr{
-    display: none;
+    max-width: 700px;
   }
 
 }
